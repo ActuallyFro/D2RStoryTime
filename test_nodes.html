@@ -1,6 +1,7 @@
 <!-- https://gist.github.com/moiarcsan/3d6f23a987633aac0d39f3ba13412a16 -->
 
 <!DOCTYPE html>
+
 <meta charset="utf-8">
 <script src="http://d3js.org/d3.v2.min.js?2.9.3"></script>
 <style>
@@ -27,7 +28,7 @@ var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-d3.json("graphFile.json", function(json){
+d3.json("D2R_StoryTime.json", function(json){
   var nodes = json.nodes;
   var links = json.links;
 
