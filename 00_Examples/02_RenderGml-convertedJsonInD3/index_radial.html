@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>D3 Radial Graph Visualization Demo</title>
+
+  <!-- JavaScript Libraries //-->
+  <script src="d3.min.3.5.6.js"></script>
+
+  <!-- CSS Style //-->
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div id="option">
+    <input name="button0" type="button" class="button" value="Lesmis" onclick="read_json('data.json')" />
+    <input name="button1" type="button" class="button" value="Karate" onclick="read_json('data.json')" />
+    <input name="button2" type="button" class="button" value="AdjNoun" onclick="read_json('data.json')" />
+  </div>
+  Compare this to the <a href="index.html">force directed graph layout</a>.
+  <div align="center" id="circle"></div>
+  <script src="script_radial.js"></script>
+
+</body>
+
+</html>

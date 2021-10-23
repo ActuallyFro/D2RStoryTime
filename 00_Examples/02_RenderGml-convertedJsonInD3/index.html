@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+
+  <title>D3 Force Directed Graph Visualization Demo</title>
+  <style>
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .link {
+      stroke: #999;
+      stroke-opacity: .6;
+    }
+
+    .node text {
+      pointer-events: none;
+      font: 10px sans-serif;
+    }
+
+    .button {
+      width: 200px;
+      margin: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="option">
+    <input name="button0" type="button" class="button" value="Lesmis" onclick="read_json('data.json')" />
+    <input name="button1" type="button" class="button" value="Karate" onclick="read_json('data.json')" />
+    <input name="button2" type="button" class="button" value="AdjNoun" onclick="read_json('data.json')" />
+  </div>
+  Compare this to the <a href="index_radial.html">radial graph layout</a>.
+  <div id="graph"> </div>
+  <script src="d3.min.3.5.6.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
