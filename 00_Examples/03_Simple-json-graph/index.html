@@ -42,14 +42,14 @@ d3.json("miserables.json", function(error, graph) {
 
   // ===============
   // NEW CODE
-  var force = self.force = d3.layout.force()
-        .nodes(json.nodes)
-        .links(json.links)
-        .gravity(.05)
-        .distance(100)
-        .charge(-100)
-        .size([width, height])
-        .start();
+  // var force = self.force = d3.layout.force()
+  //       .nodes(json.nodes)
+  //       .links(json.links)
+  //       .gravity(.05)
+  //       .distance(100)
+  //       .charge(-100)
+  //       .size([width, height])
+  //       .start();
 
   // var node_drag = d3.behavior.drag()
   //       .on("dragstart", dragstart)
@@ -143,7 +143,7 @@ d3.json("miserables.json", function(error, graph) {
 });
 
 function dragstarted(d) {
-  force.stop() // stops the force auto positioning before you start dragging
+  // force.stop() // stops the force auto positioning before you start dragging
 
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
   d.fx = d.x;
@@ -163,7 +163,7 @@ function dragged(d) {
 
 function dragended(d) {
   d.fixed = true; // of course set the node to fixed so the force doesn't include the node in its auto positioning stuff
-  force.resume();
+  // force.resume();
 
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null;
