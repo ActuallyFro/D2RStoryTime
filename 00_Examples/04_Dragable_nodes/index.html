@@ -67,6 +67,91 @@ d3.json("graph.json", function(json) {
         .attr("class", "node")
         .call(node_drag);
 
+    /*
+    https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Akara-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Full-Rejuvenation-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Flavie-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Barbarian-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Necromancer-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Jamella-icon.png
+
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Treasure-Closed-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Town-Portal-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Deckard-Cain-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Charsi-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Kashya-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Portal-to-Tristram-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Tyreal-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Warriv-in-Lut-Gohlein-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Sorceress-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Gheed-icon.png
+https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png
+https://icons.iconarchive.com/icons/tooschee/medievalish-gaming/72/diablo-icon.png
+
+
+https://static.wikia.nocookie.net/diablo_gamepedia/images/b/bc/Wiki.png/revision/latest/zoom-crop/width/200/height/200?cb=20130430225723
+https://static.wikia.nocookie.net/diablo_gamepedia/images/e/e6/Site-logo.png/revision/latest?cb=20210715070200
+https://static.wikia.nocookie.net/diablo_gamepedia/images/4/44/Betrayal_of_Harrogath_icon.png/revision/latest?cb=20091125131114
+https://static.wikia.nocookie.net/diablo_gamepedia/images/4/44/Betrayal_of_Harrogath_icon.png/revision/latest/scale-to-width-down/120?cb=20091125131114
+https://static.wikia.nocookie.net/diablo_gamepedia/images/e/ec/Blade_of_the_Old_Religion_icon.png/revision/latest?cb=20091125130737
+https://static.wikia.nocookie.net/diablo_gamepedia/images/e/ec/Blade_of_the_Old_Religion_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130737
+https://static.wikia.nocookie.net/diablo_gamepedia/images/2/2c/Den_of_Evil_icon.png/revision/latest?cb=20091125130309
+https://static.wikia.nocookie.net/diablo_gamepedia/images/2/2c/Den_of_Evil_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130309
+https://static.wikia.nocookie.net/diablo_gamepedia/images/4/45/Eve_of_Destruction_icon.png/revision/latest?cb=20090906102513
+https://static.wikia.nocookie.net/diablo_gamepedia/images/4/45/Eve_of_Destruction_icon.png/revision/latest/scale-to-width-down/120?cb=20090906102513
+https://static.wikia.nocookie.net/diablo_gamepedia/images/c/c5/Hell%27s_Forge_icon.png/revision/latest?cb=20090916194844
+https://static.wikia.nocookie.net/diablo_gamepedia/images/c/c5/Hell%27s_Forge_icon.png/revision/latest/scale-to-width-down/120?cb=20090916194844
+https://static.wikia.nocookie.net/diablo_gamepedia/images/e/e5/Khalim%27s_Will_icon.png/revision/latest?cb=20091125130800
+https://static.wikia.nocookie.net/diablo_gamepedia/images/e/e5/Khalim%27s_Will_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130800
+https://static.wikia.nocookie.net/diablo_gamepedia/images/d/d3/Lam_Esen%27s_Tome_icon.png/revision/latest?cb=20090906103210
+https://static.wikia.nocookie.net/diablo_gamepedia/images/d/d3/Lam_Esen%27s_Tome_icon.png/revision/latest/scale-to-width-down/120?cb=20090906103210
+https://static.wikia.nocookie.net/diablo_gamepedia/images/0/04/Prison_of_Ice_icon.png/revision/latest?cb=20091125131052
+https://static.wikia.nocookie.net/diablo_gamepedia/images/0/04/Prison_of_Ice_icon.png/revision/latest/scale-to-width-down/120?cb=20091125131052
+https://static.wikia.nocookie.net/diablo_gamepedia/images/d/d6/Radament%27s_Lair_icon.png/revision/latest?cb=20091125130534
+https://static.wikia.nocookie.net/diablo_gamepedia/images/d/d6/Radament%27s_Lair_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130534
+https://static.wikia.nocookie.net/diablo_gamepedia/images/8/89/Rescue_on_Mount_Arreat_icon.png/revision/latest?cb=20091125131038
+https://static.wikia.nocookie.net/diablo_gamepedia/images/8/89/Rescue_on_Mount_Arreat_icon.png/revision/latest/scale-to-width-down/120?cb=20091125131038
+https://static.wikia.nocookie.net/diablo_gamepedia/images/6/60/Rite_of_Passage_icon.png/revision/latest?cb=20091125131131
+https://static.wikia.nocookie.net/diablo_gamepedia/images/6/60/Rite_of_Passage_icon.png/revision/latest/scale-to-width-down/120?cb=20091125131131
+https://static.wikia.nocookie.net/diablo_gamepedia/images/2/20/Siege_on_Harrogath_icon.png/revision/latest?cb=20091125131013
+https://static.wikia.nocookie.net/diablo_gamepedia/images/2/20/Siege_on_Harrogath_icon.png/revision/latest/scale-to-width-down/120?cb=20091125131013
+https://static.wikia.nocookie.net/diablo_gamepedia/images/5/59/Sisters_to_the_Slaughter_icon.png/revision/latest?cb=20091125130504
+https://static.wikia.nocookie.net/diablo_gamepedia/images/5/59/Sisters_to_the_Slaughter_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130504
+https://static.wikia.nocookie.net/diablo_gamepedia/images/9/97/Sisters%27_Burial_Grounds_icon.png/revision/latest?cb=20091125130332
+https://static.wikia.nocookie.net/diablo_gamepedia/images/9/97/Sisters%27_Burial_Grounds_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130332
+https://static.wikia.nocookie.net/diablo_gamepedia/images/c/cb/Terror%27s_End_icon.png/revision/latest?cb=20090906102258
+https://static.wikia.nocookie.net/diablo_gamepedia/images/c/cb/Terror%27s_End_icon.png/revision/latest/scale-to-width-down/120?cb=20090906102258
+https://static.wikia.nocookie.net/diablo_gamepedia/images/7/7e/The_Arcane_Sanctuary_icon.png/revision/latest?cb=20091125130630
+https://static.wikia.nocookie.net/diablo_gamepedia/images/7/7e/The_Arcane_Sanctuary_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130630
+https://static.wikia.nocookie.net/diablo_gamepedia/images/0/03/The_Blackened_Temple_icon.png/revision/latest?cb=20091125130823
+https://static.wikia.nocookie.net/diablo_gamepedia/images/0/03/The_Blackened_Temple_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130823
+https://static.wikia.nocookie.net/diablo_gamepedia/images/e/e2/The_Fallen_Angel_icon.png/revision/latest?cb=20091125130157
+https://static.wikia.nocookie.net/diablo_gamepedia/images/e/e2/The_Fallen_Angel_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130157
+https://static.wikia.nocookie.net/diablo_gamepedia/images/b/bf/The_Forgotten_Tower_icon.png/revision/latest?cb=20091125130408
+https://static.wikia.nocookie.net/diablo_gamepedia/images/b/bf/The_Forgotten_Tower_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130408
+https://static.wikia.nocookie.net/diablo_gamepedia/images/9/95/The_Golden_Bird_icon.png/revision/latest?cb=20091125130720
+https://static.wikia.nocookie.net/diablo_gamepedia/images/9/95/The_Golden_Bird_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130720
+https://static.wikia.nocookie.net/diablo_gamepedia/images/b/b5/The_Guardian_icon.png/revision/latest?cb=20091125130836
+https://static.wikia.nocookie.net/diablo_gamepedia/images/b/b5/The_Guardian_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130836
+https://static.wikia.nocookie.net/diablo_gamepedia/images/1/1d/The_Horadric_Staff_icon.png/revision/latest?cb=20091125130555
+https://static.wikia.nocookie.net/diablo_gamepedia/images/1/1d/The_Horadric_Staff_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130555
+https://static.wikia.nocookie.net/diablo_gamepedia/images/5/58/The_Search_for_Cain_icon.png/revision/latest?cb=20091125130353
+https://static.wikia.nocookie.net/diablo_gamepedia/images/5/58/The_Search_for_Cain_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130353
+https://static.wikia.nocookie.net/diablo_gamepedia/images/a/ab/The_Seven_Tombs_icon.png/revision/latest?cb=20091125130703
+https://static.wikia.nocookie.net/diablo_gamepedia/images/a/ab/The_Seven_Tombs_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130703
+https://static.wikia.nocookie.net/diablo_gamepedia/images/5/58/The_Summoner_icon.png/revision/latest?cb=20091125130648
+https://static.wikia.nocookie.net/diablo_gamepedia/images/5/58/The_Summoner_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130648
+https://static.wikia.nocookie.net/diablo_gamepedia/images/2/2f/The_Tainted_Sun_icon.png/revision/latest?cb=20091125130614
+https://static.wikia.nocookie.net/diablo_gamepedia/images/2/2f/The_Tainted_Sun_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130614
+https://static.wikia.nocookie.net/diablo_gamepedia/images/e/e8/Tools_of_the_Trade_icon.png/revision/latest?cb=20091125130427
+https://static.wikia.nocookie.net/diablo_gamepedia/images/e/e8/Tools_of_the_Trade_icon.png/revision/latest/scale-to-width-down/120?cb=20091125130427
+
+
+--CO PIOLOT: https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Valeera-icon.png
+--https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Vault-Guard-icon.png
+
+    */
+
     node.append("svg:image")
         .attr("class", "circle")
         // .attr("xlink:href", "https://github.com/favicon.ico")
