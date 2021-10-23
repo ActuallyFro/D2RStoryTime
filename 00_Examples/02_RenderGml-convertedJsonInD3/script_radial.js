@@ -5,7 +5,7 @@ var diameter = 500,
     radius = diameter / 2,
     margin = 20,
     graph,
-    filename = "lesmis.json";
+    filename = "data.json";
 
 // Generates a tooltip for a SVG circle element based on its ID
 function addTooltip(circle) {
