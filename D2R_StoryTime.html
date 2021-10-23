@@ -1,18 +1,16 @@
 <html>
 
-<script>
+<!-- <style>
+  background-color: #f2f2f2;
 
+</style> -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script type>
 const targetDivAbout = document.getElementById("About");
 
 const AboutBtn = document.getElementById("ToggleAbout");
-
-AboutBtn.onclick = function() {
-    if (targetDivAbout.style.display === "none") {
-      targetDivAbout.style.display = "block";
-    } else {
-      targetDivAbout.style.display = "none";
-    }
-}
 
 </script>
 
@@ -22,21 +20,13 @@ AboutBtn.onclick = function() {
     <h1>Current D2R Story</h1>
   </div>
 
-  <div id="nav">
-    <ul>
-      <li><a href="CurrentD2RStory.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <!-- <li><a href="contact.html">Contact</a></li>
-      <li><a href="currentD2RStory.html">Current D2R Story</a></li>
-      <li><a href="pastD2RStories.html">Past D2R Stories</a></li>
-      <li><a href="d2r.html">D2R</a></li> -->
-      <li><a href="d2r-resources.html">D2R Resources</a></li>
-      <li><a href="d2r-tools.html">D2R Tools</a></li>
-      <!-- <li><a href="d2r-services.html">D2R Services</a></li>
-      <li><a href="d2r-community.html">D2R Community</a></li> -->
-      <li><a href="d2r-faq.html">D2R FAQ</a></li>
-    </ul>
-  </div>
+  <ul id="navbar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="D2R_StoryTime.html">Story Time</a></li>
+    <li><a href="D2R_About.html">About</a></li>
+    <li><a href="D2R_Contact.html">Contact</a></li>
+  </ul>
+
 
 <button id="ToggleAbout">Show About</button>
 
@@ -64,6 +54,50 @@ AboutBtn.onclick = function() {
   
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     
+  <br> <render graph file here <br>
+  <div id="graphFile">
+    <script>
+      var graphFile = "D2R_StoryTime.json";
+      d3.json(graphFile, function(error, graph) {
+        if (error) throw error;
+        console.log(graph);
+        var width = 960,
+            height = 500;
+
+        var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+        var simulation = d3.forceSimulation()
+            .force("link", d3.forceLink().id(function(d) { return d.id; }))
+            .force("charge", d3.forceManyBody())
+            .force("center", d3.forceCenter(width / 2, height / 2));
+
+        var svg = d3.select("#graphFile").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        var link = svg.append("g")
+            .attr("class", "links")
+          .selectAll("line")
+          .data(graph.links)
+          .enter().append("line")
+            .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+        var node = svg.append("g")
+            .attr("class", "nodes")
+          .selectAll("circle")
+          .data(graph.nodes)
+          .enter().append("circle")
+            .attr("r", 5)
+            .attr("fill", function(d) { return color(d.group); })
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended));
+    </script>
+    
+  </div>
+    
+  </div>
 </body>
 
 
