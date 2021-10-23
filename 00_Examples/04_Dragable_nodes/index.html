@@ -19,6 +19,7 @@ var vis = d3.select("body").append("svg:svg")
     .attr("height", h);
 
 d3.json("graph.json", function(json) {
+
     var force = self.force = d3.layout.force()
         .nodes(json.nodes)
         .links(json.links)
@@ -155,7 +156,25 @@ https://static.wikia.nocookie.net/diablo_gamepedia/images/e/e8/Tools_of_the_Trad
     node.append("svg:image")
         .attr("class", "circle")
         // .attr("xlink:href", "https://github.com/favicon.ico")
-        .attr("xlink:href", "https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png")
+        .attr("xlink:href", function (d){
+        
+          var IconLink="https://github.com/favicon.ico";
+
+          if (d.name === "OldMan") {
+            IconLink = "https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png";
+          }
+          //  else if (d === 20) { returnColor = "purple";
+          // } else if (d === 10) { returnColor = "red"; }
+
+          //"https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png"
+
+          return IconLink;
+        })
+
+//Leverage anonymous Functions:
+//IF: "name":"OldMan"
+
+
         //.attr("fill", "rgb(12,45,200)") // FAILS
         .attr("x", "-8px")
         .attr("y", "-8px")
