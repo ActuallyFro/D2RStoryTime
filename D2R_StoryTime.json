@@ -1,15 +1,12 @@
 {
-	"nodes":[
-		{"name":"MPJuvenil", "group":0},
-	  	{"name":"Geoinquietos Sevilla","group":1},
-		{"name":"IDE Sevilla","group":2},
-		{"name":"Profesores","group":3},
-		{"name":"Alumnos","group":4}
+  "nodes":[
+		{"name":"node1","group":1},
+		{"name":"node2","group":2},
+		{"name":"node3","group":2},
+		{"name":"node4","group":3}
 	],
 	"links":[
-		{"source":0,"target":1,"weight":1},
-		{"source":0,"target":2,"weight":5},
-		{"source":0,"target":3,"weight":10},
-		{"source":0,"target":4,"weight":15}
+		{"source":2,"target":1,"weight":1},
+		{"source":0,"target":2,"weight":3}
 	]
 }
