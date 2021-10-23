@@ -65,12 +65,12 @@ d3.json("miserables.json", function(error, graph) {
         d.py += d3.event.dy;
         d.x += d3.event.dx;
         d.y += d3.event.dy; 
-        ticked(); // this is the key to make it work together with updating both px,py,x,y on d !
+        tick(); // this is the key to make it work together with updating both px,py,x,y on d !
     }
 
   function dragend(d, i) {
         d.fixed = true; // of course set the node to fixed so the force doesn't include the node in its auto positioning stuff
-        ticked();
+        tick();
         force.resume();
   }
 
@@ -140,20 +140,49 @@ d3.json("miserables.json", function(error, graph) {
 });
 
 function dragstarted(d) {
+  force.stop() // stops the force auto positioning before you start dragging
+
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
   d.fx = d.x;
   d.fy = d.y;
 }
 
 function dragged(d) {
-  d.fx = d3.event.x;
-  d.fy = d3.event.y;
+  // d.fx = d3.event.x;
+  // d.fy = d3.event.y;
+
+  d.px += d3.event.dx;
+  d.py += d3.event.dy;
+  d.x += d3.event.dx;
+  d.y += d3.event.dy; 
+
 }
 
 function dragended(d) {
+  d.fixed = true; // of course set the node to fixed so the force doesn't include the node in its auto positioning stuff
+  force.resume();
+
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null;
   d.fy = null;
 }
 
+
+// function dragstart(d, i) {
+//         force.stop() // stops the force auto positioning before you start dragging
+//   }        
+
+  // function dragmove(d, i) {
+  //       d.px += d3.event.dx;
+  //       d.py += d3.event.dy;
+  //       d.x += d3.event.dx;
+  //       d.y += d3.event.dy; 
+  //       tick(); // this is the key to make it work together with updating both px,py,x,y on d !
+  //   }
+
+  // function dragend(d, i) {
+  //       d.fixed = true; // of course set the node to fixed so the force doesn't include the node in its auto positioning stuff
+  //       tick();
+  //       force.resume();
+  // }
 </script>
