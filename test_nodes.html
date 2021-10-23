@@ -1,4 +1,5 @@
 <!-- http://bl.ocks.org/jose187/4733747 -->
+
 <!DOCTYPE html>
 <meta charset="utf-8">
 <script src="https://d3js.org/d3.v2.min.js?2.9.3"></script>
@@ -36,7 +37,7 @@ var force = d3.layout.force()
     .charge(-100)
     .size([width, height]);
 
-d3.json("D2R_StoryTime.json", function(json) {
+d3.json("D2R_StoryTime.jsonG", function(json) {
   force
       .nodes(json.nodes)
       .links(json.links)
@@ -71,6 +72,3 @@ d3.json("D2R_StoryTime.json", function(json) {
     node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
   });
 });
-
-</script>
-
