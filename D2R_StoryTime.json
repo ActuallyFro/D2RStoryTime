@@ -11,6 +11,5 @@
 		{"source":0,"target":2,"weight":5},
 		{"source":0,"target":3,"weight":10},
 		{"source":0,"target":4,"weight":15}
-	],
-  "comment":"This is a sample graph with 5 nodes and 4 links. -- ALSO: https://gist.github.com/moiarcsan/3d6f23a987633aac0d39f3ba13412a16"
+	]
 }
