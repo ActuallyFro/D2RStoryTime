@@ -1,0 +1,70 @@
+<html>
+
+<script>
+
+const targetDivAbout = document.getElementById("About");
+
+const AboutBtn = document.getElementById("ToggleAbout");
+
+AboutBtn.onclick = function() {
+    if (targetDivAbout.style.display === "none") {
+      targetDivAbout.style.display = "block";
+    } else {
+      targetDivAbout.style.display = "none";
+    }
+}
+
+</script>
+
+<body>
+
+  <div id="header">
+    <h1>Current D2R Story</h1>
+  </div>
+
+  <div id="nav">
+    <ul>
+      <li><a href="CurrentD2RStory.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <!-- <li><a href="contact.html">Contact</a></li>
+      <li><a href="currentD2RStory.html">Current D2R Story</a></li>
+      <li><a href="pastD2RStories.html">Past D2R Stories</a></li>
+      <li><a href="d2r.html">D2R</a></li> -->
+      <li><a href="d2r-resources.html">D2R Resources</a></li>
+      <li><a href="d2r-tools.html">D2R Tools</a></li>
+      <!-- <li><a href="d2r-services.html">D2R Services</a></li>
+      <li><a href="d2r-community.html">D2R Community</a></li> -->
+      <li><a href="d2r-faq.html">D2R FAQ</a></li>
+    </ul>
+  </div>
+
+<button id="ToggleAbout">Show About</button>
+
+  <div id="About">
+    <h2>Current D2R Story</h2>
+    <p>
+      The D2R project is a project that aims to provide a common,
+      open, and extensible interface for the Semantic Web. The D2R
+      project is currently in its early stages, and is being developed
+      by a group of volunteers.
+    </p>
+    <p>
+      The D2R project is a project that aims to provide a common,
+      open, and extensible interface for the Semantic Web. The D2R
+      project is currently in its early stages, and is being developed
+      by a group of volunteers.
+    </p>
+    <p>
+      The D2R project is a project that aims to provide a common,
+      open, and extensible interface for the Semantic Web. The D2R
+      project is currently in its early stages, and is being developed
+      by a group of volunteers.
+    </p>
+  </div>
+  
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+</body>
+
+
+</html>
