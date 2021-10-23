@@ -69,14 +69,19 @@ d3.json("graph.json", function(json) {
     
     var color = d3.scaleOrdinal(d3.schemeCategory20);
     
+    // var circles = node.append("circle")
+    //   .attr("r", 5)
+    //   .attr("fill", function(d) { return color(d.group); });        // .attr("xlink:href", "https://github.com/favicon.ico")
+    
     node.append("svg:image")
         .attr("class", "circle")
-        // .attr("xlink:href", "https://github.com/favicon.ico")
-        .attr("fill", function(d) { return color(d.group); })
+        .attr("fill", "rgb(12,45,200)")
         .attr("x", "-8px")
         .attr("y", "-8px")
         .attr("width", "16px")
         .attr("height", "16px");
+
+        // .attr("xlink:href", "https://github.com/favicon.ico")
 
     node.append("svg:text")
         .attr("class", "nodetext")
