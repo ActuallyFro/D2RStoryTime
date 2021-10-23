@@ -5,7 +5,7 @@ var diameter = 500,
     radius = diameter / 2,
     margin = 20,
     graph,
-    filename = "data.json";
+    filename = "lesmis.json";
 
 // Generates a tooltip for a SVG circle element based on its ID
 function addTooltip(circle) {
@@ -190,7 +190,7 @@ function clean_nodes(json) {
 
 function read_json(fn){
   //Brute force clear data before reading next file
-  graph = {"nodes": [], "links": []};
+  graph = {"nodes": [], "edges": []};
   drawGraph();
   d3.json(fn, function(error, json) {
     if (error) {

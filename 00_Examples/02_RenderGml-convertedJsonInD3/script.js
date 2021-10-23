@@ -112,7 +112,7 @@ function clean_nodes(json) {
 
 function read_json(fn){
   //Brute force clear data before reading next file
-  data = {"nodes": [], "links": []};
+  data = {"nodes": [], "edges": []};
   update();
   d3.json(fn, function(error, json) {
     if (error) {
