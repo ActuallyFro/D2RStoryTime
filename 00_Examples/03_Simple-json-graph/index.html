@@ -1,5 +1,4 @@
 <!-- https://bl.ocks.org/heybignick/3faf257bbbbc7743bb72310d03b86ee8 -->
-<!-- //Merged with 04 -->
 
 <!DOCTYPE html>
 <meta charset="utf-8">
@@ -40,64 +39,21 @@ var simulation = d3.forceSimulation()
 d3.json("miserables.json", function(error, graph) {
   if (error) throw error;
 
-  // ===============
-  // NEW CODE
-  // var force = self.force = d3.layout.force()
-  //       .nodes(json.nodes)
-  //       .links(json.links)
-  //       .gravity(.05)
-  //       .distance(100)
-  //       .charge(-100)
-  //       .size([width, height])
-  //       .start();
-
-  // var node_drag = d3.behavior.drag()
-  //       .on("dragstart", dragstart)
-  //       .on("drag", dragmove)
-  //       .on("dragend", dragend);
-        
-  // function dragstart(d, i) {
-  //       force.stop() // stops the force auto positioning before you start dragging
-  // }        
-
-  // function dragmove(d, i) {
-  //       d.px += d3.event.dx;
-  //       d.py += d3.event.dy;
-  //       d.x += d3.event.dx;
-  //       d.y += d3.event.dy; 
-  //       tick(); // this is the key to make it work together with updating both px,py,x,y on d !
-  //   }
-
-  // function dragend(d, i) {
-  //       d.fixed = true; // of course set the node to fixed so the force doesn't include the node in its auto positioning stuff
-  //       tick();
-  //       force.resume();
-  // }
-
-  // END NEW CODE
-  // ===============
-
   var link = svg.append("g")
-    .attr("class", "links")
+      .attr("class", "links")
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
-    .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
 
   var node = svg.append("g")
-    .attr("class", "nodes")
+      .attr("class", "nodes")
     .selectAll("g")
     .data(graph.nodes)
     .enter().append("g")
 
-
   var circles = node.append("circle")
     .attr("r", 5)
-    // .attr("xlink:href", "https://github.com/favicon.ico")
-    // .attr("x", "-8px")
-    // .attr("y", "-8px")
-    // .attr("width", "16px")
-    // .attr("height", "16px")    
     .attr("fill", function(d) { return color(d.group); });
 
   // Create a drag handler and append it to the node object instead
@@ -125,9 +81,6 @@ d3.json("miserables.json", function(error, graph) {
   simulation.force("link")
       .links(graph.links);
 
-
-  // force.on("tick", tick);
-      
   function ticked() {
     link
         .attr("x1", function(d) { return d.source.x; })
@@ -143,28 +96,17 @@ d3.json("miserables.json", function(error, graph) {
 });
 
 function dragstarted(d) {
-  // force.stop() // stops the force auto positioning before you start dragging
-
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
   d.fx = d.x;
   d.fy = d.y;
 }
 
 function dragged(d) {
-  // d.fx = d3.event.x;
-  // d.fy = d3.event.y;
-
-  d.px += d3.event.dx;
-  d.py += d3.event.dy;
-  d.x += d3.event.dx;
-  d.y += d3.event.dy; 
-
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
 }
 
 function dragended(d) {
-  d.fixed = true; // of course set the node to fixed so the force doesn't include the node in its auto positioning stuff
-  // force.resume();
-
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null;
   d.fy = null;
