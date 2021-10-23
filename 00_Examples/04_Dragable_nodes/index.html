@@ -66,10 +66,13 @@ d3.json("graph.json", function(json) {
       .enter().append("svg:g")
         .attr("class", "node")
         .call(node_drag);
-
+    
+    var color = d3.scaleOrdinal(d3.schemeCategory20);
+    
     node.append("svg:image")
         .attr("class", "circle")
-        .attr("xlink:href", "https://github.com/favicon.ico")
+        // .attr("xlink:href", "https://github.com/favicon.ico")
+        .attr("fill", function(d) { return color(d.group); })
         .attr("x", "-8px")
         .attr("y", "-8px")
         .attr("width", "16px")
