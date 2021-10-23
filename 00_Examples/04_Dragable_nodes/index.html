@@ -75,13 +75,14 @@ d3.json("graph.json", function(json) {
     
     node.append("svg:image")
         .attr("class", "circle")
-        .attr("fill", "rgb(12,45,200)")
+        // .attr("fill", "rgb(12,45,200)")
+        .attr("xlink:href", "https://github.com/favicon.ico")
         .attr("x", "-8px")
         .attr("y", "-8px")
         .attr("width", "16px")
         .attr("height", "16px");
 
-        // .attr("xlink:href", "https://github.com/favicon.ico")
+        // 
 
     node.append("svg:text")
         .attr("class", "nodetext")
