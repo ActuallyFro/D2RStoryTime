@@ -61,39 +61,45 @@
         {
             "group": 2,
             "id": "Cain",
-            "idLink": 2
+            "idLink": 2,
+            "name": "Cain"
         },
         {
             "group": 3,
             "id": "Akara",
-            "idLink": 3
+            "idLink": 3,
+            "name": "Akara"
         },
         {
             "group": 4,
             "id": "Gheed",
-            "idLink": 4
+            "idLink": 4,
+            "name": "Gheed"
         },
         {
             "group": 5,
             "id": "Warriv",
-            "idLink": 5
+            "idLink": 5,
+            "name": "Warriv"
         },
         {
             "group": 6,
             "id": "Charsi",
-            "idLink": 6
+            "idLink": 6,
+            "name": "Charsi"
         },
         {
             "group": 7,
             "id": "Kashya",
-            "idLink": 7
+            "idLink": 7,
+            "name": "Kashya"
         },
         {
-            "group": 8,
+            "group": 9,
             "id": "1"
         },
         {
-            "group": 8,
+            "group": 9,
             "id": "0"
         },
         {
@@ -117,7 +123,7 @@
             "id": "6"
         },
         {
-            "group": 9,
+            "group": 8,
             "id": "7"
         }
     ]
