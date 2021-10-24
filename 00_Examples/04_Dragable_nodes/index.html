@@ -15,22 +15,23 @@
 var w = 960,
     h = 500
 
-//Trying to resolve string indices
-var nodeByName = d3.map(nodes, function(d) {
-    return d.name;
-});
-
-edges.forEach(function(d) {
-    d.source = nodeByName.get(d.source);
-    d.target = nodeByName.get(d.target);
-});
 
 var vis = d3.select("body").append("svg:svg")
     .attr("width", w)
     .attr("height", h);
 
 d3.json("graph.json", function(json) {
-    var force = self.force = d3.layout.force()
+  //Trying to resolve string indices:
+  var nodeByName = d3.map(json.nodes, function(d) {
+      return d.name;
+  });
+
+  json.links.forEach(function(d) {
+      d.source = nodeByName.get(d.source);
+      d.target = nodeByName.get(d.target);
+  });
+
+  var force = self.force = d3.layout.force()
         .nodes(json.nodes)
         .links(json.links)
         .gravity(.05)
@@ -71,12 +72,11 @@ d3.json("graph.json", function(json) {
         force.resume();
     }
 
-
     var node = vis.selectAll("g.node")
-        .data(json.nodes)
+      .data(json.nodes)
       .enter().append("svg:g")
-        .attr("class", "node")
-        .call(node_drag);
+      .attr("class", "node")
+      .call(node_drag);
 
     node.append("svg:image")
         .attr("class", "circle")
