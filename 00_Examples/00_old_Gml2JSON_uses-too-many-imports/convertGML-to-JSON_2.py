@@ -27,7 +27,7 @@ def graphmltojson(graphfile, outfile):
 	#for n,d in G.nodes_iter(data=True): #-- https://stackoverflow.com/questions/33734836/graph-object-has-no-attribute-nodes-iter-in-networkx-module-python
 
 	for n, d in list(G.nodes(data=True)):
-		d['modularitygroup'] = partition[n]
+		d['group'] = partition[n]
 
 	node_link = json_graph.node_link_data(G)
 	#json = json_graph.dumps(node_link)

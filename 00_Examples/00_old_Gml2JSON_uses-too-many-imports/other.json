@@ -57,48 +57,49 @@
     "multigraph": false,
     "nodes": [
         {
+            "group": 2,
             "id": "n0",
-            "modularitygroup": 2
+            "name": "OldMan"
         },
         {
-            "id": "n1",
-            "modularitygroup": 2
+            "group": 2,
+            "id": "n1"
         },
         {
-            "id": "n2",
-            "modularitygroup": 2
+            "group": 2,
+            "id": "n2"
         },
         {
-            "id": "n3",
-            "modularitygroup": 2
+            "group": 2,
+            "id": "n3"
         },
         {
-            "id": "n4",
-            "modularitygroup": 1
+            "group": 1,
+            "id": "n4"
         },
         {
-            "id": "n5",
-            "modularitygroup": 3
+            "group": 3,
+            "id": "n5"
         },
         {
-            "id": "n6",
-            "modularitygroup": 1
+            "group": 1,
+            "id": "n6"
         },
         {
-            "id": "n7",
-            "modularitygroup": 3
+            "group": 3,
+            "id": "n7"
         },
         {
-            "id": "n8",
-            "modularitygroup": 0
+            "group": 0,
+            "id": "n8"
         },
         {
-            "id": "n9",
-            "modularitygroup": 0
+            "group": 0,
+            "id": "n9"
         },
         {
-            "id": "n10",
-            "modularitygroup": 0
+            "group": 0,
+            "id": "n10"
         }
     ]
 }
