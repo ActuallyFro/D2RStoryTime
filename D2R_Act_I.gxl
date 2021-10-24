@@ -7,6 +7,7 @@
   <!-- Attribute Keys -->
   <key attr.name="name" attr.type="string" for="node" id="nameNode"><default>NaN</default></key>
   <key attr.name="idLink" attr.type="int" for="node" id="idLinkNode"><default>0</default></key>
+  <key attr.name="description" attr.type="string" for="node" id="descriptionNode"><default>MISSING DESCRIPTION</default></key>
 
   <graph id="G" edgedefault="undirected">
 
@@ -14,6 +15,7 @@
     <node id="boss_04_Diablo"> 
       <data key="nameNode">Diablo</data>
       <data key="idLinkNode">0</data>
+      <data key="descriptionNode">- Spent 2 centuries to corrupt the Soulstone that imprisoned him.  - Corrupted both King Leoric and his archbishop, Lazarus  - The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.  - Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram  - The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.  Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</data>
     </node>
 
     <node id="npc_D1_DarkWander">
@@ -70,3 +72,14 @@
 </graphml>
 
 <!-- <edge id="Link Cain to Rogue Encampment" source="2" target="8"/> -->
+
+
+      <!-- <ul style="list-style-type:disc">
+          <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>
+          <li>Corrupted both King Leoric and his archbishop, Lazarus</li>
+          <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>
+          <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>
+          <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>
+        </ul>
+
+        <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p> -->
