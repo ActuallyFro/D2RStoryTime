@@ -112,7 +112,7 @@ function clean_nodes(json) {
 
 function read_json(fn){
   //Brute force clear data before reading next file
-  data = {"nodes": [], "edges": []};
+  data = {"nodes": [], "links": []};
   update();
   d3.json(fn, function(error, json) {
     if (error) {
@@ -123,5 +123,5 @@ function read_json(fn){
     update();
   });
 }
-var filename = "data.json";
+var filename = "lesmis.json";
 read_json(filename)
