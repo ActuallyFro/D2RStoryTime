@@ -21,7 +21,7 @@ var vis = d3.select("body").append("svg:svg")
     .attr("height", h);
 
 d3.json("graph.json", function(json) {
-  //Trying to resolve string indices:
+  //Trying to resolve string indices: --credit: https://stackoverflow.com/questions/41916842/d3-json-file-with-source-and-index-as-strings-rather-than-indices
   var nodeByName = d3.map(json.nodes, function(d) {
       return d.name;
   });
