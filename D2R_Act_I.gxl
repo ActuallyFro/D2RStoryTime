@@ -23,30 +23,42 @@
 
     <node id="Cain">
       <data key="nameNode"></data>
+      <data key="idLinkNode">2</data>
     </node>
 
     <node id="Akara">
       <data key="nameNode"></data>
+      <data key="idLinkNode">3</data>
     </node>
 
     <node id="Gheed">
       <data key="nameNode"></data>
+      <data key="idLinkNode">4</data>
     </node>
 
     <node id="Warriv">
       <data key="nameNode"></data>
+      <data key="idLinkNode">5</data>
     </node>
 
     <node id="Charsi">
       <data key="nameNode"></data>
+      <data key="idLinkNode">6</data>
     </node>
 
     <node id="Kashya">
       <data key="nameNode"></data>
+      <data key="idLinkNode">7</data>
     </node>
  
   <!-- Edges -->
     <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
+    <edge id="self ref to generate" source="2" target="2"/>
+    <edge id="self ref to generate" source="3" target="3"/>
+    <edge id="self ref to generate" source="4" target="4"/>
+    <edge id="self ref to generate" source="5" target="5"/>
+    <edge id="self ref to generate" source="6" target="6"/>
+    <edge id="self ref to generate" source="7" target="7"/>
 
   </graph>
 </graphml>

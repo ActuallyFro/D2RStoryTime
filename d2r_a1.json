@@ -12,6 +12,36 @@
             "id": "Link Dark Wanderer to Diablo",
             "source": "1",
             "target": "0"
+        },
+        {
+            "id": "self ref to generate",
+            "source": "2",
+            "target": "2"
+        },
+        {
+            "id": "self ref to generate",
+            "source": "3",
+            "target": "3"
+        },
+        {
+            "id": "self ref to generate",
+            "source": "4",
+            "target": "4"
+        },
+        {
+            "id": "self ref to generate",
+            "source": "5",
+            "target": "5"
+        },
+        {
+            "id": "self ref to generate",
+            "source": "6",
+            "target": "6"
+        },
+        {
+            "id": "self ref to generate",
+            "source": "7",
+            "target": "7"
         }
     ],
     "multigraph": false,
@@ -30,27 +60,33 @@
         },
         {
             "group": 2,
-            "id": "Cain"
+            "id": "Cain",
+            "idLink": 2
         },
         {
             "group": 3,
-            "id": "Akara"
+            "id": "Akara",
+            "idLink": 3
         },
         {
             "group": 4,
-            "id": "Gheed"
+            "id": "Gheed",
+            "idLink": 4
         },
         {
             "group": 5,
-            "id": "Warriv"
+            "id": "Warriv",
+            "idLink": 5
         },
         {
             "group": 6,
-            "id": "Charsi"
+            "id": "Charsi",
+            "idLink": 6
         },
         {
             "group": 7,
-            "id": "Kashya"
+            "id": "Kashya",
+            "idLink": 7
         },
         {
             "group": 8,
@@ -59,6 +95,30 @@
         {
             "group": 8,
             "id": "0"
+        },
+        {
+            "group": 10,
+            "id": "2"
+        },
+        {
+            "group": 11,
+            "id": "3"
+        },
+        {
+            "group": 12,
+            "id": "4"
+        },
+        {
+            "group": 13,
+            "id": "5"
+        },
+        {
+            "group": 14,
+            "id": "6"
+        },
+        {
+            "group": 9,
+            "id": "7"
         }
     ]
 }
