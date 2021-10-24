@@ -78,6 +78,11 @@
             "id": "Link Warriv to Rogue Monastery (knows pass is blocked)",
             "source": "5",
             "target": "11"
+        },
+        {
+            "id": "Link Warriv's Gossip Notes",
+            "source": "5",
+            "target": "12"
         }
     ],
     "multigraph": false,
@@ -158,48 +163,59 @@
             "name": "Rogue Monastery"
         },
         {
-            "group": 13,
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Knows Kaysha is Rogue Leader</li>\n          <li>Knows she does not like outsiders</li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
+            "group": 12,
+            "id": "Warriv Gossip",
+            "idLink": 12,
+            "name": "Gossip 1"
+        },
+        {
+            "group": 14,
             "id": "1"
         },
         {
-            "group": 13,
+            "group": 14,
             "id": "0"
         },
         {
-            "group": 14,
+            "group": 15,
             "id": "8"
         },
         {
-            "group": 12,
+            "group": 13,
             "id": "3"
         },
         {
-            "group": 14,
+            "group": 15,
             "id": "4"
         },
         {
-            "group": 12,
+            "group": 13,
             "id": "5"
         },
         {
-            "group": 14,
+            "group": 15,
             "id": "6"
         },
         {
-            "group": 14,
+            "group": 15,
             "id": "7"
         },
         {
-            "group": 13,
+            "group": 14,
             "id": "9"
         },
         {
-            "group": 12,
+            "group": 13,
             "id": "10"
         },
         {
-            "group": 12,
+            "group": 13,
             "id": "11"
+        },
+        {
+            "group": 13,
+            "id": "12"
         }
     ]
 }

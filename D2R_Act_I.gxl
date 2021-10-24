@@ -109,6 +109,20 @@
       <data key="idLinkNode">11</data>
     </node>
 
+
+    <node id="Warriv Gossip">
+      <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">12</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>Knows Kaysha is Rogue Leader</li>
+          <li>Knows she does not like outsiders</li>
+        </ul>
+
+        <p>Source: First Gossip</p>
+        ]]></data>
+    </node>
+
   <!-- Edges -->
     <!-- Setup before streaming -->
     <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
@@ -127,6 +141,9 @@
     <edge id="Link Warriv to Diablo (Rumors walking Earth)" source="5" target="0"/>
     <edge id="Link Warriv to DW (knew he went through)" source="5" target="1"/>
     <edge id="Link Warriv to Akara (told you to talk to her)" source="5" target="3"/>
+
+    <!-- Warriv Gossip -->
+    <edge id="Link Warriv's Gossip Notes" source="5" target="12"/>
 
   </graph>
 </graphml>
