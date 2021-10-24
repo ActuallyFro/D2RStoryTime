@@ -61,59 +61,49 @@
     "multigraph": false,
     "nodes": [
         {
-            "group": 2,
+            "group": 0,
             "id": "n0",
             "name": "OldMan"
         },
         {
+            "group": 0,
+            "id": "n1"
+        },
+        {
+            "group": 0,
+            "id": "n2"
+        },
+        {
+            "group": 1,
+            "id": "n3"
+        },
+        {
+            "group": 1,
+            "id": "n4"
+        },
+        {
+            "group": 1,
+            "id": "n5"
+        },
+        {
+            "group": 1,
+            "id": "n6"
+        },
+        {
+            "group": 1,
+            "id": "n7"
+        },
+        {
             "group": 2,
-            "id": "n1",
-            "name": "Man"
+            "id": "n8"
         },
         {
             "group": 2,
-            "id": "n2",
-            "name": "Man"
+            "id": "n9"
         },
         {
-            "group": 1,
-            "id": "n3",
-            "name": "Man"
-        },
-        {
-            "group": 1,
-            "id": "n4",
-            "name": "Man"
-        },
-        {
-            "group": 1,
-            "id": "n5",
-            "name": "Man"
-        },
-        {
-            "group": 1,
-            "id": "n6",
-            "name": "Man"
-        },
-        {
-            "group": 0,
-            "id": "n7",
-            "name": "Man"
-        },
-        {
-            "group": 0,
-            "id": "n8",
-            "name": "Man"
-        },
-        {
-            "group": 0,
-            "id": "n9",
-            "name": "Man"
-        },
-        {
-            "group": 0,
-            "id": "n10",
-            "name": "Man"
+            "group": 2,
+            "id": "n10"
         }
     ]
 }
