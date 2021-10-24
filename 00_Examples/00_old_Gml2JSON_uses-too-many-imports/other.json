@@ -61,48 +61,48 @@
     "multigraph": false,
     "nodes": [
         {
-            "group": 0,
+            "group": 2,
             "id": "0",
             "name": "OldMan"
         },
         {
-            "group": 0,
+            "group": 2,
             "id": "1"
         },
         {
-            "group": 0,
+            "group": 2,
             "id": "2"
         },
         {
-            "group": 2,
+            "group": 1,
             "id": "3"
         },
         {
-            "group": 2,
+            "group": 1,
             "id": "4"
         },
         {
-            "group": 2,
+            "group": 1,
             "id": "5"
         },
         {
-            "group": 2,
+            "group": 1,
             "id": "6"
         },
         {
-            "group": 2,
+            "group": 0,
             "id": "7"
         },
         {
-            "group": 1,
+            "group": 0,
             "id": "8"
         },
         {
-            "group": 1,
+            "group": 0,
             "id": "9"
         },
         {
-            "group": 1,
+            "group": 0,
             "id": "10"
         }
     ]
