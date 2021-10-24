@@ -48,7 +48,7 @@
     "multigraph": false,
     "nodes": [
         {
-            "description": "- Spent 2 centuries to corrupt the Soulstone that imprisoned him.  - Corrupted both King Leoric and his archbishop, Lazarus  - The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.  - Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram  - The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.  Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml",
+            "description": "\n        <ul style=\"list-style-type:disc\">\n            <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>\n            <li>Corrupted both King Leoric and his archbishop, Lazarus</li>\n            <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>\n            <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>\n            <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>\n          </ul>\n\n          <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>\n        ",
             "group": 0,
             "id": "boss_04_Diablo",
             "idLink": 0,
@@ -103,35 +103,35 @@
             "name": "Rogue Encampment"
         },
         {
-            "group": 10,
+            "group": 9,
             "id": "1"
         },
         {
-            "group": 10,
+            "group": 9,
             "id": "0"
         },
         {
-            "group": 9,
+            "group": 10,
             "id": "8"
         },
         {
-            "group": 9,
+            "group": 10,
             "id": "3"
         },
         {
-            "group": 9,
+            "group": 10,
             "id": "4"
         },
         {
-            "group": 9,
+            "group": 10,
             "id": "5"
         },
         {
-            "group": 9,
+            "group": 10,
             "id": "6"
         },
         {
-            "group": 9,
+            "group": 10,
             "id": "7"
         }
     ]
