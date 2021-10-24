@@ -8,101 +8,46 @@
     },
     "links": [
         {
-            "source": "0",
-            "target": "2"
-        },
-        {
-            "source": "1",
-            "target": "2"
-        },
-        {
-            "source": "2",
-            "target": "3"
-        },
-        {
-            "source": "3",
-            "target": "5"
-        },
-        {
-            "source": "3",
-            "target": "4"
-        },
-        {
-            "source": "4",
-            "target": "6"
-        },
-        {
-            "source": "5",
-            "target": "6"
-        },
-        {
-            "source": "5",
-            "target": "7"
-        },
-        {
-            "source": "6",
-            "target": "8"
-        },
-        {
-            "source": "7",
-            "target": "8"
-        },
-        {
-            "source": "8",
-            "target": "9"
-        },
-        {
-            "source": "8",
-            "target": "10"
+            "id": "Link Darkwander to Diablo",
+            "source": "boss_04_Diablo",
+            "target": "npc_D1_DarkWander"
         }
     ],
     "multigraph": false,
     "nodes": [
         {
-            "group": 2,
-            "id": "0",
+            "group": 0,
+            "id": "boss_04_Diablo",
             "name": "Diablo"
         },
         {
-            "group": 2,
-            "id": "1",
+            "group": 0,
+            "id": "npc_D1_DarkWander",
             "name": "Dark Wanderer"
         },
         {
             "group": 2,
-            "id": "2"
-        },
-        {
-            "group": 2,
-            "id": "3"
-        },
-        {
-            "group": 1,
-            "id": "4"
+            "id": "Cain"
         },
         {
             "group": 3,
-            "id": "5"
+            "id": "Akara"
+        },
+        {
+            "group": 4,
+            "id": "Gheed"
+        },
+        {
+            "group": 5,
+            "id": "Warriv"
+        },
+        {
+            "group": 6,
+            "id": "Charsi"
         },
         {
             "group": 1,
-            "id": "6"
-        },
-        {
-            "group": 3,
-            "id": "7"
-        },
-        {
-            "group": 0,
-            "id": "8"
-        },
-        {
-            "group": 0,
-            "id": "9"
-        },
-        {
-            "group": 0,
-            "id": "10"
+            "id": "Kashya"
         }
     ]
 }

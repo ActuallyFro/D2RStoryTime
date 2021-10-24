@@ -6,44 +6,44 @@
 
   <!-- Attribute Keys -->
   <key attr.name="name" attr.type="string" for="node" id="nameNode"><default>NaN</default></key>
-  <!-- <key attr.name="value" attr.type="float" for="edge" id="valEdge"><default>1.0</default></key> -->
 
   <graph id="G" edgedefault="undirected">
-    <node id="0">
+
+  <!-- Nodes -->
+    <node id="boss_04_Diablo">
       <data key="nameNode">Diablo</data>
     </node>
-    <node id="1">
+
+    <node id="npc_D1_DarkWander">
       <data key="nameNode">Dark Wanderer</data>
     </node>
 
-    <node id="2"/>
-    <node id="3"/>
-    <node id="4"/>
-    <node id="5"/>
-    <node id="6"/>
-    <node id="7"/>
-    <node id="8"/>
-    <node id="9"/>
-    <node id="10"/>
+    <node id="Cain">
+      <data key="nameNode"></data>
+    </node>
 
-    <edge source="0" target="2"/>
-    <edge source="1" target="2"/>
-    <edge source="2" target="3"/>
-    <edge source="3" target="5"/>
-    <edge source="3" target="4"/>
-    <edge source="4" target="6"/>
-    <edge source="6" target="5"/>
-    <edge source="5" target="7"/>
-    <edge source="6" target="8"/>
-    <edge source="8" target="7"/>
-    <edge source="8" target="9"/>
-    <edge source="8" target="10"/>
+    <node id="Akara">
+      <data key="nameNode"></data>
+    </node>
+
+    <node id="Gheed">
+      <data key="nameNode"></data>
+    </node>
+
+    <node id="Warriv">
+      <data key="nameNode"></data>
+    </node>
+
+    <node id="Charsi">
+      <data key="nameNode"></data>
+    </node>
+
+    <node id="Kashya">
+      <data key="nameNode"></data>
+    </node>
+ 
+  <!-- Edges -->
+    <edge id="Link Darkwander to Diablo" source="npc_D1_DarkWander" target="boss_04_Diablo"/>
+
   </graph>
-
 </graphml>
-<!-- ERRORS if put on line 1: xml.etree.ElementTree.ParseError: XML or text declaration not at start of entity: -->
-<!-- Source: https://neo4j.com/labs/apoc/4.1/import/graphml/ -->
-
-<!-- Debug/reccomendation: https://stackoverflow.com/questions/36020697/xml-or-text-declaration-not-at-start-of-entity-line-2-column-0-when-calling -->
-
-<!-- How to add KEYS (to get sub-attributes): https://yed.yworks.com/support/qa/68/how-can-i-associate-additional-data-with-my-nodes-and-edges -->
