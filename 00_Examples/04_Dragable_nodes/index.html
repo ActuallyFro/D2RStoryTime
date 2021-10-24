@@ -15,6 +15,16 @@
 var w = 960,
     h = 500
 
+//Trying to resolve string indices
+var nodeByName = d3.map(nodes, function(d) {
+    return d.name;
+});
+
+edges.forEach(function(d) {
+    d.source = nodeByName.get(d.source);
+    d.target = nodeByName.get(d.target);
+});
+
 var vis = d3.select("body").append("svg:svg")
     .attr("width", w)
     .attr("height", h);
