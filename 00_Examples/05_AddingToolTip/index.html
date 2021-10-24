@@ -11,10 +11,11 @@
   </head>
   <body>
     <h3>Diablo 2: Story Time!</h3>
+      <div id="div_tooltip"></div>
+
       <script type="text/javascript">
         var w = 1500,
             h = 900
-
 
         var vis = d3.select("body").append("svg:svg")
             .attr("width", w)
@@ -30,6 +31,41 @@
               d.source = nodeByName.get(d.source);
               d.target = nodeByName.get(d.target);
           });
+
+          //TOOL TIP
+          var Tooltip = d3.select("#div_tooltip").append("div")
+          .style("opacity", 0)
+          .attr("class", "tooltip")
+          .style("background-color", "white")
+          .style("border", "solid")
+          .style("border-width", "2px")
+          .style("border-radius", "5px")
+          .style("padding", "5px")
+
+          // Three function that change the tooltip when user hover / move / leave a cell
+          var mouseover = function(d) {
+            Tooltip
+              .style("opacity", 1)
+            d3.select(this)
+              .style("stroke", "black")
+              .style("opacity", 1)
+          }
+          var mousemove = function(d) {
+            Tooltip
+              .html("The exact value of<br>this cell is: " + d.value)
+              .style("left", "## px")
+              .style("top", "## px")
+              // .style("left", (d3.mouse(this)[0]+70) + "px")
+              // .style("top", (d3.mouse(this)[1]) + "px")
+          }
+          var mouseleave = function(d) {
+            Tooltip
+              .style("opacity", 0)
+            d3.select(this)
+              .style("stroke", "none")
+              .style("opacity", 0.8)
+          }
+          //END TOOL TIP
 
           var force = self.force = d3.layout.force()
                 .nodes(json.nodes)
@@ -92,7 +128,10 @@
                 .attr("x", "-8px")
                 .attr("y", "-8px")
                 .attr("width", "16px")
-                .attr("height", "16px");
+                .attr("height", "16px")
+                .on("mouseover", mouseover) //START tool tip check on hover/etc.
+                .on("mousemove", mousemove)
+                .on("mouseleave", mouseleave);
 
             node.append("svg:text")
                 .attr("class", "nodetext")
@@ -111,43 +150,6 @@
               node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
             };
         });
-
-        //TOOL TIP
-        // create a tooltip
-        var Tooltip = d3.select("body")
-          .append("div")
-          .style("opacity", 0)
-          .attr("class", "tooltip")
-          .style("background-color", "white")
-          .style("border", "solid")
-          .style("border-width", "2px")
-          .style("border-radius", "5px")
-          .style("padding", "5px")
-
-        // Three function that change the tooltip when user hover / move / leave a cell
-        var mouseover = function(d) {
-          Tooltip
-            .style("opacity", 1)
-          d3.select(this)
-            .style("stroke", "black")
-            .style("opacity", 1)
-        }
-        var mousemove = function(d) {
-          Tooltip
-            .html("The exact value of<br>this cell is: " + d.value)
-            .style("left", "## px")
-            .style("top", "## px")
-            // .style("left", (d3.mouse(this)[0]+70) + "px")
-            // .style("top", (d3.mouse(this)[1]) + "px")
-        }
-        var mouseleave = function(d) {
-          Tooltip
-            .style("opacity", 0)
-          d3.select(this)
-            .style("stroke", "none")
-            .style("opacity", 0.8)
-        }
-        //END TOOL TIP
       </script>
   </body>
 
