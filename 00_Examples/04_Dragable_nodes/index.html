@@ -70,7 +70,15 @@ d3.json("graph.json", function(json) {
 
     node.append("svg:image")
         .attr("class", "circle")
-        .attr("xlink:href", "https://github.com/favicon.ico")
+        .attr("xlink:href", function (d){
+          var IconLink="https://github.com/favicon.ico";
+
+          if (d.name === "OldMan") {
+            IconLink="https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png";
+          }
+
+          return IconLink;
+        }) 
         .attr("x", "-8px")
         .attr("y", "-8px")
         .attr("width", "16px")
@@ -115,7 +123,8 @@ d3.json("graph.json", function(json) {
           // } else if (d === 10) { returnColor = "red"; }
 
           return IconLink;
-        }) -->
+        }) 
+      -->
 
 
 <!-- https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Akara-icon.png
