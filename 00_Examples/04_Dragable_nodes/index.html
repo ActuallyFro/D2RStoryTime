@@ -1,25 +1,25 @@
+<!-- http://bl.ocks.org/norrs/2883411 -->
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="https://d3js.org/d3.v7.js"></script>
+<script type="text/javascript" src="https://d3js.org/d3.v2.js"></script>
 <style type="text/css">
 .link { stroke: #ccc; }
 .nodetext { pointer-events: none; font: 10px sans-serif; }
 </style>
 </head>
 <body>
-  <h3>Diablo 2 - Act I</h3>
-
+<h3><a href="https://stackoverflow.com/questions/10899725/d3-js-force-directed-graph-with-support-for-drag-and-drop-to-make-selected-node">http://stackoverflow.com/questions/10899725/d3-js-force-directed-graph-with-support-for-drag-and-drop-to-make-selected-node</a></h3>
 <script type="text/javascript">
-var w = 1500,
-    h = 900
+
+var w = 960,
+    h = 500
 
 var vis = d3.select("body").append("svg:svg")
     .attr("width", w)
     .attr("height", h);
 
 d3.json("graph.json", function(json) {
-
     var force = self.force = d3.layout.force()
         .nodes(json.nodes)
         .links(json.links)
@@ -68,34 +68,13 @@ d3.json("graph.json", function(json) {
         .attr("class", "node")
         .call(node_drag);
 
-    
-    // .attr("xlink:href", "https://github.com/favicon.ico")
-
     node.append("svg:image")
         .attr("class", "circle")
-        .attr("xlink:href", function (d){
-        
-          var IconLink="https://github.com/favicon.ico";
-
-          if (d.name === "OldMan") {
-            IconLink="https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png";
-          }
-          //  else if (d === 20) { returnColor = "purple";
-          // } else if (d === 10) { returnColor = "red"; }
-
-          //"https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png"
-
-          return IconLink;
-        })
+        .attr("xlink:href", "https://github.com/favicon.ico")
         .attr("x", "-8px")
         .attr("y", "-8px")
         .attr("width", "16px")
         .attr("height", "16px");
-
-        //Leverage anonymous Functions:
-        //IF: "name":"OldMan"
-        //.attr("fill", "rgb(12,45,200)") // FAILS
-
 
     node.append("svg:text")
         .attr("class", "nodetext")
@@ -120,6 +99,23 @@ d3.json("graph.json", function(json) {
 </script>
 </body>
 </html>
+
+
+
+
+<!-- 
+        .attr("xlink:href", function (d){
+        
+          var IconLink="https://github.com/favicon.ico";
+
+          if (d.name === "OldMan") {
+            IconLink="https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png";
+          }
+          //  else if (d === 20) { returnColor = "purple";
+          // } else if (d === 10) { returnColor = "red"; }
+
+          return IconLink;
+        }) -->
 
 
 <!-- https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Akara-icon.png
