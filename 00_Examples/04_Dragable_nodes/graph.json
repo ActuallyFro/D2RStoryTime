@@ -1,107 +1,29 @@
 {
-  "directed": false,
-  "graph": {
-      "edge_default": {
-          "value": 1.0
-      },
-      "node_default": {}
-  },
-  "links": [
-      {
-          "source": "0",
-          "target": "2"
-      },
-      {
-          "source": "1",
-          "target": "2"
-      },
-      {
-          "source": "2",
-          "target": "3"
-      },
-      {
-          "source": "3",
-          "target": "5"
-      },
-      {
-          "source": "3",
-          "target": "4"
-      },
-      {
-          "source": "4",
-          "target": "6"
-      },
-      {
-          "source": "5",
-          "target": "6"
-      },
-      {
-          "source": "5",
-          "target": "7"
-      },
-      {
-          "source": "6",
-          "target": "8"
-      },
-      {
-          "source": "7",
-          "target": "8"
-      },
-      {
-          "source": "8",
-          "target": "9"
-      },
-      {
-          "source": "8",
-          "target": "10"
-      }
-  ],
-  "multigraph": false,
   "nodes": [
-      {
-          "group": 2,
-          "id": "0",
-          "name": "OldMan"
-      },
-      {
-          "group": 2,
-          "id": "1"
-      },
-      {
-          "group": 2,
-          "id": "2"
-      },
-      {
-          "group": 1,
-          "id": "3"
-      },
-      {
-          "group": 1,
-          "id": "4"
-      },
-      {
-          "group": 1,
-          "id": "5"
-      },
-      {
-          "group": 1,
-          "id": "6"
-      },
-      {
-          "group": 0,
-          "id": "7"
-      },
-      {
-          "group": 0,
-          "id": "8"
-      },
-      {
-          "group": 0,
-          "id": "9"
-      },
-      {
-          "group": 0,
-          "id": "10"
-      }
+      {"group": 2,"id": "0","name": "OldMan"},
+      {"group": 2,"id": "1","name": "Man"},
+      {"group": 2,"id": "2","name": "Man"},
+      {"group": 1,"id": "3","name": "Man"},
+      {"group": 1,"id": "4","name": "Man"},
+      {"group": 1,"id": "5","name": "Man"},
+      {"group": 1,"id": "6","name": "Man"},
+      {"group": 0,"id": "7","name": "Man"},
+      {"group": 0,"id": "8","name": "Man"},
+      {"group": 0,"id": "9","name": "Man"},
+      {"group": 0,"id": "10","name": "Man"}
+  ],
+  "links": [
+     {"source": "0","target": "2","value":2},
+     {"source": "1","target": "2","value":3},
+     {"source": "2","target": "3","value":1},
+     {"source": "3","target": "5","value":7},
+     {"source": "3","target": "4","value":8},
+     {"source": "4","target": "6","value":1},
+     {"source": "5","target": "6","value":6},
+     {"source": "5","target": "7","value":1},
+     {"source": "6","target": "8","value":3},
+     {"source": "7","target": "8","value":1},
+     {"source": "8","target": "9","value":15},
+     {"source": "8","target": "10","value":1}
   ]
 }
