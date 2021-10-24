@@ -12,8 +12,8 @@
 <h3><a href="https://stackoverflow.com/questions/10899725/d3-js-force-directed-graph-with-support-for-drag-and-drop-to-make-selected-node">http://stackoverflow.com/questions/10899725/d3-js-force-directed-graph-with-support-for-drag-and-drop-to-make-selected-node</a></h3>
 <script type="text/javascript">
 
-var w = 960,
-    h = 500
+var w = 1500,
+    h = 900
 
 
 var vis = d3.select("body").append("svg:svg")
@@ -30,6 +30,43 @@ d3.json("graph.json", function(json) {
       d.source = nodeByName.get(d.source);
       d.target = nodeByName.get(d.target);
   });
+
+
+//TOOL TIP
+// create a tooltip
+// var Tooltip = d3.select("#div_template")
+//     .append("div")
+//     .style("opacity", 0)
+//     .attr("class", "tooltip")
+//     .style("background-color", "white")
+//     .style("border", "solid")
+//     .style("border-width", "2px")
+//     .style("border-radius", "5px")
+//     .style("padding", "5px")
+
+//   // Three function that change the tooltip when user hover / move / leave a cell
+//   var mouseover = function(d) {
+//     Tooltip
+//       .style("opacity", 1)
+//     d3.select(this)
+//       .style("stroke", "black")
+//       .style("opacity", 1)
+//   }
+//   var mousemove = function(d) {
+//     Tooltip
+//       .html("The exact value of<br>this cell is: " + d.value)
+//       .style("left", (d3.mouse(this)[0]+70) + "px")
+//       .style("top", (d3.mouse(this)[1]) + "px")
+//   }
+//   var mouseleave = function(d) {
+//     Tooltip
+//       .style("opacity", 0)
+//     d3.select(this)
+//       .style("stroke", "none")
+//       .style("opacity", 0.8)
+//   }
+
+//END TOOL TIP
 
   var force = self.force = d3.layout.force()
         .nodes(json.nodes)
