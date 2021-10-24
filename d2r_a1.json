@@ -20,9 +20,19 @@
             "target": "8"
         },
         {
+            "id": "Link Warriv to DW (knew he went through)",
+            "source": "1",
+            "target": "5"
+        },
+        {
             "id": "Link Andy to Diablo",
             "source": "0",
             "target": "9"
+        },
+        {
+            "id": "Link Warriv to Diablo (Rumors walking Earth)",
+            "source": "0",
+            "target": "5"
         },
         {
             "id": "Link Akara to Rogue Encampment",
@@ -53,6 +63,21 @@
             "id": "Link Andy to Rogue Encampment",
             "source": "8",
             "target": "9"
+        },
+        {
+            "id": "Link Warriv to Akara (told you to talk to her)",
+            "source": "3",
+            "target": "5"
+        },
+        {
+            "id": "Link Warriv to Tristram (Knows of Tragedy)",
+            "source": "5",
+            "target": "10"
+        },
+        {
+            "id": "Link Warriv to Rogue Monastery (knows pass is blocked)",
+            "source": "5",
+            "target": "11"
         }
     ],
     "multigraph": false,
@@ -89,6 +114,7 @@
             "name": "Gheed"
         },
         {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Knows of Tragedy of Tristram</li>\n          <li>Rumors of Diablo walking around</li>\n          <li>KNEW of Dark Wanderer</li>\n          <li>DW Headed to Rogue Monastery</li>\n          <li>Pass is closed monsters started showing up</li>\n          <li>Jokes about you dying</li>\n          <li>Reccomends talking to Akara as leader</li>          \n        </ul>\n\n        <p>Source: Introduction Speech</p>\n        ",
             "group": 5,
             "id": "Warriv",
             "idLink": 5,
@@ -120,40 +146,60 @@
             "name": "Andariel"
         },
         {
+            "group": 10,
+            "id": "Tristram",
+            "idLink": 10,
+            "name": "Tristram"
+        },
+        {
             "group": 11,
+            "id": "Rogue Monastery",
+            "idLink": 11,
+            "name": "Rogue Monastery"
+        },
+        {
+            "group": 13,
             "id": "1"
         },
         {
-            "group": 11,
+            "group": 13,
             "id": "0"
         },
         {
-            "group": 10,
+            "group": 14,
             "id": "8"
         },
         {
-            "group": 10,
+            "group": 12,
             "id": "3"
         },
         {
-            "group": 10,
+            "group": 14,
             "id": "4"
         },
         {
-            "group": 10,
+            "group": 12,
             "id": "5"
         },
         {
-            "group": 10,
+            "group": 14,
             "id": "6"
         },
         {
-            "group": 10,
+            "group": 14,
             "id": "7"
         },
         {
-            "group": 11,
+            "group": 13,
             "id": "9"
+        },
+        {
+            "group": 12,
+            "id": "10"
+        },
+        {
+            "group": 12,
+            "id": "11"
         }
     ]
 }

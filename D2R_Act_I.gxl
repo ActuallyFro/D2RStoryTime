@@ -52,6 +52,21 @@
     <node id="Warriv">
       <data key="nameNode">Warriv</data>
       <data key="idLinkNode">5</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>Knows of Tragedy of Tristram</li>
+          <li>Rumors of Diablo walking around</li>
+          <li>KNEW of Dark Wanderer</li>
+          <li>DW Headed to Rogue Monastery</li>
+          <li>Pass is closed monsters started showing up</li>
+          <li>Jokes about you dying</li>
+          <li>Reccomends talking to Akara as leader</li>          
+        </ul>
+
+        <p>Source: Introduction Speech</p>
+        ]]></data>
+
+
     </node>
 
     <node id="Charsi">
@@ -68,7 +83,7 @@
       <data key="nameNode">Rogue Encampment</data>
       <data key="idLinkNode">8</data>
     </node>
- 
+
      <node id="boss_01_Andariel"> 
       <data key="nameNode">Andariel</data>
       <data key="idLinkNode">9</data>
@@ -84,7 +99,18 @@
         ]]></data>
     </node>
  
+    <node id="Tristram">
+      <data key="nameNode">Tristram</data>
+      <data key="idLinkNode">10</data>
+    </node>
+
+    <node id="Rogue Monastery">
+      <data key="nameNode">Rogue Monastery</data>
+      <data key="idLinkNode">11</data>
+    </node>
+
   <!-- Edges -->
+    <!-- Setup before streaming -->
     <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
     <edge id="Link Dark Wanderer to Rogue Encampment" source="1" target="8"/>
     <edge id="Link Akara to Rogue Encampment" source="3" target="8"/>
@@ -95,8 +121,16 @@
     <edge id="Link Andy to Diablo" source="9" target="0"/>
     <edge id="Link Andy to Rogue Encampment" source="9" target="8"/>
 
+    <!-- Warriv Intro -->
+    <edge id="Link Warriv to Tristram (Knows of Tragedy)" source="5" target="10"/>
+    <edge id="Link Warriv to Rogue Monastery (knows pass is blocked)" source="5" target="11"/>
+    <edge id="Link Warriv to Diablo (Rumors walking Earth)" source="5" target="0"/>
+    <edge id="Link Warriv to DW (knew he went through)" source="5" target="1"/>
+    <edge id="Link Warriv to Akara (told you to talk to her)" source="5" target="3"/>
+
   </graph>
 </graphml>
+
 
 <!-- <edge id="Link Cain to Rogue Encampment" source="2" target="8"/> -->
 
