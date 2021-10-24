@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +7,7 @@
   <title>D3 Radial Graph Visualization Demo</title>
 
   <!-- JavaScript Libraries //-->
-  <script src="d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 
   <!-- CSS Style //-->
   <link href="style.css" rel="stylesheet" type="text/css">
@@ -14,13 +15,12 @@
 
 <body>
   <div id="option">
-    <input name="button0" type="button" class="button" value="Lesmis" onclick="read_json('data.json')" />
-    <input name="button1" type="button" class="button" value="Karate" onclick="read_json('data.json')" />
-    <input name="button2" type="button" class="button" value="AdjNoun" onclick="read_json('data.json')" />
+    <input name="button0" type="button" class="button" value="Lesmis" onclick="read_json('lesmis.json')" />
+    <input name="button1" type="button" class="button" value="Karate" onclick="read_json('karate.json')" />
+    <input name="button2" type="button" class="button" value="AdjNoun" onclick="read_json('adjnoun.json')" />
   </div>
   Compare this to the <a href="index.html">force directed graph layout</a>.
   <div align="center" id="circle"></div>
-
   <script src="script_radial.js"></script>
 
 </body>
