@@ -92,6 +92,8 @@
     <edge id="Link Warriv to Rogue Encampment" source="5" target="8"/>
     <edge id="Link Charsi to Rogue Encampment" source="6" target="8"/>
     <edge id="Link Kashya to Rogue Encampment" source="7" target="8"/>
+    <edge id="Link Andy to Diablo" source="9" target="0"/>
+    <edge id="Link Andy to Rogue Encampment" source="9" target="8"/>
 
   </graph>
 </graphml>
