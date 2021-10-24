@@ -1,4 +1,64 @@
 {
+  "directed": false,
+  "graph": {
+      "edge_default": {
+          "value": 1.0
+      },
+      "node_default": {
+          "name": "NaN"
+      }
+  },
+  "links": [
+      {
+          "source": "n0",
+          "target": "n2"
+      },
+      {
+          "source": "n1",
+          "target": "n2"
+      },
+      {
+          "source": "n2",
+          "target": "n3"
+      },
+      {
+          "source": "n3",
+          "target": "n5"
+      },
+      {
+          "source": "n3",
+          "target": "n4"
+      },
+      {
+          "source": "n4",
+          "target": "n6"
+      },
+      {
+          "source": "n5",
+          "target": "n6"
+      },
+      {
+          "source": "n5",
+          "target": "n7"
+      },
+      {
+          "source": "n6",
+          "target": "n8"
+      },
+      {
+          "source": "n7",
+          "target": "n8"
+      },
+      {
+          "source": "n8",
+          "target": "n9"
+      },
+      {
+          "source": "n8",
+          "target": "n10"
+      }
+  ],
+  "multigraph": false,
   "nodes": [
       {
           "group": 2,
@@ -7,94 +67,53 @@
       },
       {
           "group": 2,
-          "id": "n1"
+          "id": "n1",
+          "name": "Man"
       },
       {
           "group": 2,
-          "id": "n2"
+          "id": "n2",
+          "name": "Man"
       },
       {
           "group": 1,
-          "id": "n3"
+          "id": "n3",
+          "name": "Man"
       },
       {
           "group": 1,
-          "id": "n4"
+          "id": "n4",
+          "name": "Man"
       },
       {
           "group": 1,
-          "id": "n5"
+          "id": "n5",
+          "name": "Man"
       },
       {
           "group": 1,
-          "id": "n6"
+          "id": "n6",
+          "name": "Man"
       },
       {
           "group": 0,
-          "id": "n7"
+          "id": "n7",
+          "name": "Man"
       },
       {
           "group": 0,
-          "id": "n8"
+          "id": "n8",
+          "name": "Man"
       },
       {
           "group": 0,
-          "id": "n9"
+          "id": "n9",
+          "name": "Man"
       },
       {
           "group": 0,
-          "id": "n10"
+          "id": "n10",
+          "name": "Man"
       }
-  ],
-
-  "links": [
-    {
-        "source": "n0",
-        "target": "n2"
-    },
-    {
-        "source": "n1",
-        "target": "n2"
-    },
-    {
-        "source": "n2",
-        "target": "n3"
-    },
-    {
-        "source": "n3",
-        "target": "n5"
-    },
-    {
-        "source": "n3",
-        "target": "n4"
-    },
-    {
-        "source": "n4",
-        "target": "n6"
-    },
-    {
-        "source": "n5",
-        "target": "n6"
-    },
-    {
-        "source": "n5",
-        "target": "n7"
-    },
-    {
-        "source": "n6",
-        "target": "n8"
-    },
-    {
-        "source": "n7",
-        "target": "n8"
-    },
-    {
-        "source": "n8",
-        "target": "n9"
-    },
-    {
-        "source": "n8",
-        "target": "n10"
-    }
-  ]  
+  ]
 }

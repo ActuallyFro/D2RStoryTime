@@ -21,16 +21,36 @@
     <node id="n0">
       <data key="nameNode">OldMan</data>
     </node>
-    <node id="n1"/>
-    <node id="n2"/>
-    <node id="n3"/>
-    <node id="n4"/>
-    <node id="n5"/>
-    <node id="n6"/>
-    <node id="n7"/>
-    <node id="n8"/>
-    <node id="n9"/>
-    <node id="n10"/>
+    <node id="n1">
+      <data key="nameNode">Man</data>
+    </node>
+    <node id="n2">
+      <data key="nameNode">Man</data>
+    </node>
+    <node id="n3">
+      <data key="nameNode">Man</data>
+    </node>
+    <node id="n4">
+      <data key="nameNode">Man</data>
+    </node>
+    <node id="n5">
+      <data key="nameNode">Man</data>
+    </node>
+    <node id="n6">
+      <data key="nameNode">Man</data>
+    </node>
+    <node id="n7">
+      <data key="nameNode">Man</data>
+    </node>
+    <node id="n8">
+      <data key="nameNode">Man</data>
+    </node>
+    <node id="n9">
+      <data key="nameNode">Man</data>
+    </node>
+    <node id="n10">
+      <data key="nameNode">Man</data>
+    </node>
 
     <edge source="n0" target="n2"/>
     <edge source="n1" target="n2"/>
