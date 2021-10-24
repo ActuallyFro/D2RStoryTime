@@ -1,9 +1,7 @@
 {
     "directed": false,
     "graph": {
-        "edge_default": {
-            "value": 1.0
-        },
+        "edge_default": {},
         "node_default": {
             "name": "NaN"
         }
@@ -63,18 +61,19 @@
         {
             "group": 2,
             "id": "0",
-            "name": "OldMan"
+            "name": "Diablo"
         },
         {
             "group": 2,
-            "id": "1"
+            "id": "1",
+            "name": "Dark Wanderer"
         },
         {
             "group": 2,
             "id": "2"
         },
         {
-            "group": 1,
+            "group": 2,
             "id": "3"
         },
         {
@@ -82,7 +81,7 @@
             "id": "4"
         },
         {
-            "group": 1,
+            "group": 3,
             "id": "5"
         },
         {
@@ -90,7 +89,7 @@
             "id": "6"
         },
         {
-            "group": 0,
+            "group": 3,
             "id": "7"
         },
         {
