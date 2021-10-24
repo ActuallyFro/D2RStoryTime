@@ -80,9 +80,14 @@
             "target": "11"
         },
         {
-            "id": "Link Warriv's Gossip Notes",
+            "id": "Link Warriv's Gossip",
             "source": "5",
             "target": "12"
+        },
+        {
+            "id": "Link Warriv's Gossip 1",
+            "source": "12",
+            "target": "13"
         }
     ],
     "multigraph": false,
@@ -163,59 +168,70 @@
             "name": "Rogue Monastery"
         },
         {
-            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Knows Kaysha is Rogue Leader</li>\n          <li>Knows she does not like outsiders</li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
+            "description": "\n        <p>All related Gossip will be posted here</p>\n        ",
             "group": 12,
             "id": "Warriv Gossip",
             "idLink": 12,
+            "name": "Gossip"
+        },
+        {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Knows Kaysha is Rogue Leader</li>\n          <li>Knows she does not like outsiders</li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
+            "group": 13,
+            "id": "Warriv Gossip 1",
+            "idLink": 13,
             "name": "Gossip 1"
         },
         {
-            "group": 14,
+            "group": 15,
             "id": "1"
         },
         {
-            "group": 14,
+            "group": 15,
             "id": "0"
         },
         {
-            "group": 15,
+            "group": 16,
             "id": "8"
         },
         {
-            "group": 13,
+            "group": 14,
             "id": "3"
         },
         {
-            "group": 15,
+            "group": 16,
             "id": "4"
         },
         {
-            "group": 13,
+            "group": 14,
             "id": "5"
         },
         {
-            "group": 15,
+            "group": 16,
             "id": "6"
         },
         {
-            "group": 15,
+            "group": 16,
             "id": "7"
         },
         {
-            "group": 14,
+            "group": 15,
             "id": "9"
         },
         {
-            "group": 13,
+            "group": 14,
             "id": "10"
         },
         {
-            "group": 13,
+            "group": 14,
             "id": "11"
         },
         {
-            "group": 13,
+            "group": 17,
             "id": "12"
+        },
+        {
+            "group": 17,
+            "id": "13"
         }
     ]
 }

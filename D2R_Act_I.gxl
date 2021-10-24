@@ -111,8 +111,16 @@
 
 
     <node id="Warriv Gossip">
-      <data key="nameNode">Gossip 1</data>
+      <data key="nameNode">Gossip</data>
       <data key="idLinkNode">12</data>
+      <data key="descriptionNode"><![CDATA[
+        <p>All related Gossip will be posted here</p>
+        ]]></data>
+    </node>
+
+    <node id="Warriv Gossip 1">
+      <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">13</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>Knows Kaysha is Rogue Leader</li>
@@ -143,7 +151,8 @@
     <edge id="Link Warriv to Akara (told you to talk to her)" source="5" target="3"/>
 
     <!-- Warriv Gossip -->
-    <edge id="Link Warriv's Gossip Notes" source="5" target="12"/>
+    <edge id="Link Warriv's Gossip" source="5" target="12"/>
+    <edge id="Link Warriv's Gossip 1" source="13" target="12"/>
 
   </graph>
 </graphml>
