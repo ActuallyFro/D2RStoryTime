@@ -8,8 +8,7 @@
 </style>
 </head>
 <body>
-<h3>Diablo 2 - Act I</h3>
-
+  <h3>Diablo 2 - Act I</h3>
 
 <script type="text/javascript">
 var w = 1500,
@@ -69,8 +68,61 @@ d3.json("graph.json", function(json) {
         .attr("class", "node")
         .call(node_drag);
 
-    /*
-    https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Akara-icon.png
+    
+    // .attr("xlink:href", "https://github.com/favicon.ico")
+
+    node.append("svg:image")
+        .attr("class", "circle")
+        .attr("xlink:href", function (d){
+        
+          var IconLink="https://github.com/favicon.ico";
+
+          if (d.name === "OldMan") {
+            IconLink="https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png";
+          }
+          //  else if (d === 20) { returnColor = "purple";
+          // } else if (d === 10) { returnColor = "red"; }
+
+          //"https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png"
+
+          return IconLink;
+        })
+        .attr("x", "-8px")
+        .attr("y", "-8px")
+        .attr("width", "16px")
+        .attr("height", "16px");
+
+        //Leverage anonymous Functions:
+        //IF: "name":"OldMan"
+        //.attr("fill", "rgb(12,45,200)") // FAILS
+
+
+    node.append("svg:text")
+        .attr("class", "nodetext")
+        .attr("dx", 12)
+        .attr("dy", ".35em")
+        .text(function(d) { return d.name });
+
+    force.on("tick", tick);
+
+    function tick() {
+      link.attr("x1", function(d) { return d.source.x; })
+          .attr("y1", function(d) { return d.source.y; })
+          .attr("x2", function(d) { return d.target.x; })
+          .attr("y2", function(d) { return d.target.y; });
+
+      node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    };
+
+
+});
+
+</script>
+</body>
+</html>
+
+
+<!-- https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Akara-icon.png
 https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Full-Rejuvenation-icon.png
 https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Flavie-icon.png
 https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Barbarian-icon.png
@@ -151,57 +203,5 @@ https://static.wikia.nocookie.net/diablo_gamepedia/images/e/e8/Tools_of_the_Trad
 
 --CO PIOLOT: https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Valeera-icon.png
 --https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Vault-Guard-icon.png
+ -->
 
-    */
-
-    node.append("svg:image")
-        .attr("class", "circle")
-        // .attr("xlink:href", "https://github.com/favicon.ico")
-        .attr("xlink:href", function (d){
-        
-          var IconLink="https://github.com/favicon.ico";
-
-          if (d.name === "OldMan") {
-            IconLink = "https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png";
-          }
-          //  else if (d === 20) { returnColor = "purple";
-          // } else if (d === 10) { returnColor = "red"; }
-
-          //"https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png"
-
-          return IconLink;
-        })
-
-//Leverage anonymous Functions:
-//IF: "name":"OldMan"
-
-
-        //.attr("fill", "rgb(12,45,200)") // FAILS
-        .attr("x", "-8px")
-        .attr("y", "-8px")
-        .attr("width", "16px")
-        .attr("height", "16px");
-
-    node.append("svg:text")
-        .attr("class", "nodetext")
-        .attr("dx", 12)
-        .attr("dy", ".35em")
-        .text(function(d) { return d.name });
-
-    force.on("tick", tick);
-
-    function tick() {
-      link.attr("x1", function(d) { return d.source.x; })
-          .attr("y1", function(d) { return d.source.y; })
-          .attr("x2", function(d) { return d.target.x; })
-          .attr("y2", function(d) { return d.target.y; });
-
-      node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-    };
-
-
-});
-
-</script>
-</body>
-</html>
