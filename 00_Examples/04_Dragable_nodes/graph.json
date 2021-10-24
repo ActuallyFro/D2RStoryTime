@@ -1,13 +1,16 @@
 {
   "directed": false,
   "graph": {
-      "edge_default": {},
-      "node_default": {}
+      "edge_default": {
+          "value": 1.0
+      },
+      "node_default": {
+          "name": "NaN"
+      }
   },
   "links": [
       {
           "source": "n0",
-          "JUNK NOTE": "OLDFORMAT:    {\"source\":1,\"target\":0,\"value\":1},",
           "target": "n2"
       },
       {

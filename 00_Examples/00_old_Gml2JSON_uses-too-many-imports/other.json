@@ -1,8 +1,12 @@
 {
     "directed": false,
     "graph": {
-        "edge_default": {},
-        "node_default": {}
+        "edge_default": {
+            "value": 1.0
+        },
+        "node_default": {
+            "name": "NaN"
+        }
     },
     "links": [
         {
@@ -70,7 +74,7 @@
             "id": "n2"
         },
         {
-            "group": 2,
+            "group": 1,
             "id": "n3"
         },
         {
@@ -78,7 +82,7 @@
             "id": "n4"
         },
         {
-            "group": 3,
+            "group": 1,
             "id": "n5"
         },
         {
@@ -86,7 +90,7 @@
             "id": "n6"
         },
         {
-            "group": 3,
+            "group": 0,
             "id": "n7"
         },
         {
