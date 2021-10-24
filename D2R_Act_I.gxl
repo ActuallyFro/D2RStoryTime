@@ -17,14 +17,15 @@
       <data key="idLinkNode">0</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
-            <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>
-            <li>Corrupted both King Leoric and his archbishop, Lazarus</li>
-            <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>
-            <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>
-            <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>
-          </ul>
+          <li>Prime Evil: Lord of Terror</li>
+          <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>
+          <li>Corrupted both King Leoric and his archbishop, Lazarus</li>
+          <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>
+          <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>
+          <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>
+        </ul>
 
-          <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>
+        <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>
         ]]></data>
     </node>
 
@@ -68,6 +69,20 @@
       <data key="idLinkNode">8</data>
     </node>
  
+     <node id="boss_01_Andariel"> 
+      <data key="nameNode">Andariel</data>
+      <data key="idLinkNode">9</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>Lessor Evil: Maiden of Anguish</li>
+          <li>Once overthrew the three Prime Evils</li>
+          <li>Presence in Sanctuary implies: forces of Hell are once again aligned behind Diablo and his Brothers</li>
+          <li>Acting on behalf of Diablo to prevent anyone from following him eastward</li>
+          </ul>
+
+          <p>Source: http://classic.battle.net/diablo2exp/monsters/act1-andariel.shtml</p>
+        ]]></data>
+    </node>
  
   <!-- Edges -->
     <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
