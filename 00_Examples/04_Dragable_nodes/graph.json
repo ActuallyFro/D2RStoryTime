@@ -1,64 +1,4 @@
 {
-  "directed": false,
-  "graph": {
-      "edge_default": {
-          "value": 1.0
-      },
-      "node_default": {
-          "name": "NaN"
-      }
-  },
-  "links": [
-      {
-          "source": "n0",
-          "target": "n2"
-      },
-      {
-          "source": "n1",
-          "target": "n2"
-      },
-      {
-          "source": "n2",
-          "target": "n3"
-      },
-      {
-          "source": "n3",
-          "target": "n5"
-      },
-      {
-          "source": "n3",
-          "target": "n4"
-      },
-      {
-          "source": "n4",
-          "target": "n6"
-      },
-      {
-          "source": "n5",
-          "target": "n6"
-      },
-      {
-          "source": "n5",
-          "target": "n7"
-      },
-      {
-          "source": "n6",
-          "target": "n8"
-      },
-      {
-          "source": "n7",
-          "target": "n8"
-      },
-      {
-          "source": "n8",
-          "target": "n9"
-      },
-      {
-          "source": "n8",
-          "target": "n10"
-      }
-  ],
-  "multigraph": false,
   "nodes": [
       {
           "group": 0,
@@ -105,5 +45,55 @@
           "group": 2,
           "id": "n10"
       }
+  ],
+  "links": [
+    {
+        "source": "n0",
+        "target": "n2"
+    },
+    {
+        "source": "n1",
+        "target": "n2"
+    },
+    {
+        "source": "n2",
+        "target": "n3"
+    },
+    {
+        "source": "n3",
+        "target": "n5"
+    },
+    {
+        "source": "n3",
+        "target": "n4"
+    },
+    {
+        "source": "n4",
+        "target": "n6"
+    },
+    {
+        "source": "n5",
+        "target": "n6"
+    },
+    {
+        "source": "n5",
+        "target": "n7"
+    },
+    {
+        "source": "n6",
+        "target": "n8"
+    },
+    {
+        "source": "n7",
+        "target": "n8"
+    },
+    {
+        "source": "n8",
+        "target": "n9"
+    },
+    {
+        "source": "n8",
+        "target": "n10"
+    }
   ]
 }
