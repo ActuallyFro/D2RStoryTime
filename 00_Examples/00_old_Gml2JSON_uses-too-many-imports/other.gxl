@@ -5,7 +5,7 @@
      http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
 
   <!-- Attribute Keys -->
-  <key attr.name="name" attr.type="string" for="ode" id="nameNode"><default>NaN</default></key>
+  <key attr.name="name" attr.type="string" for="node" id="nameNode"><default>NaN</default></key>
   <key attr.name="value" attr.type="float" for="edge" id="valEdge"><default>1.0</default></key>
 
   <!-- <key attr.name="url" attr.type="string" for="ode" id="d1"/>

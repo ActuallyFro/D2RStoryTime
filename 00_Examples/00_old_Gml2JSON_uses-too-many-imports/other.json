@@ -4,7 +4,9 @@
         "edge_default": {
             "value": 1.0
         },
-        "node_default": {}
+        "node_default": {
+            "name": "NaN"
+        }
     },
     "links": [
         {
@@ -72,7 +74,7 @@
             "id": "2"
         },
         {
-            "group": 0,
+            "group": 2,
             "id": "3"
         },
         {
@@ -80,7 +82,7 @@
             "id": "4"
         },
         {
-            "group": 3,
+            "group": 2,
             "id": "5"
         },
         {
@@ -88,7 +90,7 @@
             "id": "6"
         },
         {
-            "group": 3,
+            "group": 2,
             "id": "7"
         },
         {
