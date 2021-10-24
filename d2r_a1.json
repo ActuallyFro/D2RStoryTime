@@ -14,33 +14,33 @@
             "target": "0"
         },
         {
-            "id": "self ref to generate",
-            "source": "2",
-            "target": "2"
+            "id": "Link Dark Wanderer to Rogue Encampment",
+            "source": "1",
+            "target": "8"
         },
         {
-            "id": "self ref to generate",
-            "source": "3",
+            "id": "Link Akara to Rogue Encampment",
+            "source": "8",
             "target": "3"
         },
         {
-            "id": "self ref to generate",
-            "source": "4",
+            "id": "Link Gheed to Rogue Encampment",
+            "source": "8",
             "target": "4"
         },
         {
-            "id": "self ref to generate",
-            "source": "5",
+            "id": "Link Warriv to Rogue Encampment",
+            "source": "8",
             "target": "5"
         },
         {
-            "id": "self ref to generate",
-            "source": "6",
+            "id": "Link Charsi to Rogue Encampment",
+            "source": "8",
             "target": "6"
         },
         {
-            "id": "self ref to generate",
-            "source": "7",
+            "id": "Link Kashya to Rogue Encampment",
+            "source": "8",
             "target": "7"
         }
     ],
@@ -95,6 +95,12 @@
             "name": "Kashya"
         },
         {
+            "group": 8,
+            "id": "Rogue Encampment",
+            "idLink": 8,
+            "name": "Rogue Encampment"
+        },
+        {
             "group": 9,
             "id": "1"
         },
@@ -104,26 +110,26 @@
         },
         {
             "group": 10,
-            "id": "2"
+            "id": "8"
         },
         {
-            "group": 11,
+            "group": 10,
             "id": "3"
         },
         {
-            "group": 12,
+            "group": 10,
             "id": "4"
         },
         {
-            "group": 13,
+            "group": 10,
             "id": "5"
         },
         {
-            "group": 14,
+            "group": 10,
             "id": "6"
         },
         {
-            "group": 8,
+            "group": 10,
             "id": "7"
         }
     ]

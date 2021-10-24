@@ -50,15 +50,23 @@
       <data key="nameNode">Kashya</data>
       <data key="idLinkNode">7</data>
     </node>
+
+    <node id="Rogue Encampment">
+      <data key="nameNode">Rogue Encampment</data>
+      <data key="idLinkNode">8</data>
+    </node>
+ 
  
   <!-- Edges -->
     <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
-    <edge id="self ref to generate" source="2" target="2"/>
-    <edge id="self ref to generate" source="3" target="3"/>
-    <edge id="self ref to generate" source="4" target="4"/>
-    <edge id="self ref to generate" source="5" target="5"/>
-    <edge id="self ref to generate" source="6" target="6"/>
-    <edge id="self ref to generate" source="7" target="7"/>
+    <edge id="Link Dark Wanderer to Rogue Encampment" source="1" target="8"/>
+    <edge id="Link Akara to Rogue Encampment" source="3" target="8"/>
+    <edge id="Link Gheed to Rogue Encampment" source="4" target="8"/>
+    <edge id="Link Warriv to Rogue Encampment" source="5" target="8"/>
+    <edge id="Link Charsi to Rogue Encampment" source="6" target="8"/>
+    <edge id="Link Kashya to Rogue Encampment" source="7" target="8"/>
 
   </graph>
 </graphml>
+
+<!-- <edge id="Link Cain to Rogue Encampment" source="2" target="8"/> -->
