@@ -3,14 +3,15 @@
     "graph": {
         "edge_default": {},
         "node_default": {
+            "idLink": 0,
             "name": "NaN"
         }
     },
     "links": [
         {
-            "id": "Link Darkwander to Diablo",
-            "source": "boss_04_Diablo",
-            "target": "npc_D1_DarkWander"
+            "id": "Link Dark Wanderer to Diablo",
+            "source": "1",
+            "target": "0"
         }
     ],
     "multigraph": false,
@@ -18,11 +19,13 @@
         {
             "group": 0,
             "id": "boss_04_Diablo",
+            "idLink": 0,
             "name": "Diablo"
         },
         {
-            "group": 0,
+            "group": 1,
             "id": "npc_D1_DarkWander",
+            "idLink": 1,
             "name": "Dark Wanderer"
         },
         {
@@ -46,8 +49,16 @@
             "id": "Charsi"
         },
         {
-            "group": 1,
+            "group": 7,
             "id": "Kashya"
+        },
+        {
+            "group": 8,
+            "id": "1"
+        },
+        {
+            "group": 8,
+            "id": "0"
         }
     ]
 }

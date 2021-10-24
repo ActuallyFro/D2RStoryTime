@@ -6,16 +6,19 @@
 
   <!-- Attribute Keys -->
   <key attr.name="name" attr.type="string" for="node" id="nameNode"><default>NaN</default></key>
+  <key attr.name="idLink" attr.type="int" for="node" id="idLinkNode"><default>0</default></key>
 
   <graph id="G" edgedefault="undirected">
 
   <!-- Nodes -->
-    <node id="boss_04_Diablo">
+    <node id="boss_04_Diablo"> 
       <data key="nameNode">Diablo</data>
+      <data key="idLinkNode">0</data>
     </node>
 
     <node id="npc_D1_DarkWander">
       <data key="nameNode">Dark Wanderer</data>
+      <data key="idLinkNode">1</data>
     </node>
 
     <node id="Cain">
@@ -43,7 +46,7 @@
     </node>
  
   <!-- Edges -->
-    <edge id="Link Darkwander to Diablo" source="npc_D1_DarkWander" target="boss_04_Diablo"/>
+    <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
 
   </graph>
 </graphml>
