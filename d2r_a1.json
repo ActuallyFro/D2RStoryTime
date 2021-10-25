@@ -202,6 +202,7 @@
             "name": "Cain"
         },
         {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>High Priestess of the Sisterhood of the Sightless Eye</li>\n          <li>Offers poor shelter within rickety walls</li>\n          <li>Sisterhood is under a strange curse</li>\n          <li>Their mighty Citadel (the Monastery) has been corrupted by Andariel\n            <ul>\n              <li>- - Andy corrupted the sisters and drove the survivors out</li>\n              <li>Last defenders are scattered or dead</li>\n            </ul>\n          </li>\n          <li>Offers pledge of loyalty forever if we help lift the curse</li>\n        </ul>\n\n        <p>Source: Introduction Speech</p>\n        ",
             "group": 3,
             "id": "Akara",
             "idLink": 3,
@@ -324,7 +325,7 @@
             "name": "Gossip 1"
         },
         {
-            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li></li>\n        </ul>\n        \n        <p>Source: First Gossip</p>\n        ",
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Knows Kaysha is fiercly loyal\n          <li>- - Thinks anger and frustration will lead her into harms way\n          <li>- Highly protective of the Rogues that are left\n          <li>- - will not send the rouges out unless there is a dire need \n\n          <li>- GitHub COPILOT SAYS: Knows Charsi is a very nice lady \n          \n          </li>\n        </ul>\n        \n        <p>Source: First Gossip</p>\n        ",
             "group": 21,
             "id": "Akara Gossip 1",
             "idLink": 21,
@@ -339,7 +340,7 @@
             "id": "0"
         },
         {
-            "group": 23,
+            "group": 22,
             "id": "8"
         },
         {
@@ -347,7 +348,7 @@
             "id": "3"
         },
         {
-            "group": 23,
+            "group": 22,
             "id": "4"
         },
         {
@@ -355,7 +356,7 @@
             "id": "5"
         },
         {
-            "group": 23,
+            "group": 22,
             "id": "6"
         },
         {
@@ -363,7 +364,7 @@
             "id": "7"
         },
         {
-            "group": 23,
+            "group": 22,
             "id": "9"
         },
         {
@@ -391,19 +392,19 @@
             "id": "18"
         },
         {
-            "group": 23,
+            "group": 22,
             "id": "15"
         },
         {
-            "group": 23,
+            "group": 22,
             "id": "19"
         },
         {
-            "group": 22,
+            "group": 23,
             "id": "16"
         },
         {
-            "group": 22,
+            "group": 23,
             "id": "20"
         },
         {

@@ -42,6 +42,22 @@
     <node id="Akara">
       <data key="nameNode">Akara</data>
       <data key="idLinkNode">3</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>High Priestess of the Sisterhood of the Sightless Eye</li>
+          <li>Offers poor shelter within rickety walls</li>
+          <li>Sisterhood is under a strange curse</li>
+          <li>Their mighty Citadel (the Monastery) has been corrupted by Andariel
+            <ul>
+              <li>- - Andy corrupted the sisters and drove the survivors out</li>
+              <li>Last defenders are scattered or dead</li>
+            </ul>
+          </li>
+          <li>Offers pledge of loyalty forever if we help lift the curse</li>
+        </ul>
+
+        <p>Source: Introduction Speech</p>
+        ]]></data>
     </node>
 
     <node id="Gheed">
@@ -239,13 +255,24 @@
       <data key="idLinkNode">21</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
-          <li></li>
+          <li>Knows Kaysha is fiercly loyal
+          <li>- - Thinks anger and frustration will lead her into harms way
+          <li>- Highly protective of the Rogues that are left
+          <li>- - will not send the rouges out unless there is a dire need 
+
+          <li>- GitHub COPILOT SAYS: Knows Charsi is a very nice lady 
+          
+          </li>
         </ul>
         
         <p>Source: First Gossip</p>
         ]]></data>
     </node>   
-    
+Akara Intro (3)
+linked to Sisterhood of the Sightless Eye
+
+Akara Gossip
+   
     <!-- Edges -->
     <!-- Setup before streaming -->
     <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
@@ -314,3 +341,47 @@
 <!-- <edge id="Link Cain to Rogue Encampment" source="2" target="8"/> -->
 
 <!-- HTML inside of HTML: https://stackoverflow.com/questions/1398571/html-inside-xml-should-i-use-cdata-or-encode-the-html -->
+
+
+<!--
+
+
+QUEST 1:
+Quest Start - - Akara
+- Place of great evil
+- Cave of shadowy and horrors from beyond the grave
+- fears of an attack 
+- wants us to destroy them
+- - RESULTS IN QUEST LOG: to look for Den of evil
+
+WArriv: one that seeks the gave seeks death
+
+Kaysha: Finest archers have been claimed; wonders how we will fare
+
+Charsi: Beasts from the den have started to roam the country side; tells us to be careful
+
+Gheed: says we are a brave soul; Rather sink his "sacred scepter" into the foulest, carbuncular trull than step into a cave
+(WOW)
+
+
+Warriv Gossip 2:
+- East are lands of great mysteries
+- Jewel of the Desert, Lut Gholein is East
+
+Catalyst: quit and reload
+
+
+Kaysha Gossip 2:
+- Wants to figure of how Andariel has corrupted the sisters
+- Then we can drive out the evil clouding their minds
+
+Catalyst: quit and reload
+
+
+QUEST 1: Update 1
+- MANY rogue scouts have died in that terrible place!
+- cannot afford to lose more
+- IF you choose to enter, you do so alone
+
+Catalyst: quit and reload
+-->
