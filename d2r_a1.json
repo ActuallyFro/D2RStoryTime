@@ -100,6 +100,11 @@
             "target": "16"
         },
         {
+            "key": "Link Gheed to Andariel (knows of forces/corruption)",
+            "source": "4",
+            "target": "9"
+        },
+        {
             "key": "Link Warriv to Tristram (Knows of Tragedy)",
             "source": "5",
             "target": "10"
@@ -203,6 +208,7 @@
             "name": "Akara"
         },
         {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>NEVER wanted to lay eyes on Necros</li>\n          <li>BUT is okay with taking your money...gold or gems</li>\n          <li>Items guarenteed for life</li>\n          <li><ul><li>have 2 day warranty</li></ul></li>\n        </ul>\n\n        <p>Source: Introduction Speech</p>\n        ",
             "group": 4,
             "id": "Gheed",
             "idLink": 4,
@@ -311,7 +317,7 @@
             "name": "Gossip 1"
         },
         {
-            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li></li>\n        </ul>\n        \n        <p>Source: First Gossip</p>\n        ",
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Forrests and Monastery host Andariel's forces</li>\n          <li>WILL NOT be adventuring out of the camp...</li>\n        </ul>\n        \n        <p>Source: First Gossip</p>\n        ",
             "group": 20,
             "id": "Gheed Gossip 1",
             "idLink": 20,
@@ -333,15 +339,15 @@
             "id": "0"
         },
         {
-            "group": 25,
+            "group": 23,
             "id": "8"
         },
         {
-            "group": 23,
+            "group": 24,
             "id": "3"
         },
         {
-            "group": 22,
+            "group": 23,
             "id": "4"
         },
         {
@@ -349,47 +355,47 @@
             "id": "5"
         },
         {
-            "group": 22,
+            "group": 23,
             "id": "6"
         },
         {
-            "group": 23,
+            "group": 24,
             "id": "7"
         },
         {
-            "group": 25,
+            "group": 23,
             "id": "9"
         },
         {
-            "group": 22,
+            "group": 25,
             "id": "10"
         },
         {
-            "group": 23,
+            "group": 24,
             "id": "11"
         },
         {
-            "group": 24,
+            "group": 25,
             "id": "12"
         },
         {
-            "group": 24,
+            "group": 25,
             "id": "13"
         },
         {
-            "group": 23,
+            "group": 24,
             "id": "14"
         },
         {
-            "group": 23,
+            "group": 24,
             "id": "18"
         },
         {
-            "group": 22,
+            "group": 23,
             "id": "15"
         },
         {
-            "group": 22,
+            "group": 23,
             "id": "19"
         },
         {
@@ -401,11 +407,11 @@
             "id": "20"
         },
         {
-            "group": 23,
+            "group": 24,
             "id": "17"
         },
         {
-            "group": 23,
+            "group": 24,
             "id": "21"
         }
     ]

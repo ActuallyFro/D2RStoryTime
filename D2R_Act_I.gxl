@@ -47,6 +47,16 @@
     <node id="Gheed">
       <data key="nameNode">Gheed</data>
       <data key="idLinkNode">4</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>NEVER wanted to lay eyes on Necros</li>
+          <li>BUT is okay with taking your money...gold or gems</li>
+          <li>Items guarenteed for life</li>
+          <li><ul><li>have 2 day warranty</li></ul></li>
+        </ul>
+
+        <p>Source: Introduction Speech</p>
+        ]]></data>
     </node>
 
     <node id="Warriv">
@@ -216,7 +226,8 @@
       <data key="idLinkNode">20</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
-          <li></li>
+          <li>Forrests and Monastery host Andariel's forces</li>
+          <li>WILL NOT be adventuring out of the camp...</li>
         </ul>
         
         <p>Source: First Gossip</p>
@@ -280,9 +291,11 @@
     <edge id="Link Charsi to Gheed (speaks, likes, thinks he's funny)" source="6" target="4"/>
 
     <!-- Gheed Intro -->
+
     <!-- Gheed Gossip -->
     <edge id="Link Gheed's Gossip" source="16" target="4"/>
     <edge id="Link Gheed's Gossip 1" source="20" target="16"/>
+    <edge id="Link Gheed to Andariel (knows of forces/corruption)" source="9" target="4"/>
 
     <!-- Akara Intro -->
     <!-- Akara Gossip -->
