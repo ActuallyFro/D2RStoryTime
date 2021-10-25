@@ -72,6 +72,17 @@
     <node id="Charsi">
       <data key="nameNode">Charsi</data>
       <data key="idLinkNode">6</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>She's the blacksmith</li>
+          <li>Calls players adventurers</li>
+          <li>Sisters fought Diablo in Tristram</li>
+          <li>Rogues brought back powerful loot</li>
+          <li>MOST sisters are corrupted by Andariel (FIRST to mention so**)</li>
+        </ul>
+
+        <p>Source: Introduction Speech</p>
+        ]]></data>
     </node>
 
     <node id="Kashya">
@@ -191,7 +202,8 @@
       <data key="idLinkNode">19</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
-          <li></li>
+          <li>She likes Gheed -- thinks he's funny</li>
+          <li>Wants to see the sights like Gheed</li>
         </ul>
 
         <p>Source: First Gossip</p>
@@ -259,15 +271,13 @@
     <edge id="Link Warriv to Kaysha (kinda trusts warriv)" source="7" target="5"/>
 
     <!-- Charsi Intro -->
-<!-- 
-Intro (6)
-
-Gossip: (19) -->
-
+    <edge id="Link Charsi to Tristam (knows of Rogue's Fight in D1)" source="10" target="6"/>
+    <edge id="Link Charsi to Andariel (knows she's cause of corruption)" source="9" target="6"/>
 
     <!-- Charsi Gossip -->
     <edge id="Link Charsi's Gossip" source="15" target="6"/>
     <edge id="Link Charsi's Gossip 1" source="19" target="15"/>
+    <edge id="Link Charsi to Gheed (speaks, likes, thinks he's funny)" source="6" target="4"/>
 
     <!-- Gheed Intro -->
     <!-- Gheed Gossip -->

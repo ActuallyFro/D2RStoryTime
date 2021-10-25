@@ -90,6 +90,11 @@
             "target": "17"
         },
         {
+            "key": "Link Charsi to Gheed (speaks, likes, thinks he's funny)",
+            "source": "4",
+            "target": "6"
+        },
+        {
             "key": "Link Gheed's Gossip",
             "source": "4",
             "target": "16"
@@ -118,6 +123,16 @@
             "key": "Link Warriv to Kaysha (kinda trusts warriv)",
             "source": "5",
             "target": "7"
+        },
+        {
+            "key": "Link Charsi to Tristam (knows of Rogue's Fight in D1)",
+            "source": "6",
+            "target": "10"
+        },
+        {
+            "key": "Link Charsi to Andariel (knows she's cause of corruption)",
+            "source": "6",
+            "target": "9"
         },
         {
             "key": "Link Charsi's Gossip",
@@ -201,6 +216,7 @@
             "name": "Warriv"
         },
         {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>She's the blacksmith</li>\n          <li>Calls players adventurers</li>\n          <li>Sisters fought Diablo in Tristram</li>\n          <li>Rogues brought back powerful loot</li>\n          <li>MOST sisters are corrupted by Andariel (FIRST to mention so**)</li>\n        </ul>\n\n        <p>Source: Introduction Speech</p>\n        ",
             "group": 6,
             "id": "Charsi",
             "idLink": 6,
@@ -288,7 +304,7 @@
             "name": "Gossip 1"
         },
         {
-            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li></li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>She likes Gheed -- thinks he's funny</li>\n          <li>Wants to see the sights like Gheed</li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
             "group": 19,
             "id": "Charsi Gossip 1",
             "idLink": 19,
@@ -325,7 +341,7 @@
             "id": "3"
         },
         {
-            "group": 24,
+            "group": 22,
             "id": "4"
         },
         {
@@ -333,7 +349,7 @@
             "id": "5"
         },
         {
-            "group": 26,
+            "group": 22,
             "id": "6"
         },
         {
@@ -345,7 +361,7 @@
             "id": "9"
         },
         {
-            "group": 25,
+            "group": 22,
             "id": "10"
         },
         {
@@ -353,11 +369,11 @@
             "id": "11"
         },
         {
-            "group": 22,
+            "group": 24,
             "id": "12"
         },
         {
-            "group": 22,
+            "group": 24,
             "id": "13"
         },
         {
@@ -369,19 +385,19 @@
             "id": "18"
         },
         {
-            "group": 26,
+            "group": 22,
             "id": "15"
         },
         {
-            "group": 26,
+            "group": 22,
             "id": "19"
         },
         {
-            "group": 24,
+            "group": 22,
             "id": "16"
         },
         {
-            "group": 24,
+            "group": 22,
             "id": "20"
         },
         {
