@@ -153,6 +153,7 @@
     <!-- Warriv Gossip -->
     <edge id="Link Warriv's Gossip" source="5" target="12"/>
     <edge id="Link Warriv's Gossip 1" source="13" target="12"/>
+    <edge id="Link Warriv to Kaysha (knows she's the leader)" source="5" target="7"/>
 
   </graph>
 </graphml>

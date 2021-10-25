@@ -85,6 +85,11 @@
             "target": "12"
         },
         {
+            "id": "Link Warriv to Kaysha (knows she's the leader)",
+            "source": "5",
+            "target": "7"
+        },
+        {
             "id": "Link Warriv's Gossip 1",
             "source": "12",
             "target": "13"
@@ -194,7 +199,7 @@
             "id": "8"
         },
         {
-            "group": 14,
+            "group": 17,
             "id": "3"
         },
         {
@@ -202,7 +207,7 @@
             "id": "4"
         },
         {
-            "group": 14,
+            "group": 17,
             "id": "5"
         },
         {
@@ -218,19 +223,19 @@
             "id": "9"
         },
         {
-            "group": 14,
+            "group": 17,
             "id": "10"
         },
         {
-            "group": 14,
+            "group": 17,
             "id": "11"
         },
         {
-            "group": 17,
+            "group": 14,
             "id": "12"
         },
         {
-            "group": 17,
+            "group": 14,
             "id": "13"
         }
     ]
