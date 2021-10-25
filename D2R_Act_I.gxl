@@ -124,7 +124,7 @@
       <data key="nameNode">Gossip</data>
       <data key="idLinkNode">12</data>
       <data key="descriptionNode"><![CDATA[
-        <p>All related Gossip will be posted here</p>
+        <p>All related Warriv Gossip will be posted here</p>
         ]]></data>
     </node>
     
@@ -145,7 +145,7 @@
       <data key="nameNode">Gossip</data>
       <data key="idLinkNode">14</data>
       <data key="descriptionNode"><![CDATA[
-        <p>All related Gossip will be posted here</p>
+        <p>All related Kaysha Gossip will be posted here</p>
         ]]></data>
     </node>
 
@@ -153,7 +153,7 @@
       <data key="nameNode">Gossip</data>
       <data key="idLinkNode">15</data>
       <data key="descriptionNode"><![CDATA[
-        <p>All related Gossip will be posted here</p>
+        <p>All related Charsi Gossip will be posted here</p>
         ]]></data>
     </node>
 
@@ -161,7 +161,7 @@
       <data key="nameNode">Gossip</data>
       <data key="idLinkNode">16</data>
       <data key="descriptionNode"><![CDATA[
-        <p>All related Gossip will be posted here</p>
+        <p>All related Gheed Gossip will be posted here</p>
         ]]></data>
     </node>
 
@@ -169,7 +169,7 @@
       <data key="nameNode">Gossip</data>
       <data key="idLinkNode">17</data>
       <data key="descriptionNode"><![CDATA[
-        <p>All related Gossip will be posted here</p>
+        <p>All related Akara Gossip will be posted here</p>
         ]]></data>
     </node>    
 
@@ -208,7 +208,7 @@
 
     <!-- Warriv Gossip -->
     <edge id="Link Warriv's Gossip" source="5" target="12"/>
-    <edge id="Link Warriv's Gossip 1" source="18" target="12"/>
+    <edge id="Link Warriv's Gossip 1" source="13" target="12"/>
     <edge id="Link Warriv to Kaysha (knows she's the leader)" source="5" target="7"/>
 
     <!-- Kaysha Intro -->
@@ -224,12 +224,15 @@
 
     <!-- Charsi Intro -->
     <!-- Charsi Gossip -->
+    <edge id="Link Charsi's Gossip" source="15" target="6"/>
 
     <!-- Gheed Intro -->
     <!-- Gheed Gossip -->
+    <edge id="Link Gheed's Gossip" source="16" target="4"/>
 
     <!-- Akara Intro -->
     <!-- Akara Gossip -->
+    <edge id="Link Akara's Gossip" source="17" target="3"/>
 
     <!-- RANDOM/One time NPCs-->
 

@@ -85,6 +85,16 @@
             "target": "7"
         },
         {
+            "key": "Link Akara's Gossip",
+            "source": "3",
+            "target": "17"
+        },
+        {
+            "key": "Link Gheed's Gossip",
+            "source": "4",
+            "target": "16"
+        },
+        {
             "key": "Link Warriv to Tristram (Knows of Tragedy)",
             "source": "5",
             "target": "10"
@@ -110,6 +120,11 @@
             "target": "7"
         },
         {
+            "key": "Link Charsi's Gossip",
+            "source": "6",
+            "target": "15"
+        },
+        {
             "key": "Ancestral home is Rogue Monastery",
             "source": "7",
             "target": "11"
@@ -122,12 +137,12 @@
         {
             "key": "Link Warriv's Gossip 1",
             "source": "12",
-            "target": "18"
+            "target": "13"
         },
         {
             "key": "Link Kaysha's Gossip 1",
-            "source": "18",
-            "target": "14"
+            "source": "14",
+            "target": "18"
         }
     ],
     "multigraph": true,
@@ -209,7 +224,7 @@
             "name": "Rogue Monastery"
         },
         {
-            "description": "\n        <p>All related Gossip will be posted here</p>\n        ",
+            "description": "\n        <p>All related Warriv Gossip will be posted here</p>\n        ",
             "group": 12,
             "id": "Warriv Gossip",
             "idLink": 12,
@@ -223,28 +238,28 @@
             "name": "Gossip 1"
         },
         {
-            "description": "\n        <p>All related Gossip will be posted here</p>\n        ",
+            "description": "\n        <p>All related Kaysha Gossip will be posted here</p>\n        ",
             "group": 14,
             "id": "Kaysha Gossip",
             "idLink": 14,
             "name": "Gossip"
         },
         {
-            "description": "\n        <p>All related Gossip will be posted here</p>\n        ",
+            "description": "\n        <p>All related Charsi Gossip will be posted here</p>\n        ",
             "group": 15,
             "id": "Charsi Gossip",
             "idLink": 15,
             "name": "Gossip"
         },
         {
-            "description": "\n        <p>All related Gossip will be posted here</p>\n        ",
+            "description": "\n        <p>All related Gheed Gossip will be posted here</p>\n        ",
             "group": 16,
             "id": "Gheed Gossip",
             "idLink": 16,
             "name": "Gossip"
         },
         {
-            "description": "\n        <p>All related Gossip will be posted here</p>\n        ",
+            "description": "\n        <p>All related Akara Gossip will be posted here</p>\n        ",
             "group": 17,
             "id": "Akara Gossip",
             "idLink": 17,
@@ -258,60 +273,76 @@
             "name": "Gossip 1"
         },
         {
-            "group": 20,
+            "group": 19,
             "id": "1"
         },
         {
-            "group": 20,
+            "group": 19,
             "id": "0"
         },
         {
-            "group": 20,
+            "group": 19,
             "id": "8"
         },
         {
-            "group": 19,
+            "group": 20,
             "id": "3"
         },
         {
-            "group": 20,
+            "group": 21,
             "id": "4"
         },
         {
-            "group": 19,
+            "group": 20,
             "id": "5"
         },
         {
-            "group": 20,
+            "group": 19,
             "id": "6"
         },
         {
-            "group": 19,
+            "group": 20,
             "id": "7"
         },
         {
-            "group": 20,
+            "group": 19,
             "id": "9"
         },
         {
-            "group": 19,
+            "group": 20,
             "id": "10"
         },
         {
-            "group": 19,
+            "group": 20,
             "id": "11"
         },
         {
-            "group": 21,
+            "group": 22,
             "id": "12"
         },
         {
-            "group": 21,
+            "group": 22,
+            "id": "13"
+        },
+        {
+            "group": 23,
+            "id": "14"
+        },
+        {
+            "group": 23,
             "id": "18"
         },
         {
+            "group": 19,
+            "id": "15"
+        },
+        {
             "group": 21,
-            "id": "14"
+            "id": "16"
+        },
+        {
+            "group": 20,
+            "id": "17"
         }
     ]
 }
