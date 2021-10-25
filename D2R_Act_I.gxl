@@ -268,10 +268,10 @@
         <p>Source: First Gossip</p>
         ]]></data>
     </node>   
-Akara Intro (3)
+<!-- Akara Intro (3)
 linked to Sisterhood of the Sightless Eye
 
-Akara Gossip
+Akara Gossip -->
    
     <!-- Edges -->
     <!-- Setup before streaming -->
@@ -377,11 +377,69 @@ Kaysha Gossip 2:
 
 Catalyst: quit and reload
 
+Kaysha Gossip 3:
+- Perhaps Tristram deserved its fate ... for letting Evil loose upon the land
+- Hopes they don't suffer the same
 
-QUEST 1: Update 1
+Catalyst: quit and reload
+
+
+QUEST 1: Update 1 (Akara)
 - MANY rogue scouts have died in that terrible place!
 - cannot afford to lose more
 - IF you choose to enter, you do so alone
 
 Catalyst: quit and reload
+
+QUEST 1: Update 2 (Akara)
+- Task is NOT complete until you have killed all the demons in the cave
+
+Catalyst: WP from ColdPlains
+
+QUEST 1: Update 1 (Kaysha)
+- Better come through on this, our reputation depends on it
+
+Catalyst: Cold Plains WP transit
+
+QUEST 1: Update 1 (Warriv)
+- One who hesitates does so with good reason
+
+Catalyst: Cold Plains WP transit
+
+Charsi Gossip 2:
+- Warriv is alright, she guesses
+- Hasn't really talked to him
+
+QUEST 1: Update 1 (Charsi)
+- Noticed we hadn't cleared the cave yet
+- Asks if we need anything
+
+Catalyst: Cold Plains WP transit
+
+
+QUEST 1: Update 1 (Gheed)
+- Demons are still befouling the cave
+- Thinks we need a new weapon
+
+Catalyst: Cold Plains WP transit
+
+Gheed Gossip 2:
+- Charsi is a fine girl
+- - Has no business savy
+- - her prices for weapons and armor will NEVER earn her a profit
+- - Fills her mind with stories of adventure (to distract from his profit he's making)
+
+Random:
+=======
+Flavie 
+- States to turn back
+- Says we don't have enough experience for the next wilderness
+
+Gossip 2: Akara
+- Wilderness if overrun with evil
+- Minions of Hell have taken over rightful home
+- MUST purge all evil from the Monastery and restore order to the world
+
+Catalyst: Used Waypoint in Cold Plains
+
 -->
