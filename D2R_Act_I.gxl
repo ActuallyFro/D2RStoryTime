@@ -77,6 +77,16 @@
     <node id="Kashya">
       <data key="nameNode">Kashya</data>
       <data key="idLinkNode">7</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>Calls you an outlander</li>
+          <li>Knows you are here to to challenge evil/restoring them to ancestral home (Rogue Monastery)</li>
+          <li>Akara is spirital leader</li>
+          <li>Kaysha is military leader</li>          
+        </ul>
+
+        <p>Source: Introduction Speech</p>
+        ]]></data>
     </node>
 
     <node id="Rogue Encampment">
@@ -117,7 +127,7 @@
         <p>All related Gossip will be posted here</p>
         ]]></data>
     </node>
-
+    
     <node id="Warriv Gossip 1">
       <data key="nameNode">Gossip 1</data>
       <data key="idLinkNode">13</data>
@@ -131,7 +141,53 @@
         ]]></data>
     </node>
 
-  <!-- Edges -->
+    <node id="Kaysha Gossip">
+      <data key="nameNode">Gossip</data>
+      <data key="idLinkNode">14</data>
+      <data key="descriptionNode"><![CDATA[
+        <p>All related Gossip will be posted here</p>
+        ]]></data>
+    </node>
+
+    <node id="Charsi Gossip">
+      <data key="nameNode">Gossip</data>
+      <data key="idLinkNode">15</data>
+      <data key="descriptionNode"><![CDATA[
+        <p>All related Gossip will be posted here</p>
+        ]]></data>
+    </node>
+
+    <node id="Gheed Gossip">
+      <data key="nameNode">Gossip</data>
+      <data key="idLinkNode">16</data>
+      <data key="descriptionNode"><![CDATA[
+        <p>All related Gossip will be posted here</p>
+        ]]></data>
+    </node>
+
+    <node id="Akara Gossip">
+      <data key="nameNode">Gossip</data>
+      <data key="idLinkNode">17</data>
+      <data key="descriptionNode"><![CDATA[
+        <p>All related Gossip will be posted here</p>
+        ]]></data>
+    </node>    
+
+    <node id="Kaysha Gossip 1">
+      <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">18</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>Does not trust many outlanders</li>
+          <li>Warriv seems fine</li>
+        </ul>
+
+        <p>Source: First Gossip</p>
+        ]]></data>
+    </node>
+
+
+    <!-- Edges -->
     <!-- Setup before streaming -->
     <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
     <edge id="Link Dark Wanderer to Rogue Encampment" source="1" target="8"/>
@@ -152,11 +208,36 @@
 
     <!-- Warriv Gossip -->
     <edge id="Link Warriv's Gossip" source="5" target="12"/>
-    <edge id="Link Warriv's Gossip 1" source="13" target="12"/>
+    <edge id="Link Warriv's Gossip 1" source="18" target="12"/>
     <edge id="Link Warriv to Kaysha (knows she's the leader)" source="5" target="7"/>
+
+    <!-- Kaysha Intro -->
+    <edge id="Ancestral home is Rogue Monastery" source="7" target="11"/>
+    <edge id="Ancestral home is Rogue Monastery" source="3" target="11"/>
+    <edge id="Is Akara's Military Leader" source="7" target="3"/>
+    <edge id="Is her Spirtual Leader" source="3" target="7"/>
+
+    <!-- Kaysha Gossip -->
+    <edge id="Link Kaysha's Gossip" source="7" target="14"/>
+    <edge id="Link Kaysha's Gossip 1" source="18" target="14"/>
+    <edge id="Link Warriv to Kaysha (kinda trusts warriv)" source="7" target="5"/>
+
+    <!-- Charsi Intro -->
+    <!-- Charsi Gossip -->
+
+    <!-- Gheed Intro -->
+    <!-- Gheed Gossip -->
+
+    <!-- Akara Intro -->
+    <!-- Akara Gossip -->
+
+    <!-- RANDOM/One time NPCs-->
+
+    <!-- Flavie -->
 
   </graph>
 </graphml>
+
 
 
 <!-- <edge id="Link Cain to Rogue Encampment" source="2" target="8"/> -->

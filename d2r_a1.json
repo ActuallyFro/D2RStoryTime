@@ -10,92 +10,127 @@
     },
     "links": [
         {
-            "id": "Link Dark Wanderer to Diablo",
+            "key": "Link Dark Wanderer to Diablo",
             "source": "1",
             "target": "0"
         },
         {
-            "id": "Link Dark Wanderer to Rogue Encampment",
+            "key": "Link Dark Wanderer to Rogue Encampment",
             "source": "1",
             "target": "8"
         },
         {
-            "id": "Link Warriv to DW (knew he went through)",
+            "key": "Link Warriv to DW (knew he went through)",
             "source": "1",
             "target": "5"
         },
         {
-            "id": "Link Andy to Diablo",
+            "key": "Link Andy to Diablo",
             "source": "0",
             "target": "9"
         },
         {
-            "id": "Link Warriv to Diablo (Rumors walking Earth)",
+            "key": "Link Warriv to Diablo (Rumors walking Earth)",
             "source": "0",
             "target": "5"
         },
         {
-            "id": "Link Akara to Rogue Encampment",
+            "key": "Link Akara to Rogue Encampment",
             "source": "8",
             "target": "3"
         },
         {
-            "id": "Link Gheed to Rogue Encampment",
+            "key": "Link Gheed to Rogue Encampment",
             "source": "8",
             "target": "4"
         },
         {
-            "id": "Link Warriv to Rogue Encampment",
+            "key": "Link Warriv to Rogue Encampment",
             "source": "8",
             "target": "5"
         },
         {
-            "id": "Link Charsi to Rogue Encampment",
+            "key": "Link Charsi to Rogue Encampment",
             "source": "8",
             "target": "6"
         },
         {
-            "id": "Link Kashya to Rogue Encampment",
+            "key": "Link Kashya to Rogue Encampment",
             "source": "8",
             "target": "7"
         },
         {
-            "id": "Link Andy to Rogue Encampment",
+            "key": "Link Andy to Rogue Encampment",
             "source": "8",
             "target": "9"
         },
         {
-            "id": "Link Warriv to Akara (told you to talk to her)",
+            "key": "Link Warriv to Akara (told you to talk to her)",
             "source": "3",
             "target": "5"
         },
         {
-            "id": "Link Warriv to Tristram (Knows of Tragedy)",
+            "key": "Ancestral home is Rogue Monastery",
+            "source": "3",
+            "target": "11"
+        },
+        {
+            "key": "Is Akara's Military Leader",
+            "source": "3",
+            "target": "7"
+        },
+        {
+            "key": "Is her Spirtual Leader",
+            "source": "3",
+            "target": "7"
+        },
+        {
+            "key": "Link Warriv to Tristram (Knows of Tragedy)",
             "source": "5",
             "target": "10"
         },
         {
-            "id": "Link Warriv to Rogue Monastery (knows pass is blocked)",
+            "key": "Link Warriv to Rogue Monastery (knows pass is blocked)",
             "source": "5",
             "target": "11"
         },
         {
-            "id": "Link Warriv's Gossip",
+            "key": "Link Warriv's Gossip",
             "source": "5",
             "target": "12"
         },
         {
-            "id": "Link Warriv to Kaysha (knows she's the leader)",
+            "key": "Link Warriv to Kaysha (knows she's the leader)",
             "source": "5",
             "target": "7"
         },
         {
-            "id": "Link Warriv's Gossip 1",
+            "key": "Link Warriv to Kaysha (kinda trusts warriv)",
+            "source": "5",
+            "target": "7"
+        },
+        {
+            "key": "Ancestral home is Rogue Monastery",
+            "source": "7",
+            "target": "11"
+        },
+        {
+            "key": "Link Kaysha's Gossip",
+            "source": "7",
+            "target": "14"
+        },
+        {
+            "key": "Link Warriv's Gossip 1",
             "source": "12",
-            "target": "13"
+            "target": "18"
+        },
+        {
+            "key": "Link Kaysha's Gossip 1",
+            "source": "18",
+            "target": "14"
         }
     ],
-    "multigraph": false,
+    "multigraph": true,
     "nodes": [
         {
             "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Prime Evil: Lord of Terror</li>\n          <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>\n          <li>Corrupted both King Leoric and his archbishop, Lazarus</li>\n          <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>\n          <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>\n          <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>\n        </ul>\n\n        <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>\n        ",
@@ -142,6 +177,7 @@
             "name": "Charsi"
         },
         {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Calls you an outlander</li>\n          <li>Knows you are here to to challenge evil/restoring them to ancestral home (Rogue Monastery)</li>\n          <li>Akara is spirital leader</li>\n          <li>Kaysha is military leader</li>          \n        </ul>\n\n        <p>Source: Introduction Speech</p>\n        ",
             "group": 7,
             "id": "Kashya",
             "idLink": 7,
@@ -187,56 +223,95 @@
             "name": "Gossip 1"
         },
         {
+            "description": "\n        <p>All related Gossip will be posted here</p>\n        ",
+            "group": 14,
+            "id": "Kaysha Gossip",
+            "idLink": 14,
+            "name": "Gossip"
+        },
+        {
+            "description": "\n        <p>All related Gossip will be posted here</p>\n        ",
             "group": 15,
+            "id": "Charsi Gossip",
+            "idLink": 15,
+            "name": "Gossip"
+        },
+        {
+            "description": "\n        <p>All related Gossip will be posted here</p>\n        ",
+            "group": 16,
+            "id": "Gheed Gossip",
+            "idLink": 16,
+            "name": "Gossip"
+        },
+        {
+            "description": "\n        <p>All related Gossip will be posted here</p>\n        ",
+            "group": 17,
+            "id": "Akara Gossip",
+            "idLink": 17,
+            "name": "Gossip"
+        },
+        {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Does not trust many outlanders</li>\n          <li>Warriv seems fine</li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
+            "group": 18,
+            "id": "Kaysha Gossip 1",
+            "idLink": 18,
+            "name": "Gossip 1"
+        },
+        {
+            "group": 20,
             "id": "1"
         },
         {
-            "group": 15,
+            "group": 20,
             "id": "0"
         },
         {
-            "group": 16,
+            "group": 20,
             "id": "8"
         },
         {
-            "group": 17,
+            "group": 19,
             "id": "3"
         },
         {
-            "group": 16,
+            "group": 20,
             "id": "4"
         },
         {
-            "group": 17,
+            "group": 19,
             "id": "5"
         },
         {
-            "group": 16,
+            "group": 20,
             "id": "6"
         },
         {
-            "group": 16,
+            "group": 19,
             "id": "7"
         },
         {
-            "group": 15,
+            "group": 20,
             "id": "9"
         },
         {
-            "group": 17,
+            "group": 19,
             "id": "10"
         },
         {
-            "group": 17,
+            "group": 19,
             "id": "11"
         },
         {
-            "group": 14,
+            "group": 21,
             "id": "12"
         },
         {
-            "group": 14,
-            "id": "13"
+            "group": 21,
+            "id": "18"
+        },
+        {
+            "group": 21,
+            "id": "14"
         }
     ]
 }
