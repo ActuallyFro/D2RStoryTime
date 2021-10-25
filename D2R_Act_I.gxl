@@ -186,7 +186,43 @@
         ]]></data>
     </node>
 
+    <node id="Charsi Gossip 1">
+      <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">19</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li></li>
+        </ul>
 
+        <p>Source: First Gossip</p>
+        ]]></data>
+    </node>
+
+
+    <node id="Gheed Gossip 1">
+      <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">20</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li></li>
+        </ul>
+        
+        <p>Source: First Gossip</p>
+        ]]></data>
+    </node>
+
+    <node id="Akara Gossip 1">
+      <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">21</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li></li>
+        </ul>
+        
+        <p>Source: First Gossip</p>
+        ]]></data>
+    </node>   
+    
     <!-- Edges -->
     <!-- Setup before streaming -->
     <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
@@ -223,16 +259,25 @@
     <edge id="Link Warriv to Kaysha (kinda trusts warriv)" source="7" target="5"/>
 
     <!-- Charsi Intro -->
+<!-- 
+Intro (6)
+
+Gossip: (19) -->
+
+
     <!-- Charsi Gossip -->
     <edge id="Link Charsi's Gossip" source="15" target="6"/>
+    <edge id="Link Charsi's Gossip 1" source="19" target="15"/>
 
     <!-- Gheed Intro -->
     <!-- Gheed Gossip -->
     <edge id="Link Gheed's Gossip" source="16" target="4"/>
+    <edge id="Link Gheed's Gossip 1" source="20" target="16"/>
 
     <!-- Akara Intro -->
     <!-- Akara Gossip -->
     <edge id="Link Akara's Gossip" source="17" target="3"/>
+    <edge id="Link Akara's Gossip 1" source="21" target="17"/>
 
     <!-- RANDOM/One time NPCs-->
 

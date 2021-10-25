@@ -143,6 +143,21 @@
             "key": "Link Kaysha's Gossip 1",
             "source": "14",
             "target": "18"
+        },
+        {
+            "key": "Link Charsi's Gossip 1",
+            "source": "15",
+            "target": "19"
+        },
+        {
+            "key": "Link Gheed's Gossip 1",
+            "source": "16",
+            "target": "20"
+        },
+        {
+            "key": "Link Akara's Gossip 1",
+            "source": "17",
+            "target": "21"
         }
     ],
     "multigraph": true,
@@ -273,47 +288,68 @@
             "name": "Gossip 1"
         },
         {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li></li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
             "group": 19,
+            "id": "Charsi Gossip 1",
+            "idLink": 19,
+            "name": "Gossip 1"
+        },
+        {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li></li>\n        </ul>\n        \n        <p>Source: First Gossip</p>\n        ",
+            "group": 20,
+            "id": "Gheed Gossip 1",
+            "idLink": 20,
+            "name": "Gossip 1"
+        },
+        {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li></li>\n        </ul>\n        \n        <p>Source: First Gossip</p>\n        ",
+            "group": 21,
+            "id": "Akara Gossip 1",
+            "idLink": 21,
+            "name": "Gossip 1"
+        },
+        {
+            "group": 25,
             "id": "1"
         },
         {
-            "group": 19,
+            "group": 25,
             "id": "0"
         },
         {
-            "group": 19,
+            "group": 25,
             "id": "8"
         },
         {
-            "group": 20,
+            "group": 23,
             "id": "3"
         },
         {
-            "group": 21,
+            "group": 24,
             "id": "4"
         },
         {
-            "group": 20,
+            "group": 25,
             "id": "5"
         },
         {
-            "group": 19,
+            "group": 26,
             "id": "6"
         },
         {
-            "group": 20,
+            "group": 23,
             "id": "7"
         },
         {
-            "group": 19,
+            "group": 25,
             "id": "9"
         },
         {
-            "group": 20,
+            "group": 25,
             "id": "10"
         },
         {
-            "group": 20,
+            "group": 23,
             "id": "11"
         },
         {
@@ -333,16 +369,28 @@
             "id": "18"
         },
         {
-            "group": 19,
+            "group": 26,
             "id": "15"
         },
         {
-            "group": 21,
+            "group": 26,
+            "id": "19"
+        },
+        {
+            "group": 24,
             "id": "16"
         },
         {
-            "group": 20,
+            "group": 24,
+            "id": "20"
+        },
+        {
+            "group": 23,
             "id": "17"
+        },
+        {
+            "group": 23,
+            "id": "21"
         }
     ]
 }
