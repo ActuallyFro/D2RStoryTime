@@ -1,48 +1,82 @@
 <!-- This page is built to help facilitate the creation of GXL node building-->
+<!-- mostly built with GitHub Copilot -->
+
 <html>
   <head>
     <meta charset="utf-8">
     <title>GXL Node Builder</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+
+    <style>
+      body {
+        padding-top: 2%;
+        padding-bottom: 3%;
+        background-color: #1aa890;
+        font: 400 15px Lato, sans-serif;
+      }
+
+      h1 {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: center;
+        margin: 0 0 20px 0;
+        letter-spacing: 4px;
+      }
+
+      h2 {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: left;
+        margin: 0 0 20px 0;
+      }
+
+      .form-control {
+        min-height: 21px;
+        background: #fff;
+        box-shadow: none !important;
+        border-color: #e3e3e3;
+      }
+
+      label {
+        text-align: left !important;
+        margin-bottom: 0;
+      }
+
+    </style>
   </head>
 
   <script>
-    function getNode(node) {
-      var node = document.getElementById(node);
-      return node;
-    }
-
-    function getNodeValue(node) {
+    function getGraphElementValue(node) {
       var node = document.getElementById(node);
       return node.value;
     }
 
-    function getNodeText(node) {
-      var node = document.getElementById(node);
-      return node.innerText;
-    }
-
-    function createNode(nodeType, nodeName, nodeValue, nodeText) {
-      var node = document.createElement(nodeType);
-      node.setAttribute("id", nodeName);
+    function createNode(graphElementType, graphElementName, nodeValue, nodeText) {
+      var node = document.createElement(graphElementType);
+      node.setAttribute("id", graphElementName);
       node.setAttribute("value", nodeValue);
       node.innerText = nodeText;
 
       //Update nodeString Div
       var nodeString = document.getElementById("nodeString");
-      nodeString.textContent = "\<node\>"
-      + "\n\t\<" + nodeType + "\>"
-      + "\n\t\t" + nodeName
-      + "\n\t\t" + nodeValue
-      + "\n\t\t" + nodeText
-      + "\n\t\</" + nodeType + "\>"
-      + "\n\</node\>";
+      nodeString.textContent = "<" + graphElementType + ">\n";
 
+      if(graphElementName != "") {
+        nodeString.textContent += "\n\t\t<" + graphElementName + ">\n";
+      }
+      // "\n\t\t" + graphElementName
+      // + "\n\t\t" + nodeValue
+      // + "\n\t\t" + nodeText
+      // + "\n\t\</" + graphElementType + "\>"
+
+      nodeString.textContent += "\n\t\</" + graphElementType + "\> \n\n";
+
+      nodeString.innerHTML = nodeString.innerHTML.replace(/\n\r?/g, '<br />');
       // "\</node\>";//node.outerHTML;
 
 
@@ -57,19 +91,20 @@
         <h1>GXL Node Builder</h1>
 
         <h2>Create a new node</h2>
-
         <div class="row">
           <div class="col-md-12">
             <!--input field that updates a div on keyup-->
-            <div class="form-group" onchange="createNode(getNodeValue('nodeType'), getNodeValue('nodeName'), getNodeValue('nodeValue'), getNodeValue('nodeText'))">
-              <label for="nodeName">Node Name</label>
-              <input type="text" class="form-control" id="nodeName" placeholder="Enter node name"><br>
+            <div class="form-group" onchange="createNode(getGraphElementValue('graphElementType'), getGraphElementValue('graphElementName'), getGraphElementValue('nodeValue'), getGraphElementValue('nodeText'))">
+              <!--  Aligned label column and input column-->
 
-              <label for="nodeType">Node Type</label>
-              <select class="form-control" id="nodeType">
+
+              <label for="graphElementName">Element Name</label>
+              <input type="text" class="form-control" id="graphElementName" placeholder="Enter node name">
+
+              <label for="graphElementType">Graph Element Type</label>
+              <select class="form-control" id="graphElementType">
                 <option value="node">node</option>
                 <option value="edge">edge</option>
-                <option value="graph">graph</option>
               </select><br>
 
               <label for="nodeValue">Node Value</label>
@@ -77,8 +112,6 @@
 
               <label for="nodeText">Node Text</label>
               <input type="text" class="form-control" id="nodeText" placeholder="Enter node text"><br>
-
-              <!-- <button type="button" class="btn btn-default" onclick="createNode(getNodeValue('nodeType'), getNodeValue('nodeName'), getNodeValue('nodeValue'), getNodeValue('nodeText'))">Create Node</button> -->
             </div>
           </div>
         </div>
