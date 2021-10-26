@@ -100,6 +100,14 @@
 
       return node;
     }
+
+    function addTextToScratchPad() {
+      var ScratchPad =document.getElementById("ScratchPad");
+      var nodeString = document.getElementById("nodeString");
+
+      ScratchPad.innerHTML += nodeString.innerHTML + " \n";
+      ScratchPad.innerHTML = ScratchPad.innerHTML.replace(/\n\r?/g, '<br />');
+    }
   </script>
 
 
@@ -175,7 +183,8 @@
       </div>
     </div>
   </div> 
-
+<br><br>
+  <button onclick="addTextToScratchPad()">Add Text to Scratch Pad</button>
   <hr>
 
   <div class="container">
@@ -191,6 +200,7 @@
   </div>
 
   <hr>
+  <h2>DEMO: add/remove fields dynamically</h1>
 
 
               <!-- HOWTO dynamic, manual form expansion... -->
@@ -233,6 +243,10 @@ $(document).ready(function(){
     });
 });
 </script>
+
+<hr>
+  <h1>Scratch Pad</h1>
+  <p id="ScratchPad"></p>
 
 <hr>
   
