@@ -122,38 +122,41 @@
               <input type="text" class="form-control" id="graphElementName" placeholder="the 'id' value">
 
               <label for="graphElementType">Graph Element Type</label>
-              <select class="form-control" id="graphElementType">
+              <!-- <select class="form-control" id="graphElementType">
                 <option value="node">node</option>
                 <option value="edge">edge</option>
-              </select><br>
+              </select><br> -->
 
               <!-- NOW AT: https://github.com/ActuallyFro/hide-show-fields-form -->
               <div class="form-group">
-                <label for="seeAnotherFieldGroup">Do You Want To See Another Group of Fields?</label>
-                <select class="form-control" id="seeAnotherFieldGroup">
-                  <option value="no">Not Particularly.</option>
-                  <option value="yes">I Guess!</option>
+                <label for="graphElementType">Graph Element Type</label>
+                <select class="form-control" id="graphElementType">
+                  <option value="node">node</option>
+                  <option value="edge">edge</option>
                 </select>
               </div>
 
-              <div class="form-group" id="otherFieldGroupDiv">
+              <div class="form-group" id="fieldEdgeDivGroup">
                 <div class="row">
                   <div class="col-6">
-                    <label for="otherField1">Group: Heres One!</label>
-                    <input type="text" class="form-control w-100" id="otherField1">
+                    <label for="fieldEdgeSource">Source</label>
+                    <input type="text" class="form-control w-100" id="fieldEdgeSource" placeholder="the 'id' for source">
                   </div>
                   <div class="col-6">
-                    <label for="otherField2">Group: Another One!</label>
-                    <input type="text" class="form-control w-100" id="otherField2">
+                    <label for="fieldEdgeTarget">Target</label>
+                    <input type="text" class="form-control w-100" id="fieldEdgeTarget" placeholder="the 'id' for target">
                   </div>
                 </div>
               </div>
 
-              <label for="nodeValue">Node Value</label>
-              <input type="text" class="form-control" id="nodeValue" placeholder="Enter node value"><br>
+              <div class="form-group" id="fieldNodeDivGroup">
+                <label for="nodeValue">Node Value</label>
+                <input type="text" class="form-control" id="nodeValue" placeholder="Enter node value"><br>
+  
+                <label for="nodeText">Node Text</label>
+                <input type="text" class="form-control" id="nodeText" placeholder="Enter node text"><br>  
+              </div>  
 
-              <label for="nodeText">Node Text</label>
-              <input type="text" class="form-control" id="nodeText" placeholder="Enter node text"><br>
             </div>
           </div>
         </div>
@@ -237,22 +240,24 @@ $(document).ready(function(){
   // });
   // $("#seeAnotherField").trigger("change");
   
-  $("#seeAnotherFieldGroup").change(function() {
-    if ($(this).val() == "yes") {
-      $('#otherFieldGroupDiv').show();
-      $('#otherField1').attr('required', '');
-      $('#otherField1').attr('data-error', 'This field is required.');
-      $('#otherField2').attr('required', '');
-      $('#otherField2').attr('data-error', 'This field is required.');
+  $("#graphElementType").change(function() {
+    if ($(this).val() == "edge") {
+      $('#fieldEdgeDivGroup').show();
+      $('#fieldNodeDivGroup').hide();
+      // $('#fieldEdgeSource').attr('required', '');
+      // $('#fieldEdgeSource').attr('data-error', 'This field is required.');
+      // $('#fieldEdgeTarget').attr('required', '');
+      // $('#fieldEdgeTarget').attr('data-error', 'This field is required.');
     } else {
-      $('#otherFieldGroupDiv').hide();
-      $('#otherField1').removeAttr('required');
-      $('#otherField1').removeAttr('data-error');
-      $('#otherField2').removeAttr('required');
-      $('#otherField2').removeAttr('data-error');
+      $('#fieldEdgeDivGroup').hide();
+      $('#fieldNodeDivGroup').show();
+      // $('#fieldEdgeSource').removeAttr('required');
+      // $('#fieldEdgeSource').removeAttr('data-error');
+      // $('#fieldEdgeTarget').removeAttr('required');
+      // $('#fieldEdgeTarget').removeAttr('data-error');
     }
   });
-  $("#seeAnotherFieldGroup").trigger("change");
+  $("#graphElementType").trigger("change");
   
   
   
