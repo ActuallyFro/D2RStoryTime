@@ -102,15 +102,15 @@
     }
   </script>
 
+
+
 <body>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <h1>GXL Node Builder</h1>
 
-        <h2>Create a new node</h2>
-
-
+        <h2>Create a new Node or Edge</h2>
         <div class="row">
           <div class="col-md-12">
             <!--input field that updates a div on keyup-->
@@ -121,11 +121,8 @@
               <label for="graphElementName">Element Name: </label>
               <input type="text" class="form-control" id="graphElementName" placeholder="the 'id' value">
 
-              <label for="graphElementType">Graph Element Type</label>
-              <!-- <select class="form-control" id="graphElementType">
-                <option value="node">node</option>
-                <option value="edge">edge</option>
-              </select><br> -->
+              <!-- Add blank space to form -->
+            <pre></pre>  
 
               <!-- NOW AT: https://github.com/ActuallyFro/hide-show-fields-form -->
               <div class="form-group">
@@ -156,6 +153,21 @@
                 <label for="nodeText">Node Text</label>
                 <input type="text" class="form-control" id="nodeText" placeholder="Enter node text"><br>  
               </div>  
+
+              <!-- SHOW or HIDE Type Selection in Div tags -->
+              <script type="text/javascript">//<![CDATA[
+                $("#graphElementType").change(function() {
+                  if ($(this).val() == "edge") {
+                    $('#fieldEdgeDivGroup').show();
+                    $('#fieldNodeDivGroup').hide();
+
+                  } else {
+                    $('#fieldEdgeDivGroup').hide();
+                    $('#fieldNodeDivGroup').show();
+                  }
+                });
+                $("#graphElementType").trigger("change");
+              //]]></script>
 
             </div>
           </div>
@@ -224,44 +236,6 @@ $(document).ready(function(){
 </script>
 
 <hr>
-
-<script type="text/javascript">//<![CDATA[
-
-  // $("#seeAnotherField").change(function() {
-  //   if ($(this).val() == "yes") {
-  //     $('#otherFieldDiv').show();
-  //     $('#otherField').attr('required', '');
-  //     $('#otherField').attr('data-error', 'This field is required.');
-  //   } else {
-  //     $('#otherFieldDiv').hide();
-  //     $('#otherField').removeAttr('required');
-  //     $('#otherField').removeAttr('data-error');
-  //   }
-  // });
-  // $("#seeAnotherField").trigger("change");
-  
-  $("#graphElementType").change(function() {
-    if ($(this).val() == "edge") {
-      $('#fieldEdgeDivGroup').show();
-      $('#fieldNodeDivGroup').hide();
-      // $('#fieldEdgeSource').attr('required', '');
-      // $('#fieldEdgeSource').attr('data-error', 'This field is required.');
-      // $('#fieldEdgeTarget').attr('required', '');
-      // $('#fieldEdgeTarget').attr('data-error', 'This field is required.');
-    } else {
-      $('#fieldEdgeDivGroup').hide();
-      $('#fieldNodeDivGroup').show();
-      // $('#fieldEdgeSource').removeAttr('required');
-      // $('#fieldEdgeSource').removeAttr('data-error');
-      // $('#fieldEdgeTarget').removeAttr('required');
-      // $('#fieldEdgeTarget').removeAttr('data-error');
-    }
-  });
-  $("#graphElementType").trigger("change");
-  
-  
-  
-    //]]></script>
   
     <script>
       // tell the embed parent frame the height of the content
