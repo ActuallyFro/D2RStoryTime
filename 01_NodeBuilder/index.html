@@ -7,8 +7,8 @@
     <title>GXL Node Builder</title>
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <!-- <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> -->
+    <!-- <script src="js/jquery-2.1.4.min.js"></script> -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
 
     <style>
       body {
@@ -55,20 +55,25 @@
       var node = document.getElementById(node);
       return node.value;
     }
-
+ 
     function createNode(graphElementType, graphElementName, nodeValue, nodeText) {
       var node = document.createElement(graphElementType);
       node.setAttribute("id", graphElementName);
       node.setAttribute("value", nodeValue);
       node.innerText = nodeText;
 
-      //Update nodeString Div
-      var nodeString = document.getElementById("nodeString");
-      nodeString.textContent = "<" + graphElementType + ">\n";
+//    <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
+//    <node id="boss_04_Diablo"> 
 
-      if(graphElementName != "") {
-        nodeString.textContent += "\n\t\t<" + graphElementName + ">\n";
+      var nodeString = document.getElementById("nodeString");
+
+      if (graphElementType.toLowerCase() == "node"){
+        nodeString.textContent = "<node id=\""+graphElementName+"\">\n";
+
+      } else {
+        nodeString.textContent = "<edge id=\""+graphElementName+"\" source=\""+ 0 +"\" target=\""+ 0 +"\">\n";
       }
+
       // "\n\t\t" + graphElementName
       // + "\n\t\t" + nodeValue
       // + "\n\t\t" + nodeText
@@ -98,14 +103,28 @@
               <!--  Aligned label column and input column-->
 
 
-              <label for="graphElementName">Element Name</label>
-              <input type="text" class="form-control" id="graphElementName" placeholder="Enter node name">
+              <label for="graphElementName">Element Name: </label>
+              <input type="text" class="form-control" id="graphElementName" placeholder="the 'id' value">
 
               <label for="graphElementType">Graph Element Type</label>
               <select class="form-control" id="graphElementType">
                 <option value="node">node</option>
                 <option value="edge">edge</option>
               </select><br>
+
+<!-- If graphElementType is edge show two fields for source and target -->
+<script>
+  function showSourceTarget() {
+    var graphElementType = document.getElementById("graphElementType");
+    var sourceTarget = document.getElementById("sourceTarget");
+
+    if (graphElementType.value == "edge") {
+      sourceTarget.style.display = "block";
+    } else {
+      sourceTarget.style.display = "none";
+    }
+
+</script>
 
               <label for="nodeValue">Node Value</label>
               <input type="text" class="form-control" id="nodeValue" placeholder="Enter node value"><br>
