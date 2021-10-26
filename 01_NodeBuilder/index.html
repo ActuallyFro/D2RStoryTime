@@ -68,8 +68,8 @@
       var node = document.getElementById(node);
       return node.value;
     }
- 
-    function createNode(graphElementType, graphElementName, nodeValue, nodeText) {
+    
+    function createNode(graphElementType, graphElementName, nodeValue, nodeText, edgeSource, edgeTarget) {
       var node = document.createElement(graphElementType);
       node.setAttribute("id", graphElementName);
       node.setAttribute("value", nodeValue);
@@ -82,9 +82,10 @@
 
       if (graphElementType.toLowerCase() == "node"){
         nodeString.textContent = "<node id=\""+graphElementName+"\">\n";
+        nodeString.textContent += "\n\t\</node\> \n\n";
 
       } else {
-        nodeString.textContent = "<edge id=\""+graphElementName+"\" source=\""+ 0 +"\" target=\""+ 0 +"\">\n";
+        nodeString.textContent = "<edge id=\""+graphElementName+"\" source=\""+ edgeSource +"\" target=\""+ edgeTarget +"\"/>";
       }
 
       // "\n\t\t" + graphElementName
@@ -92,7 +93,6 @@
       // + "\n\t\t" + nodeText
       // + "\n\t\</" + graphElementType + "\>"
 
-      nodeString.textContent += "\n\t\</" + graphElementType + "\> \n\n";
 
       nodeString.innerHTML = nodeString.innerHTML.replace(/\n\r?/g, '<br />');
       // "\</node\>";//node.outerHTML;
@@ -114,16 +114,15 @@
         <div class="row">
           <div class="col-md-12">
             <!--input field that updates a div on keyup-->
-            <div class="form-group" onchange="createNode(getGraphElementValue('graphElementType'), getGraphElementValue('graphElementName'), getGraphElementValue('nodeValue'), getGraphElementValue('nodeText'))">
+            <div class="form-group" onchange="createNode(getGraphElementValue('graphElementType'), getGraphElementValue('graphElementName'), getGraphElementValue('nodeValue'), getGraphElementValue('nodeText'), getGraphElementValue('fieldEdgeSource'), getGraphElementValue('fieldEdgeTarget'))">
               <!--  Aligned label column and input column-->
-
 
               <label for="graphElementName">Element Name: </label>
               <input type="text" class="form-control" id="graphElementName" placeholder="the 'id' value">
 
               <!-- Add blank space to form -->
             <pre></pre>  
-
+            
               <!-- NOW AT: https://github.com/ActuallyFro/hide-show-fields-form -->
               <div class="form-group">
                 <label for="graphElementType">Graph Element Type</label>
