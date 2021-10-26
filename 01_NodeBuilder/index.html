@@ -1,0 +1,139 @@
+<!-- This page is built to help facilitate the creation of GXL node building-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GXL Node Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+
+  <script>
+    function getNode(node) {
+      var node = document.getElementById(node);
+      return node;
+    }
+
+    function getNodeValue(node) {
+      var node = document.getElementById(node);
+      return node.value;
+    }
+
+    function getNodeText(node) {
+      var node = document.getElementById(node);
+      return node.innerText;
+    }
+
+    function createNode(nodeType, nodeName, nodeValue, nodeText) {
+      var node = document.createElement(nodeType);
+      node.setAttribute("id", nodeName);
+      node.setAttribute("value", nodeValue);
+      node.innerText = nodeText;
+
+      //Update nodeString Div
+      var nodeString = document.getElementById("nodeString");
+      nodeString.textContent = "\<node\>"
+      + "\n\t\<" + nodeType + "\>"
+      + "\n\t\t" + nodeName
+      + "\n\t\t" + nodeValue
+      + "\n\t\t" + nodeText
+      + "\n\t\</" + nodeType + "\>"
+      + "\n\</node\>";
+
+      // "\</node\>";//node.outerHTML;
+
+
+      return node;
+    }
+  </script>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>GXL Node Builder</h1>
+
+        <h2>Create a new node</h2>
+
+        <div class="row">
+          <div class="col-md-12">
+            <!--input field that updates a div on keyup-->
+            <div class="form-group" onchange="createNode(getNodeValue('nodeType'), getNodeValue('nodeName'), getNodeValue('nodeValue'), getNodeValue('nodeText'))">
+              <label for="nodeName">Node Name</label>
+              <input type="text" class="form-control" id="nodeName" placeholder="Enter node name"><br>
+
+              <label for="nodeType">Node Type</label>
+              <select class="form-control" id="nodeType">
+                <option value="node">node</option>
+                <option value="edge">edge</option>
+                <option value="graph">graph</option>
+              </select><br>
+
+              <label for="nodeValue">Node Value</label>
+              <input type="text" class="form-control" id="nodeValue" placeholder="Enter node value"><br>
+
+              <label for="nodeText">Node Text</label>
+              <input type="text" class="form-control" id="nodeText" placeholder="Enter node text"><br>
+
+              <!-- <button type="button" class="btn btn-default" onclick="createNode(getNodeValue('nodeType'), getNodeValue('nodeName'), getNodeValue('nodeValue'), getNodeValue('nodeText'))">Create Node</button> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div> 
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2> Current Node String</h2>
+      </div>
+      <div>
+      <!--JavaScript will generate the string and render it here-->
+      <div id="nodeString"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!-- 
+
+  Example Key:
+    <key attr.name="name" attr.type="string" for="node" id="nameNode"><default>NaN</default></key>
+
+  Example Node:
+    <node id="boss_04_Diablo"> 
+      <data key="nameNode">Diablo</data>
+      <data key="idLinkNode">0</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>Prime Evil: Lord of Terror</li>
+          <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>
+          <li>Corrupted both King Leoric and his archbishop, Lazarus</li>
+          <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>
+          <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>
+          <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>
+        </ul>
+
+        <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>
+        ]]></data>
+    </node>
+  
+    <node id="npc_D1_DarkWander">
+      <data key="nameNode">Dark Wanderer</data>
+      <data key="idLinkNode">1</data>
+    </node>
+
+
+  Example Edge:
+    <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
+
+-->
