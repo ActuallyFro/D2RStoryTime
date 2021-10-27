@@ -69,16 +69,33 @@
       return node.value;
     }
     
+    function getGraphElementValueArray(node) {
+      var nodeValues;
+      for(var index=0; index < node.length; index++) {
+        var node = document.getElementById(node[index]);
+
+        //if not last index
+        if(index != node.length-1) {
+          nodeValues += node.value + ",";
+        } else {
+          nodeValues += node.value;
+        }
+        
+      }
+      
+      return nodeValues;
+    }
+
     function createNode(graphElementType, graphElementName, nodeValue, nodeText, edgeSource, edgeTarget) {
-      var node = document.createElement(graphElementType);
-      node.setAttribute("id", graphElementName);
-      node.setAttribute("value", nodeValue);
-      node.innerText = nodeText;
+      // var node = document.createElement(graphElementType);
+      // node.setAttribute("id", graphElementName);
+      // node.setAttribute("value", nodeValue);
+      // node.innerText = nodeText;
 
 //    <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
 //    <node id="boss_04_Diablo"> 
 
-      var nodeString = document.getElementById("nodeString");
+      var nodeString = document.getElementById("currentNodeString");
 
       if (graphElementType.toLowerCase() == "node"){
         nodeString.textContent = "<node id=\""+graphElementName+"\">\n";
@@ -103,7 +120,7 @@
 
     function addTextToScratchPad() {
       var ScratchPad =document.getElementById("ScratchPad");
-      var nodeString = document.getElementById("nodeString");
+      var nodeString = document.getElementById("currentNodeString");
 
       ScratchPad.innerHTML += nodeString.innerHTML + " \n";
       ScratchPad.innerHTML = ScratchPad.innerHTML.replace(/\n\r?/g, '<br />');
@@ -122,14 +139,19 @@
         <div class="row">
           <div class="col-md-12">
             <!--input field that updates a div on keyup-->
-            <div class="form-group" onchange="createNode(getGraphElementValue('graphElementType'), getGraphElementValue('graphElementName'), getGraphElementValue('nodeValue'), getGraphElementValue('nodeText'), getGraphElementValue('fieldEdgeSource'), getGraphElementValue('fieldEdgeTarget'))">
+            <div class="form-group" onchange="createNode(getGraphElementValue('graphElementType'), 
+                                                         getGraphElementValue('graphElementName'), 
+                                                         getGraphElementValueArray(fieldNodeKeyVal), 
+                                                         getGraphElementValueArray(fieldNodeDataVal), 
+                                                         getGraphElementValue('fieldEdgeSource'), 
+                                                         getGraphElementValue('fieldEdgeTarget'))">
               <!--  Aligned label column and input column-->
 
               <label for="graphElementName">Element Name: </label>
               <input type="text" class="form-control" id="graphElementName" placeholder="the 'id' value">
 
               <!-- Add blank space to form -->
-            <pre></pre>  
+              <pre></pre>  
             
               <!-- NOW AT: https://github.com/ActuallyFro/hide-show-fields-form -->
               <div class="form-group">
@@ -153,13 +175,16 @@
                 </div>
               </div>
 
+              <!-- Add blank space to form -->
+              <pre></pre> 
               <div class="form-group" id="fieldNodeDivGroup">
+                <h3><label for="dynamicNodeDataFields">Data Tag(s):</label></h3>
                 <div class="dynamicNodeDataFields">
                   <!-- Source: https://www.codexworld.com/add-remove-input-fields-dynamically-using-jquery/ -->
                   <div>
                     <label for="fieldNodeKeyVal[]">Key</label>
                     <input type="text" name="fieldNodeKeyVal[]" value=""/>
-                    <label for="fieldNodeDataVal[]">Data</label>
+                    <label for="fieldNodeDataVal[]">Value</label>
                     <input type="text" name="fieldNodeDataVal[]" value=""/>
                       <a href="javascript:void(0);" class="add_button" title="Add field"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-plus" viewBox="0 0 16 16">
                         <path d="M8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z"/>
@@ -208,7 +233,7 @@
       </div>
       <div>
       <!--JavaScript will generate the string and render it here-->
-      <div id="nodeString"></div>
+      <div id="currentNodeString"></div>
       </div>
     </div>
   </div>
@@ -221,6 +246,7 @@
 
 
               <!-- HOWTO dynamic, manual form expansion... -->
+
 <script type="text/javascript">
 //Source: https://www.codexworld.com/add-remove-input-fields-dynamically-using-jquery/
 $(document).ready(function(){
@@ -230,7 +256,7 @@ $(document).ready(function(){
     var fieldHTML = '<div> \
                        <label for="fieldNodeKeyVal[]">Key</label>\
                        <input type="text" name="fieldNodeKeyVal[]" value=""/>\
-                       <label for="fieldNodeDataVal[]">Data</label>\
+                       <label for="fieldNodeDataVal[]">Value</label>\
                       <input type="text" name="fieldNodeDataVal[]" value=""/>\
                        <a href="javascript:void(0);" class="remove_button"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-file-minus\" viewBox=\"0 0 16 16\"><path d=\"M5.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z\"/><path d=\"M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z\"/></svg></a>\
                        </div>'; //New input field html 
@@ -254,43 +280,12 @@ $(document).ready(function(){
 });
 </script>
 
-<hr>
-  <h1>Scratch Pad</h1>
-  <p id="ScratchPad"></p>
+    <hr>
+      <h1>Scratch Pad</h1>
+      <p id="ScratchPad"></p>
+    <hr>
 
-<hr>
-  
-    <script>
-      // tell the embed parent frame the height of the content
-      if (window.parent && window.parent.parent){
-        window.parent.parent.postMessage(["resultsFrame", {
-          height: document.body.getBoundingClientRect().height,
-          slug: "dpo07Ly5"
-        }], "*")
-      }
-  
-      // always overwrite window.name, in case users try to set it manually
-      window.name = "result"
-    </script>
-  
-      <script>
-        let allLines = []
-  
-        window.addEventListener("message", (message) => {
-          if (message.data.console){
-            let insert = document.querySelector("#insert")
-            allLines.push(message.data.console.payload)
-            insert.innerHTML = allLines.join(";\r")
-  
-            let result = eval.call(null, message.data.console.payload)
-            if (result !== undefined){
-              console.log(result)
-            }
-          }
-        })
-      </script>
-
-</body>
+  </body>
 </html>
 
 <!-- 
