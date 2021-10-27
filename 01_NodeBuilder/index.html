@@ -40,6 +40,11 @@
         text-align: left;
         margin: 0 0 20px 0;
       }
+
+      .tab {
+            display: inline-block;
+            margin-left: 40px;
+        }
 /* 
       .form-control {
         min-height: 21px;
@@ -70,7 +75,7 @@
     }
     
     function getGraphElementValueArray(node) {
-      var nodeValues;
+      var nodeValues="{";
       for(var index=0; index < node.length; index++) {
         var node = document.getElementById(node[index]);
 
@@ -82,24 +87,47 @@
         }
         
       }
+
+      nodeValues += "}";
       
       return nodeValues;
     }
 
-    function createNode(graphElementType, graphElementName, nodeValue, nodeText, edgeSource, edgeTarget) {
-      // var node = document.createElement(graphElementType);
-      // node.setAttribute("id", graphElementName);
-      // node.setAttribute("value", nodeValue);
-      // node.innerText = nodeText;
+    // function createNode(graphElementType, graphElementName, nodeDataKeys, nodeDataValues, edgeSource, edgeTarget) {
+    function createNode(graphElementType, graphElementName, edgeSource, edgeTarget) {
 
-//    <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
-//    <node id="boss_04_Diablo"> 
+      var nodeDataValues = "";
+      var nodeDataKeys = ""; 
+
+      nodeDataKeysArray = document.getElementsByName("fieldNodeKeyVal");
+      nodeDataValuesArray = document.getElementsByName("fieldNodeDataVal");
 
       var nodeString = document.getElementById("currentNodeString");
 
       if (graphElementType.toLowerCase() == "node"){
         nodeString.textContent = "<node id=\""+graphElementName+"\">\n";
-        nodeString.textContent += "\n\t\</node\> \n\n";
+
+      if(nodeDataKeysArray.length > 0 && nodeDataValuesArray.length > 0) {
+        for(var index=0; index < nodeDataKeysArray.length; index++) {
+          nodeString.textContent += "\t<data key=\""+nodeDataKeysArray[index].value+"\">";
+
+          if ( nodeDataKeysArray[index].value == "descriptionNode"){
+            nodeString.textContent += "<![CDATA[\n";
+            nodeString.textContent += nodeDataValuesArray[index].value+"\n";
+            nodeString.textContent += "\t]]></data>";
+          } else {
+            nodeString.textContent += nodeDataValuesArray[index].value;
+          }
+
+          nodeString.textContent +="</data>\n";
+        }
+
+      } else {
+        nodeString.textContent += "\t<data key=\"\"> EMPTY! </data>\n";
+      }
+
+      nodeString.textContent += "</node\> \n\n";
+
 
       } else {
         nodeString.textContent = "<edge id=\""+graphElementName+"\" source=\""+ edgeSource +"\" target=\""+ edgeTarget +"\"/>";
@@ -112,6 +140,7 @@
 
 
       nodeString.innerHTML = nodeString.innerHTML.replace(/\n\r?/g, '<br />');
+      nodeString.innerHTML = nodeString.innerHTML.replace(/\t\r?/g, '&nbsp;&nbsp;');
       // "\</node\>";//node.outerHTML;
 
 
@@ -139,12 +168,14 @@
         <div class="row">
           <div class="col-md-12">
             <!--input field that updates a div on keyup-->
+
             <div class="form-group" onchange="createNode(getGraphElementValue('graphElementType'), 
-                                                         getGraphElementValue('graphElementName'), 
-                                                         getGraphElementValueArray(fieldNodeKeyVal), 
-                                                         getGraphElementValueArray(fieldNodeDataVal), 
-                                                         getGraphElementValue('fieldEdgeSource'), 
-                                                         getGraphElementValue('fieldEdgeTarget'))">
+                        getGraphElementValue('graphElementName'), 
+                        // getGraphElementValueArray(fieldNodeKeyVal), 
+                        // getGraphElementValueArray(fieldNodeDataVal), 
+                        getGraphElementValue('fieldEdgeSource'), 
+                        getGraphElementValue('fieldEdgeTarget'))">
+
               <!--  Aligned label column and input column-->
 
               <label for="graphElementName">Element Name: </label>
@@ -182,10 +213,10 @@
                 <div class="dynamicNodeDataFields">
                   <!-- Source: https://www.codexworld.com/add-remove-input-fields-dynamically-using-jquery/ -->
                   <div>
-                    <label for="fieldNodeKeyVal[]">Key</label>
-                    <input type="text" name="fieldNodeKeyVal[]" value=""/>
-                    <label for="fieldNodeDataVal[]">Value</label>
-                    <input type="text" name="fieldNodeDataVal[]" value=""/>
+                    <label for="fieldNodeKeyVal">Key</label>
+                    <input type="text" name="fieldNodeKeyVal" value=""/>
+                    <label for="fieldNodeDataVal">Value</label>
+                    <textarea name="fieldNodeDataVal" placeholder=""></textarea>
                       <a href="javascript:void(0);" class="add_button" title="Add field"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-plus" viewBox="0 0 16 16">
                         <path d="M8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z"/>
                         <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
@@ -254,10 +285,10 @@ $(document).ready(function(){
     var addButton = $('.add_button'); //Add button selector
     var wrapper = $('.dynamicNodeDataFields'); //Input field wrapper
     var fieldHTML = '<div> \
-                       <label for="fieldNodeKeyVal[]">Key</label>\
-                       <input type="text" name="fieldNodeKeyVal[]" value=""/>\
-                       <label for="fieldNodeDataVal[]">Value</label>\
-                      <input type="text" name="fieldNodeDataVal[]" value=""/>\
+                       <label for="fieldNodeKeyVal">Key</label>\
+                       <input type="text" name="fieldNodeKeyVal" value=""/>\
+                       <label for="fieldNodeDataVal">Value</label>\
+                       <textarea name="fieldNodeDataVal" placeholder=""></textarea>\
                        <a href="javascript:void(0);" class="remove_button"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-file-minus\" viewBox=\"0 0 16 16\"><path d=\"M5.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z\"/><path d=\"M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z\"/></svg></a>\
                        </div>'; //New input field html 
     var x = 1; //Initial field counter is 1
