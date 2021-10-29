@@ -2,8 +2,8 @@
  1. Talk to Warriv (Intro + Gossip) [X]
  2. Talk to other NPCS in Camp (Intro + Gossip)
   1. Kashya [X]
-  2. Charsi [ ]
-  3. Gheed [ ]
+  2. Charsi [X]
+  3. Gheed [X]
 
 1. Run "Quest Checklist"
  1. Talk to quest owner
@@ -18,8 +18,8 @@
 5. Repeat for all quests
 
 2. Quest Tracker
- 1. Act I [ ]
-  1. Quest 1 [ ]
+ 1. Act I [X]
+  1. Quest 1 [X]
   2. Quest 2 [ ]
   3. Quest 3 [ ]
   4. Quest 4 [ ]
