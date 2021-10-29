@@ -30,6 +30,11 @@
             "target": "9"
         },
         {
+            "key": "Link Andy to Rogue Encampment",
+            "source": "0",
+            "target": "9"
+        },
+        {
             "key": "Link Warriv to Diablo (Rumors walking Earth)",
             "source": "0",
             "target": "5"
@@ -58,11 +63,6 @@
             "key": "Link Kashya to Rogue Encampment",
             "source": "8",
             "target": "7"
-        },
-        {
-            "key": "Link Andy to Rogue Encampment",
-            "source": "3",
-            "target": "9"
         },
         {
             "key": "Link Warriv to Akara (told you to talk to her)",
@@ -332,11 +332,11 @@
             "name": "Gossip 1"
         },
         {
-            "group": 23,
+            "group": 22,
             "id": "1"
         },
         {
-            "group": 23,
+            "group": 22,
             "id": "0"
         },
         {
@@ -356,7 +356,7 @@
             "id": "5"
         },
         {
-            "group": 24,
+            "group": 25,
             "id": "6"
         },
         {
@@ -364,11 +364,11 @@
             "id": "7"
         },
         {
-            "group": 24,
+            "group": 22,
             "id": "9"
         },
         {
-            "group": 24,
+            "group": 25,
             "id": "10"
         },
         {
@@ -376,27 +376,27 @@
             "id": "11"
         },
         {
-            "group": 25,
+            "group": 26,
             "id": "12"
         },
         {
-            "group": 25,
+            "group": 26,
             "id": "13"
         },
         {
-            "group": 26,
+            "group": 27,
             "id": "14"
         },
         {
-            "group": 26,
+            "group": 27,
             "id": "18"
         },
         {
-            "group": 24,
+            "group": 25,
             "id": "15"
         },
         {
-            "group": 24,
+            "group": 25,
             "id": "19"
         },
         {
@@ -408,11 +408,11 @@
             "id": "20"
         },
         {
-            "group": 22,
+            "group": 28,
             "id": "17"
         },
         {
-            "group": 22,
+            "group": 28,
             "id": "21"
         }
     ]
