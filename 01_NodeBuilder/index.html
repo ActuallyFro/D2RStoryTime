@@ -93,6 +93,43 @@
       return nodeValues;
     }
 
+/*
+\t<ul style="list-style-type:disc">
+  <li>Prime Evil: Lord of Terror</li>
+  <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>
+  <li>Corrupted both King Leoric and his archbishop, Lazarus</li>
+  <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>
+  <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>
+  <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>
+</ul>
+
+<p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>
+*/
+
+//allow tab within textarea
+$(document).ready(function() {
+  $('textarea').keydown(function(e) {
+    if (e.keyCode == 9) { // tab was pressed
+      // get caret position/selection
+      var start = this.selectionStart;
+      var end = this.selectionEnd;
+
+      var $this = $(this);
+
+      // set textarea value to: text before caret + tab + text after caret
+      $this.val($this.val().substring(0, start)
+          + "\t"
+          + $this.val().substring(end));
+
+      // put caret at right position again
+      this.selectionStart = this.selectionEnd = start + 1;
+
+      // prevent the focus lose
+      return false;
+    }
+  });
+});
+
     // function createNode(graphElementType, graphElementName, nodeDataKeys, nodeDataValues, edgeSource, edgeTarget) {
     function createNode(graphElementType, graphElementName, edgeSource, edgeTarget) {
 
@@ -113,13 +150,26 @@
 
           if ( nodeDataKeysArray[index].value == "descriptionNode"){
             nodeString.textContent += "<![CDATA[\n";
-            nodeString.textContent += nodeDataValuesArray[index].value+"\n";
-            nodeString.textContent += "\t]]></data>";
+            
+            var textareaBuffer = nodeDataValuesArray[index].value;
+
+            //COPILOT CODE--------------- START
+            //for each line in textarea, append \t
+            var textareaLines = textareaBuffer.split("\n");
+            for(var lineIndex=0; lineIndex < textareaLines.length; lineIndex++) {
+              textareaLines[lineIndex] = "\t\t" + textareaLines[lineIndex];
+            }
+            nodeString.textContent += textareaLines.join("\n");
+            //COPILOT CODE--------------- END
+            // nodeString.textContent += textareaBuffer+"\n";
+
+            nodeString.textContent += "\n\t]]></data>\n";
+
           } else {
             nodeString.textContent += nodeDataValuesArray[index].value;
+            nodeString.textContent +="</data>\n";
           }
 
-          nodeString.textContent +="</data>\n";
         }
 
       } else {
@@ -340,14 +390,12 @@ $(document).ready(function(){
         <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>
         ]]></data>
     </node>
-  
+
     <node id="npc_D1_DarkWander">
       <data key="nameNode">Dark Wanderer</data>
       <data key="idLinkNode">1</data>
     </node>
 
-
   Example Edge:
     <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
-
 -->
