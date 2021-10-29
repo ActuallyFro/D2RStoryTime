@@ -61,7 +61,7 @@
         },
         {
             "key": "Link Andy to Rogue Encampment",
-            "source": "8",
+            "source": "3",
             "target": "9"
         },
         {
@@ -332,47 +332,47 @@
             "name": "Gossip 1"
         },
         {
-            "group": 25,
+            "group": 23,
             "id": "1"
         },
         {
-            "group": 25,
+            "group": 23,
             "id": "0"
         },
         {
-            "group": 22,
+            "group": 23,
             "id": "8"
         },
         {
-            "group": 24,
+            "group": 23,
             "id": "3"
         },
         {
-            "group": 22,
+            "group": 24,
             "id": "4"
         },
         {
-            "group": 25,
+            "group": 23,
             "id": "5"
         },
         {
-            "group": 22,
+            "group": 24,
             "id": "6"
         },
         {
-            "group": 24,
+            "group": 23,
             "id": "7"
         },
         {
-            "group": 22,
+            "group": 24,
             "id": "9"
         },
         {
-            "group": 25,
+            "group": 24,
             "id": "10"
         },
         {
-            "group": 24,
+            "group": 23,
             "id": "11"
         },
         {
@@ -384,35 +384,35 @@
             "id": "13"
         },
         {
-            "group": 24,
+            "group": 26,
             "id": "14"
         },
         {
-            "group": 24,
+            "group": 26,
             "id": "18"
         },
         {
-            "group": 22,
+            "group": 24,
             "id": "15"
         },
         {
-            "group": 22,
+            "group": 24,
             "id": "19"
         },
         {
-            "group": 23,
+            "group": 24,
             "id": "16"
         },
         {
-            "group": 23,
+            "group": 24,
             "id": "20"
         },
         {
-            "group": 24,
+            "group": 22,
             "id": "17"
         },
         {
-            "group": 24,
+            "group": 22,
             "id": "21"
         }
     ]
