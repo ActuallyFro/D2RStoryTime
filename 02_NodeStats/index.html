@@ -64,6 +64,17 @@
                     $("#keyTable").append("<tr><th>"+valKey+"</th><td>"+valId+"</td><td>"+valType+"</td><td>"+valDefault+"</td></tr>");
                 });
 
+                // for each edge, get the id, source, target and show it in the #keyEdges table
+                $(xml).find("edge").each(function() {
+                    var valId = $(this).attr("id");
+                    var valSource = $(this).attr("source");
+                    var valTarget = $(this).attr("target");
+                    
+                    $("#edgeTable").append("<tr><th>"+valId+"</th><td>"+valSource+"</td><td>"+valTarget+"</td></tr>");
+                });
+
+                // id="Ancestral home is Rogue Monastery" source="7" target="11"
+
             });
         });
 
@@ -159,8 +170,9 @@
                         <thead>
                             <tr>
                                 <th>Node</th>
-                                <th>Key</th>
-                                <th>Value</th>
+                                <th>Name</th>
+                                <th>Parent Node Postion/Id</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
                         <tbody id="nodeTable">
@@ -177,8 +189,8 @@
                         <thead>
                             <tr>
                                 <th>Edge</th>
-                                <th>Key</th>
-                                <th>Value</th>
+                                <th>Source</th>
+                                <th>Target</th>
                             </tr>
                         </thead>
                         <tbody id="edgeTable">
