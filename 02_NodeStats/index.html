@@ -43,7 +43,7 @@
     </style>
 
     <!-- Jquery: opens stats.xml file, counts <node> tags, shows result in table with key and value, then update html in div tag -->
-            <script>
+    <script>
         $(document).ready(function() {
             $.get("../D2R_Act_I.gxl", function(xml) {
                 var countKey = $(xml).find("key").length;
@@ -66,10 +66,32 @@
 </head> 
 
 <body>
+    <!-- Nav bar that stays at top of page -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">NodeStats</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#StatsTable">Stats Table</a></li>
+                    <li><a href="#KeyTable">Key Table</a></li>
+                    <li><a href="#NodeTable">Node Table</a></li>
+                    <li><a href="#EdgeTable">Edge Table</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>NodeStats</h1>
+
             </div>
         </div>
         
