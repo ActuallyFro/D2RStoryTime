@@ -86,7 +86,23 @@
                     var strTarget = $(varNodes[valTarget]).attr("id");
                     var strTargetIndex = $(varNodes[valTarget]).find("data[key='idLinkNode']").text();
 
-                    $("#edgeTable").append("<tr><th>"+valId+"</th><td>"+valSource+" ("+strSourceIndex+":"+strSource+")</td><td>"+valTarget+" ("+strTargetIndex+":"+strTarget+")</td></tr>");
+
+                    $("#edgeTable").append("<tr><th>"+valId+"</th>");
+                    if (valSource != strSourceIndex) {
+                        $("#edgeTable").append("<td>"+valSource+" ("+strSourceIndex+":"+strSource+" <b><font color='red'>ERROR!</font></b>)</td>");
+                    } else {
+                        $("#edgeTable").append("<td>"+valSource+" ("+strSource+")</td>");
+                    }
+                    
+                    
+                    if (valTarget != strTargetIndex) {
+                        $("#edgeTable").append("<td>"+valTarget+" ("+strTargetIndex+":"+strTarget+" <b><font color='red'>ERROR!</font></b>)</td>");
+                    } else {
+                        $("#edgeTable").append("<td>"+valTarget+" ("+strTarget+")</td>");
+                    }
+
+                    $("#edgeTable").append("</tr>");
+
                 });
 
                 // id="Ancestral home is Rogue Monastery" source="7" target="11"
