@@ -64,13 +64,40 @@
                     $("#keyTable").append("<tr><th>"+valKey+"</th><td>"+valId+"</td><td>"+valType+"</td><td>"+valDefault+"</td></tr>");
                 });
 
+                // for each node, get the key, name, id and description to show it in the #keyEdges table
+                var varNodes = $(xml).find("node");
+                for (var i = 0; i < varNodes.length; i++) {
+                    var valKey = $(varNodes[i]).attr("id");
+                    var valName = $(varNodes[i]).find("data[key='nameNode']").text();
+                    var valId = $(varNodes[i]).find("data[key='idLinkNode']").text();
+                    var valDesc = $(varNodes[i]).find("data[key='descriptionNode']").text();
+                    
+                    $("#nodeTable").append("<tr><th>"+valKey+"</th><td>"+valName+"</td><td>"+valId+"</td><td>"+valDesc+"</td></tr>");                    
+                }
+
+                // $(xml).find("node").each(function() {
+                //     var valKey = $(this).attr("id");
+                //     var valName = $(this).find("data[key='nameNode']").text();
+                //     var valId = $(this).find("data[key='idLinkNode']").text();
+                //     var valDesc = $(this).find("data[key='descriptionNode']").text();
+                    
+                //     $("#nodeTable").append("<tr><th>"+valKey+"</th><td>"+valName+"</td><td>"+valId+"</td><td>"+valDesc+"</td></tr>");
+                // });
+
+    //             <node id="Akara Gossip 1">
+    //   <data key="nameNode">Gossip 1</data>
+    //   <data key="idLinkNode">21</data>
+    //   <data key="descriptionNode"><![CDATA[
+
                 // for each edge, get the id, source, target and show it in the #keyEdges table
                 $(xml).find("edge").each(function() {
                     var valId = $(this).attr("id");
                     var valSource = $(this).attr("source");
                     var valTarget = $(this).attr("target");
                     
-                    $("#edgeTable").append("<tr><th>"+valId+"</th><td>"+valSource+"</td><td>"+valTarget+"</td></tr>");
+                    var strSource = "NaN"; //$(xml).find("node");
+
+                    $("#edgeTable").append("<tr><th>"+valId+"</th><td>"+valSource+"("+strSource+")</td><td>"+valTarget+"</td></tr>");
                 });
 
                 // id="Ancestral home is Rogue Monastery" source="7" target="11"
