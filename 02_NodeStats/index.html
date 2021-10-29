@@ -26,17 +26,18 @@
             background-color: 333333;
         }
 
-        /* .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
-            border: 1px solid #ddd;
+        .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+            border: 1px solid rgb(129, 61, 255);
         }
     
         .table-bordered>thead>tr>th {
-            border-bottom-width: 2px;
+            color: aqua;
+            border-bottom-width: 5px rgb(129, 61, 255);
         }
 
         .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th {
             border-width: 1px;
-        } */
+        }
         
         /* .table-bordered>thead>tr>th, .table-bordered>tbody>tr>td, .table-bordered>tfoot> */
     </style>
@@ -45,12 +46,13 @@
             <script>
         $(document).ready(function() {
             $.get("../D2R_Act_I.gxl", function(xml) {
-                var count = $(xml).find("node").length;
-                $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
-                $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
-                $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
-                $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
-                $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
+                var countKey = $(xml).find("key").length;
+                var countNode = $(xml).find("node").length;
+                var countEdge = $(xml).find("edge").length;
+                
+                $("#table").append("<tr><th>Keys</th><td>"+countKey+"</td></tr>");
+                $("#table").append("<tr><th>Nodes</th><td>"+countNode+"</td></tr>");
+                $("#table").append("<tr><th>Edges</th><td>"+countEdge+"</td></tr>");
             });
         });
 
@@ -60,28 +62,6 @@
         }
 
     </script>
-
-
-        <!-- <script>
-                $(document).ready(function() {
-            // WORKS!
-            //=======
-            // $.ajax({
-            //     type: "GET",
-            //     url: "../D2R_Act_I.gxl",
-            //     dataType: "xml",
-            //     success: function(xml) {
-            //         var count = 0;
-            //         $(xml).find('node').each(function() {
-            //             count++;
-            //         });
-            //         $('#nodeCount').html(count);
-            //     }
-            // });
-        });
-    </script>
-    --> 
-
 
 </head> 
 
@@ -103,31 +83,19 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- div that java script updates -->
-                <div id="nodeCount">
-<!-- bootstrap #table -->
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Key</th>
-                            <th>Value</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table">
-                    </tbody>
-                </table>
-                        <!-- <tr>
-                            <th>Nodes</th>
-                            <td>
-                                <script>
-                                    $(document).ready(function() {
-                                        $.get("../D2R_Act_I.gxl", function(xml) {
-                                            var count = $(xml).find("node").length;
-                                            $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
-                                            $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
-                                            $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
-                                            $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
-                                            $("#table").append("<tr><th>Nodes</th><td>"+ -->
-
+                <div id="StatsTable">
+                    <h2>Stats Table</h1>
+                    <!-- bootstrap #table -->
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Key</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table">
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
