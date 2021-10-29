@@ -84,8 +84,7 @@
                     var strSource = $(varNodes[valSource]).attr("id");
                     var strTarget = $(varNodes[valTarget]).attr("id");
 
-                    //TODO: FIX -- The bad data is NOT showing as bad....
-                    $("#edgeTable").append("<tr><th>"+valId+"</th><td>"+valSource+" ("+strSource+")</td><td>"+valTarget+" ("+strTarget+")</td></tr>");
+                    $("#edgeTable").append("<tr><th>"+valId+"</th><td>"+valSource+" ("+valSource+":"+strSource+")</td><td>"+valTarget+" ("+valTarget+":"+strTarget+")</td></tr>");
                 });
 
                 // id="Ancestral home is Rogue Monastery" source="7" target="11"
