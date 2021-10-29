@@ -1,4 +1,7 @@
-<html>
+
+<html> 
+<!-- This page is nearly ALL COPILOT! -->
+
 <head>
     <title>NodeStats</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -8,9 +11,55 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-zh-TW.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/extensions/export/tableExport.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/extensions/export/tableExport.min.js"></script> -->
+
+    <!-- add CSS with font and background color defaults -->
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #ddd;
+            line-height: 1.42857143;
+            background-color: 333333;
+        }
+
+        /* .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+            border: 1px solid #ddd;
+        }
+    
+        .table-bordered>thead>tr>th {
+            border-bottom-width: 2px;
+        }
+
+        .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th {
+            border-width: 1px;
+        } */
+        
+        /* .table-bordered>thead>tr>th, .table-bordered>tbody>tr>td, .table-bordered>tfoot> */
+    </style>
+
+    <!-- Javascript that opens stats.xml file, counts <node> tags, shows result in table by updating div tag -->
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                type: "GET",
+                url: "../D2R_Act_I.gxl",
+                dataType: "xml",
+                success: function(xml) {
+                    var count = 0;
+                    $(xml).find('node').each(function() {
+                        count++;
+                    });
+                    $('#nodeCount').html(count);
+                }
+            });
+        });
+    </script>
+
+
 </head> 
 
 <body>
@@ -20,8 +69,18 @@
                 <h1>NodeStats</h1>
             </div>
         </div>
+        
+        <!-- fancy a$$ hr -->
         <div class="row">
             <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- div that java script updates -->
+                <div id="nodeCount"></div>
             </div>
         </div>
     </div>
