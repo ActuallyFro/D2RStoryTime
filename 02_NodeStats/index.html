@@ -41,23 +41,40 @@
         /* .table-bordered>thead>tr>th, .table-bordered>tbody>tr>td, .table-bordered>tfoot> */
     </style>
 
-    <!-- Javascript that opens stats.xml file, counts <node> tags, shows result in table by updating div tag -->
-    <script>
+    <!-- Jquery: opens stats.xml file, counts <node> tags, shows result in table with key and value, then update html in div tag -->
+            <script>
         $(document).ready(function() {
-            $.ajax({
-                type: "GET",
-                url: "../D2R_Act_I.gxl",
-                dataType: "xml",
-                success: function(xml) {
-                    var count = 0;
-                    $(xml).find('node').each(function() {
-                        count++;
-                    });
-                    $('#nodeCount').html(count);
-                }
+            $.get("../D2R_Act_I.gxl", function(xml) {
+                var count = $(xml).find("node").length;
+                $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
+                $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
+                $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
+                $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
+                $("#table").append("<tr><th>Nodes</th><td>"+count+"</td></tr>");
             });
         });
     </script>
+
+
+        <!-- <script>
+                $(document).ready(function() {
+            // WORKS!
+            //=======
+            // $.ajax({
+            //     type: "GET",
+            //     url: "../D2R_Act_I.gxl",
+            //     dataType: "xml",
+            //     success: function(xml) {
+            //         var count = 0;
+            //         $(xml).find('node').each(function() {
+            //             count++;
+            //         });
+            //         $('#nodeCount').html(count);
+            //     }
+            // });
+        });
+    </script>
+    --> 
 
 
 </head> 
