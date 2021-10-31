@@ -1,6 +1,3 @@
-
-
-
 //Zoom functions: https://embed.plnkr.co/1Mub7rTUKQuuAB6TAoJb/
 
 function DrawGraph(name_of_json){
