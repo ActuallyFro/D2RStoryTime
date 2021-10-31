@@ -18,6 +18,10 @@
 
     <!-- add CSS with font and background color defaults -->
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 14px;
@@ -158,7 +162,8 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- div that java script updates -->
-                <div id="StatsTable">
+                <div style="padding-top: 40px; margin-top: -40px;" id="StatsTable">
+                    <!-- credit on div anchor style: https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header -->
                     <h2>Stats Table</h1>
                     <!-- bootstrap #table -->
                     <table class="table table-bordered">
@@ -175,7 +180,7 @@
             </div>
             <!-- Key Table -->
             <div class="col-md-12">
-                <div id="KeyTable">
+                <div style="padding-top: 40px; margin-top: -40px;"  id="KeyTable">
                     <h2>Current Keys</h1>
                     <!-- bootstrap #table -->
                     <table class="table table-bordered">
@@ -194,7 +199,7 @@
             </div>
             <!-- Node Table -->
             <div class="col-md-12">
-                <div id="NodeTable">
+                <div style="padding-top: 40px; margin-top: -40px;" id="NodeTable">
                     <h2>Current Nodes</h1>
                     <!-- bootstrap #table -->
                     <table class="table table-bordered">
@@ -213,7 +218,7 @@
             </div>
             <!-- Edge Table -->
             <div class="col-md-12">
-                <div id="EdgeTable">
+                <div style="padding-top: 40px; margin-top: -40px;" id="EdgeTable">
                     <h2>Current Edges</h1>
                     <!-- bootstrap #table -->
                     <table class="table table-bordered">
