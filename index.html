@@ -23,6 +23,20 @@
         z-index: 1;
       }
 
+      /* Center <table> tools-table */
+      .tools-table {
+        /* margin: 0 auto; */
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* make <td> width-25-px, with forced with 25 px width */
+      .width-25-px {
+        width: 25px;
+        min-width: 25px;
+        max-width: 25px;
+      }
+
     </style>
   </head>
 
@@ -48,22 +62,27 @@
     <hr>
     <div id="div_tooltip"></div>
 
+    <hr>
+    <div id="tools">
+      <table class="tools-table">
+        <tr>
+          <td>
+            <a href="./01_NodeBuilder/" target="_blank">
+              Node Builder
+            </a>
+          </td>
+          <td class="width-25-px"></td>
+          <td>
+            <a href="./02_NodeStats/" target="_blank">
+              Node Stats
+            </a>
+          </td>
+        </tr>
+      </table>
+
+    </div>
 </body>
 
 </html>
 
-<!-- 
-        .attr("xlink:href", function (d){
-        
-          var IconLink="https://github.com/favicon.ico";
-
-          if (d.name === "OldMan") {
-            IconLink="https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Diablo-icon.png";
-          }
-          //  else if (d === 20) { returnColor = "purple";
-          // } else if (d === 10) { returnColor = "red"; }
-
-          return IconLink;
-        }) 
-      -->
-
+<!--  var IconLink="https://github.com/favicon.ico";  -->
