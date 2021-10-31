@@ -82,10 +82,26 @@
                     var valTarget = $(this).attr("target");
                     
                     var strSource = $(varNodes[valSource]).attr("id");
+                    var strSourceIndex = $(varNodes[valSource]).find("data[key='idLinkNode']").text();
                     var strTarget = $(varNodes[valTarget]).attr("id");
+                    var strTargetIndex = $(varNodes[valTarget]).find("data[key='idLinkNode']").text();
 
-                    //TODO: FIX -- The bad data is NOT showing as bad....
-                    $("#edgeTable").append("<tr><th>"+valId+"</th><td>"+valSource+" ("+strSource+")</td><td>"+valTarget+" ("+strTarget+")</td></tr>");
+                    var valRowStr = "<tr><th>"+valId+"</th>";
+                    // if (valSource != strSourceIndex) {
+                    //     $("#edgeTable").append("<td>"+valSource+" ("+strSourceIndex+":"+strSource+" <b><font color='red'>ERROR!</font></b>)</td>");
+                    // } else {
+                        valRowStr += "<td>"+valSource+" ("+strSource+")</td>";
+                    // }
+                                        
+                    // if (valTarget != strTargetIndex) {
+                        valRowStr += "<td>"+valTarget+" ("+strTarget+")</td>";
+                    //     $("#edgeTable").append("<td>"+valTarget+" ("+strTargetIndex+":"+strTarget+" <b><font color='red'>ERROR!</font></b>)</td>");
+                    // } else {
+                    // }
+
+                    valRowStr += "</tr>";
+                    $("#edgeTable").append(valRowStr);
+
                 });
 
                 // id="Ancestral home is Rogue Monastery" source="7" target="11"
