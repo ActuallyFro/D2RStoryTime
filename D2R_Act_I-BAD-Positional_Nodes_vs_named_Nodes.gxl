@@ -14,6 +14,7 @@
   <!-- Nodes -->
     <node id="boss_04_Diablo"> 
       <data key="nameNode">Diablo</data>
+      <data key="idLinkNode">0</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>Prime Evil: Lord of Terror</li>
@@ -30,14 +31,17 @@
 
     <node id="npc_D1_DarkWander">
       <data key="nameNode">Dark Wanderer</data>
+      <data key="idLinkNode">1</data>
     </node>
 
     <node id="Cain">
       <data key="nameNode">Cain</data>
+      <data key="idLinkNode">2</data>
     </node>
 
     <node id="Akara">
       <data key="nameNode">Akara</data>
+      <data key="idLinkNode">3</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>High Priestess of the Sisterhood of the Sightless Eye</li>
@@ -58,6 +62,7 @@
 
     <node id="Gheed">
       <data key="nameNode">Gheed</data>
+      <data key="idLinkNode">4</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>NEVER wanted to lay eyes on Necros</li>
@@ -72,6 +77,7 @@
 
     <node id="Warriv">
       <data key="nameNode">Warriv</data>
+      <data key="idLinkNode">5</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>Knows of Tragedy of Tristram</li>
@@ -91,6 +97,7 @@
 
     <node id="Charsi">
       <data key="nameNode">Charsi</data>
+      <data key="idLinkNode">6</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>She's the blacksmith</li>
@@ -106,6 +113,7 @@
 
     <node id="Kashya">
       <data key="nameNode">Kashya</data>
+      <data key="idLinkNode">7</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>Calls you an outlander</li>
@@ -120,10 +128,12 @@
 
     <node id="Rogue Encampment">
       <data key="nameNode">Rogue Encampment</data>
+      <data key="idLinkNode">8</data>
     </node>
 
      <node id="boss_01_Andariel"> 
       <data key="nameNode">Andariel</data>
+      <data key="idLinkNode">9</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>Lessor Evil: Maiden of Anguish</li>
@@ -138,15 +148,18 @@
  
     <node id="Tristram">
       <data key="nameNode">Tristram</data>
+      <data key="idLinkNode">10</data>
     </node>
 
     <node id="Rogue Monastery">
       <data key="nameNode">Rogue Monastery</data>
+      <data key="idLinkNode">11</data>
     </node>
 
 
     <node id="Warriv Gossip">
       <data key="nameNode">Gossip</data>
+      <data key="idLinkNode">12</data>
       <data key="descriptionNode"><![CDATA[
         <p>All related Warriv Gossip will be posted here</p>
         ]]></data>
@@ -154,6 +167,7 @@
     
     <node id="Warriv Gossip 1">
       <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">13</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>Knows Kaysha is Rogue Leader</li>
@@ -166,6 +180,7 @@
 
     <node id="Kaysha Gossip">
       <data key="nameNode">Gossip</data>
+      <data key="idLinkNode">14</data>
       <data key="descriptionNode"><![CDATA[
         <p>All related Kaysha Gossip will be posted here</p>
         ]]></data>
@@ -173,6 +188,7 @@
 
     <node id="Charsi Gossip">
       <data key="nameNode">Gossip</data>
+      <data key="idLinkNode">15</data>
       <data key="descriptionNode"><![CDATA[
         <p>All related Charsi Gossip will be posted here</p>
         ]]></data>
@@ -180,6 +196,7 @@
 
     <node id="Gheed Gossip">
       <data key="nameNode">Gossip</data>
+      <data key="idLinkNode">16</data>
       <data key="descriptionNode"><![CDATA[
         <p>All related Gheed Gossip will be posted here</p>
         ]]></data>
@@ -187,6 +204,7 @@
 
     <node id="Akara Gossip">
       <data key="nameNode">Gossip</data>
+      <data key="idLinkNode">17</data>
       <data key="descriptionNode"><![CDATA[
         <p>All related Akara Gossip will be posted here</p>
         ]]></data>
@@ -194,6 +212,7 @@
 
     <node id="Kaysha Gossip 1">
       <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">18</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>Does not trust many outlanders</li>
@@ -206,6 +225,7 @@
 
     <node id="Charsi Gossip 1">
       <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">19</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>She likes Gheed -- thinks he's funny</li>
@@ -219,6 +239,7 @@
 
     <node id="Gheed Gossip 1">
       <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">20</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>Forrests and Monastery host Andariel's forces</li>
@@ -231,6 +252,7 @@
 
     <node id="Akara Gossip 1">
       <data key="nameNode">Gossip 1</data>
+      <data key="idLinkNode">21</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
           <li>Knows Kaysha is fiercly loyal
