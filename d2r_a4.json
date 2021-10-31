@@ -1,0 +1,12 @@
+{
+  "links": [],
+  "nodes": [
+    {
+      "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Prime Evil: Lord of Terror</li>\n          <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>\n          <li>Corrupted both King Leoric and his archbishop, Lazarus</li>\n          <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>\n          <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>\n          <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>\n        </ul>\n\n        <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>\n        ",
+      "group": 0,
+      "id": "boss_04_Diablo",
+      "idLink": 0,
+      "name": "Diablo"
+    }
+  ]
+}
