@@ -1,6 +1,7 @@
 function DrawGraph(name_of_json){
   // clear <div> GraphArea
   document.getElementById("GraphArea").innerHTML = "";
+  document.getElementById("div_tooltip").innerHTML = "";
 
   // var w, h which are 100% of the screen width and height
   var w = window.innerWidth*1.0,
