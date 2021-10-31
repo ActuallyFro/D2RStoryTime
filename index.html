@@ -15,6 +15,14 @@
         color: rgb(30, 175, 90);
       } */
 
+      .option {
+        z-index: 0;
+      }
+
+      .GraphArea {
+        z-index: 1;
+      }
+
     </style>
   </head>
 
@@ -27,14 +35,13 @@
       <input name="button3" type="button" class="button" value="Act 4" onclick="DrawGraph('d2r_a4.json')" />
       <input name="button4" type="button" class="button" value="Act 5" onclick="DrawGraph('d2r_a5.json')" />
     </div>
-
+    
+    <hr>
     <h3>Diablo 2: Story Time!</h3>
     <div id="GraphArea"></div>
-    <!-- Add button to reset d3.js svg -->
-    
+
     <!-- [TODO] See graph in Radial Format <a href="index_radial.html"> HERE</a>. -->
-  <hr>
-    <!-- Trying to put tool tip UNDER svg... -->
+    <hr>
     <div id="div_tooltip"></div>
 
 </body>

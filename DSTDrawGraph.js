@@ -1,3 +1,8 @@
+
+
+
+//Zoom functions: https://embed.plnkr.co/1Mub7rTUKQuuAB6TAoJb/
+
 function DrawGraph(name_of_json){
   // clear <div> GraphArea
   document.getElementById("GraphArea").innerHTML = "";
@@ -76,6 +81,7 @@ function DrawGraph(name_of_json){
       .attr("y2", function(d) { return d.target.y; });
 
     var node_drag = d3.behavior.drag().on("dragstart", dragstart).on("drag", dragmove).on("dragend", dragend);
+    var node_zoom = d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoom);
 
     function dragstart(d, i) {
         force.stop() // stops the force auto positioning before you start dragging
@@ -95,11 +101,17 @@ function DrawGraph(name_of_json){
       force.resume();
     }
 
+    function zoom() {
+      var zoom = d3.event;
+      vis.attr("transform", "translate(" + zoom.translate + ")scale(" + zoom.scale + ")");
+    }
+    
     var node = vis.selectAll("g.node")
       .data(json.nodes)
       .enter().append("svg:g")
       .attr("class", "node")
-      .call(node_drag);
+      .call(node_drag)
+      .call(node_zoom);
 
     var nodeCount=0;
     var lastName=""
