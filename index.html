@@ -7,6 +7,13 @@
     <style type="text/css">
       .link { stroke: #ccc; }
       .nodetext { pointer-events: none; font: 10px sans-serif; }
+
+      /* Fill Webpage Background 
+      body {
+        background-color: #141111;
+        color: rgb(30, 175, 90);
+      } */
+
     </style>
   </head>
   <body>
@@ -40,6 +47,11 @@
             d.target = nodeByName.get(d.target);
         });
 
+        // for each json.nodes, if d.name is "", then removed it.
+        // json.nodes = json.nodes.filter(function(d) {
+        //     return d.name != "";
+        // });
+
         //TOOL TIP - START
         var Tooltip = d3.select("#div_tooltip").append("div")
           .style("opacity", 0)
@@ -60,10 +72,7 @@
         }
 
         var mousemove = function(d) {
-          Tooltip
-            .html("Decription:" + d.description)
-            .style("left", (d3.mouse(this)[0]+70) + "px")
-            .style("top", (d3.mouse(this)[1]) + "px")
+          Tooltip.html("Decription:" + d.description).style("left", (d3.mouse(this)[0]+70) + "px").style("top", (d3.mouse(this)[1]) + "px")
         }
 
         var mouseleave = function(d) {
@@ -119,7 +128,15 @@
           .attr("class", "node")
           .call(node_drag);
 
+        var nodeCount=0;
+        var lastName=""
+
         node.append("svg:image").attr("class", "circle").attr("xlink:href", function (d){
+
+          // print node Count and name to console:
+          console.log("Node["+nodeCount + "]: " + d.name);
+          lastName = d.name;
+
           var IconLink="http://classic.battle.net/favicon.ico";
 
           // BOSSES
@@ -137,10 +154,10 @@
             IconLink="https://icons.iconarchive.com/icons/iconfactory/diablo-2/32/Portal-to-Tristram-icon.png";
 
           } else if (d.name === "Rogue Monastery") {
-            IconLink="https://iconarchive.com/show/archaeologicons-icons-by-lyle-zapato/Trilith-icon.html";
+            IconLink="https://icons.iconarchive.com/icons/lyle-zapato/archaeologicons/32/Trilith-icon.png";
 
           } else if (d.name === "Cairn Stones") {
-            IconLink="https://iconarchive.com/show/archaeologicons-icons-by-lyle-zapato/Trilith-icon.html";
+            IconLink="https://icons.iconarchive.com/icons/lyle-zapato/archaeologicons/32/Trilith-icon.png";
 
           // NPCS
           } else if (d.name === "Akara") {
@@ -212,6 +229,10 @@
           .attr("dy", ".35em")
           .text(function(d) { return d.name });
 
+        //the converted JSON has rogue, maybe malformed, groups from networkx + comunity...
+        //Thus, for each node that are undefined, remove
+        node.filter(function(d) { return !d.name; }).remove(); //May need: d.name == "" check        
+
         force.on("tick", tick);
 
         function tick() {
@@ -266,7 +287,7 @@ scroll:
 https://iconarchive.com/show/archaeologicons-icons-by-lyle-zapato/Scroll-icon.html
 
 Cairn:
-https://iconarchive.com/show/archaeologicons-icons-by-lyle-zapato/Trilith-icon.html
+https://icons.iconarchive.com/icons/lyle-zapato/archaeologicons/32/Trilith-icon.png
 
 
 http://classic.battle.net/favicon.ico
