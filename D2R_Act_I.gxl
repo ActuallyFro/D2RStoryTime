@@ -12,6 +12,34 @@
   <graph id="G" edgedefault="undirected">
 
   <!-- Nodes -->
+    <!-- Towns -->
+    <node id="Rogue Encampment">
+      <data key="nameNode">Rogue Encampment</data>
+    </node>
+
+    <node id="Tristram">
+      <data key="nameNode">Tristram</data>
+    </node>
+
+    <node id="Rogue Monastery">
+      <data key="nameNode">Rogue Monastery</data>
+    </node>
+
+    <!-- Bosses -->
+     <node id="boss_01_Andariel"> 
+      <data key="nameNode">Andariel</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>Lessor Evil: Maiden of Anguish</li>
+          <li>Once overthrew the three Prime Evils</li>
+          <li>Presence in Sanctuary implies: forces of Hell are once again aligned behind Diablo and his Brothers</li>
+          <li>Acting on behalf of Diablo to prevent anyone from following him eastward</li>
+          </ul>
+
+          <p>Source: http://classic.battle.net/diablo2exp/monsters/act1-andariel.shtml</p>
+        ]]></data>
+    </node>
+
     <node id="boss_04_Diablo"> 
       <data key="nameNode">Diablo</data>
       <data key="descriptionNode"><![CDATA[
@@ -28,15 +56,16 @@
         ]]></data>
     </node>
 
+    <!-- NPCs -->
     <node id="npc_D1_DarkWander">
       <data key="nameNode">Dark Wanderer</data>
     </node>
 
-    <node id="Cain">
+    <node id="npc_Cain">
       <data key="nameNode">Cain</data>
     </node>
 
-    <node id="Akara">
+    <node id="npc_Akara">
       <data key="nameNode">Akara</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
@@ -56,7 +85,7 @@
         ]]></data>
     </node>
 
-    <node id="Gheed">
+    <node id="npc_Gheed">
       <data key="nameNode">Gheed</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
@@ -70,7 +99,7 @@
         ]]></data>
     </node>
 
-    <node id="Warriv">
+    <node id="npc_Warriv">
       <data key="nameNode">Warriv</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
@@ -85,11 +114,9 @@
 
         <p>Source: Introduction Speech</p>
         ]]></data>
-
-
     </node>
 
-    <node id="Charsi">
+    <node id="npc_Charsi">
       <data key="nameNode">Charsi</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
@@ -104,7 +131,7 @@
         ]]></data>
     </node>
 
-    <node id="Kashya">
+    <node id="npc_Kashya">
       <data key="nameNode">Kashya</data>
       <data key="descriptionNode"><![CDATA[
         <ul style="list-style-type:disc">
@@ -118,52 +145,14 @@
         ]]></data>
     </node>
 
-    <node id="Rogue Encampment">
-      <data key="nameNode">Rogue Encampment</data>
-    </node>
-
-     <node id="boss_01_Andariel"> 
-      <data key="nameNode">Andariel</data>
-      <data key="descriptionNode"><![CDATA[
-        <ul style="list-style-type:disc">
-          <li>Lessor Evil: Maiden of Anguish</li>
-          <li>Once overthrew the three Prime Evils</li>
-          <li>Presence in Sanctuary implies: forces of Hell are once again aligned behind Diablo and his Brothers</li>
-          <li>Acting on behalf of Diablo to prevent anyone from following him eastward</li>
-          </ul>
-
-          <p>Source: http://classic.battle.net/diablo2exp/monsters/act1-andariel.shtml</p>
-        ]]></data>
-    </node>
- 
-    <node id="Tristram">
-      <data key="nameNode">Tristram</data>
-    </node>
-
-    <node id="Rogue Monastery">
-      <data key="nameNode">Rogue Monastery</data>
-    </node>
-
-
     <node id="Warriv Gossip">
       <data key="nameNode">Gossip</data>
       <data key="descriptionNode"><![CDATA[
         <p>All related Warriv Gossip will be posted here</p>
         ]]></data>
     </node>
-    
-    <node id="Warriv Gossip 1">
-      <data key="nameNode">Gossip 1</data>
-      <data key="descriptionNode"><![CDATA[
-        <ul style="list-style-type:disc">
-          <li>Knows Kaysha is Rogue Leader</li>
-          <li>Knows she does not like outsiders</li>
-        </ul>
 
-        <p>Source: First Gossip</p>
-        ]]></data>
-    </node>
-
+    <!-- NPCs Gossip-->    
     <node id="Kaysha Gossip">
       <data key="nameNode">Gossip</data>
       <data key="descriptionNode"><![CDATA[
@@ -191,6 +180,20 @@
         <p>All related Akara Gossip will be posted here</p>
         ]]></data>
     </node>    
+
+    <!-- NPCs Gossip Entries-->    
+    <node id="Warriv Gossip 1">
+      <data key="nameNode">Gossip 1</data>
+      <data key="descriptionNode"><![CDATA[
+        <ul style="list-style-type:disc">
+          <li>Knows Kaysha is Rogue Leader</li>
+          <li>Knows she does not like outsiders</li>
+        </ul>
+
+        <p>Source: First Gossip</p>
+        ]]></data>
+    </node>
+
 
     <node id="Kaysha Gossip 1">
       <data key="nameNode">Gossip 1</data>
@@ -246,66 +249,62 @@
         <p>Source: First Gossip</p>
         ]]></data>
     </node>   
-<!-- Akara Intro (3)
-linked to Sisterhood of the Sightless Eye
 
-Akara Gossip -->
-   
-    <!-- Edges -->
+  <!-- Edges -->
     <!-- Setup before streaming -->
     <edge id="Link Dark Wanderer to Diablo" source="npc_D1_DarkWander" target="boss_04_Diablo"/>
     <edge id="Link Dark Wanderer to Rogue Encampment" source="npc_D1_DarkWander" target="Rogue Encampment"/>
-    <edge id="Link Akara to Rogue Encampment" source="Akara" target="Rogue Encampment"/>
-    <edge id="Link Gheed to Rogue Encampment" source="Gheed" target="Rogue Encampment"/>
-    <edge id="Link Warriv to Rogue Encampment" source="Warriv" target="Rogue Encampment"/>
-    <edge id="Link Charsi to Rogue Encampment" source="Charsi" target="Rogue Encampment"/>
-    <edge id="Link Kashya to Rogue Encampment" source="Kaysha" target="Rogue Encampment"/>
+    <edge id="Link Akara to Rogue Encampment" source="npc_Akara" target="Rogue Encampment"/>
+    <edge id="Link Gheed to Rogue Encampment" source="npc_Gheed" target="Rogue Encampment"/>
+    <edge id="Link Warriv to Rogue Encampment" source="npc_Warriv" target="Rogue Encampment"/>
+    <edge id="Link Charsi to Rogue Encampment" source="npc_Charsi" target="Rogue Encampment"/>
+    <edge id="Link Kashya to Rogue Encampment" source="npc_Kashya" target="Rogue Encampment"/>
     <edge id="Link Andy to Diablo" source="boss_01_Andariel" target="boss_04_Diablo"/>
     <edge id="Link Andy to Rogue Encampment" source="boss_01_Andariel" target="boss_04_Diablo"/> 
     <!-- ABOVE EDGE IS BAD -->
 
     <!-- Warriv Intro -->
-    <edge id="Link Warriv to Tristram (Knows of Tragedy)" source="Warriv" target="Tristram"/>
-    <edge id="Link Warriv to Rogue Monastery (knows pass is blocked)" source="Warriv" target="Rogue Monastery"/>
-    <edge id="Link Warriv to Diablo (Rumors walking Earth)" source="Warriv" target="boss_04_Diablo"/>
-    <edge id="Link Warriv to DW (knew he went through)" source="Warriv" target="npc_D1_DarkWander"/>
-    <edge id="Link Warriv to Akara (told you to talk to her)" source="Warriv" target="Akara"/>
+    <edge id="Link Warriv to Tristram (Knows of Tragedy)" source="npc_Warriv" target="Tristram"/>
+    <edge id="Link Warriv to Rogue Monastery (knows pass is blocked)" source="npc_Warriv" target="Rogue Monastery"/>
+    <edge id="Link Warriv to Diablo (Rumors walking Earth)" source="npc_Warriv" target="boss_04_Diablo"/>
+    <edge id="Link Warriv to DW (knew he went through)" source="npc_Warriv" target="npc_D1_DarkWander"/>
+    <edge id="Link Warriv to Akara (told you to talk to her)" source="npc_Warriv" target="npc_Akara"/>
 
     <!-- Warriv Gossip -->
-    <edge id="Link Warriv's Gossip" source="Warriv" target="Warriv Gossip"/>
+    <edge id="Link Warriv's Gossip" source="npc_Warriv" target="Warriv Gossip"/>
     <edge id="Link Warriv's Gossip 1" source="Warriv Gossip 1" target="Warriv Gossip"/>
-    <edge id="Link Warriv to Kaysha (knows she's the leader)" source="Warriv" target="Kaysha"/>
+    <edge id="Link Warriv to Kaysha (knows she's the leader)" source="npc_Warriv" target="npc_Kashya"/>
 
     <!-- Kaysha Intro -->
-    <edge id="Ancestral home is Rogue Monastery" source="Kaysha" target="Rogue Monastery"/>
-    <edge id="Ancestral home is Rogue Monastery" source="Akara" target="Rogue Monastery"/>
-    <edge id="Is Akara's Military Leader" source="Kaysha" target="Akara"/>
-    <edge id="Is her Spirtual Leader" source="Akara" target="Kaysha"/>
+    <edge id="Ancestral home is Rogue Monastery" source="npc_Kashya" target="Rogue Monastery"/>
+    <edge id="Ancestral home is Rogue Monastery" source="npc_Akara" target="Rogue Monastery"/>
+    <edge id="Is Akara's Military Leader" source="npc_Kashya" target="npc_Akara"/>
+    <edge id="Is her Spirtual Leader" source="npc_Akara" target="npc_Kashya"/>
 
     <!-- Kaysha Gossip -->
-    <edge id="Link Kaysha's Gossip" source="Kaysha" target="Kaysha Gossip"/>
+    <edge id="Link Kaysha's Gossip" source="npc_Kashya" target="Kaysha Gossip"/>
     <edge id="Link Kaysha's Gossip 1" source="Kaysha Gossip 1" target="Kaysha Gossip"/>
-    <edge id="Link Warriv to Kaysha (kinda trusts warriv)" source="Kaysha" target="Warriv"/>
+    <edge id="Link Warriv to Kaysha (kinda trusts warriv)" source="npc_Kashya" target="npc_Warriv"/>
 
     <!-- Charsi Intro -->
-    <edge id="Link Charsi to Tristam (knows of Rogue's Fight in D1)" source="Tristram" target="Charsi"/>
-    <edge id="Link Charsi to Andariel (knows she's cause of corruption)" source="boss_01_Andariel" target="Charsi"/>
+    <edge id="Link Charsi to Tristam (knows of Rogue's Fight in D1)" source="Tristram" target="npc_Charsi"/>
+    <edge id="Link Charsi to Andariel (knows she's cause of corruption)" source="boss_01_Andariel" target="npc_Charsi"/>
 
     <!-- Charsi Gossip -->
-    <edge id="Link Charsi's Gossip" source="Charsi Gossip" target="Charsi"/>
+    <edge id="Link Charsi's Gossip" source="Charsi Gossip" target="npc_Charsi"/>
     <edge id="Link Charsi's Gossip 1" source="Charsi Gossip 1" target="Charsi Gossip"/>
-    <edge id="Link Charsi to Gheed (speaks, likes, thinks he's funny)" source="Charsi" target="Gheed"/>
+    <edge id="Link Charsi to Gheed (speaks, likes, thinks he's funny)" source="npc_Charsi" target="npc_Gheed"/>
 
     <!-- Gheed Intro -->
 
     <!-- Gheed Gossip -->
-    <edge id="Link Gheed's Gossip" source="Gheed Gossip" target="Gheed"/>
+    <edge id="Link Gheed's Gossip" source="Gheed Gossip" target="npc_Gheed"/>
     <edge id="Link Gheed's Gossip 1" source="Gheed Gossip 1" target="Gheed Gossip"/>
-    <edge id="Link Gheed to Andariel (knows of forces/corruption)" source="boss_01_Andariel" target="Gheed"/>
+    <edge id="Link Gheed to Andariel (knows of forces/corruption)" source="boss_01_Andariel" target="npc_Gheed"/>
 
     <!-- Akara Intro -->
     <!-- Akara Gossip -->
-    <edge id="Link Akara's Gossip" source="Akara Gossip" target="Akara"/>
+    <edge id="Link Akara's Gossip" source="Akara Gossip" target="npc_Akara"/>
     <edge id="Link Akara's Gossip 1" source="Akara Gossip 1" target="Akara Gossip"/>
 
     <!-- RANDOM/One time NPCs-->
