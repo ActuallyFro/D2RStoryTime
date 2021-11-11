@@ -1,6 +1,3 @@
-
-
-
 //Zoom functions: https://embed.plnkr.co/1Mub7rTUKQuuAB6TAoJb/
 
 function DrawGraph(name_of_json){
@@ -15,21 +12,49 @@ function DrawGraph(name_of_json){
   var vis = d3.select("#GraphArea").append("svg:svg").attr("width", w).attr("height", h);
 
   d3.json(name_of_json, function(json) {
-    //Trying to resolve string indices: --credit: https://stackoverflow.com/questions/41916842/d3-json-file-with-source-and-index-as-strings-rather-than-indices
-    var nodeByName = d3.map(json.nodes, function(d) {
-        return d.name;
-    });
 
-    json.links.forEach(function(d) {
-        d.source = nodeByName.get(d.source);
-        d.target = nodeByName.get(d.target);
-    });
+    //BAD, BRUTE FORCE way to lookup the link's name to the indexed node -- but d3 is gonna d3 ...
+    //console.log("Loaded nodes: "+json.nodes.length);
+    //console.log("Loaded links: "+json.links.length);
+    for (var i = 0; i < json.links.length; i++) {
+      var link = json.links[i];  
+      // console.log("Link: "+link.source+" "+link.target+" "+link.value);
 
-    // for each json.nodes, if d.name is "", then removed it.
-    // json.nodes = json.nodes.filter(function(d) {
-    //     return d.name != "";
-    // });
+      var sourceFound = false;
+      var targetFound = false;
 
+      //console.log("Converting NAMED refs for Link["+i+"]:<"+link.value+"> {src:"+link.source+", tgt:"+link.target+"}");
+      //look for both source and target... update nodes with respective index...
+      for (var ii = 0; ii < json.nodes.length; ii++) {
+        // print loop number:
+        var node = json.nodes[ii];
+        //console.log("Loop ["+ii+"]: ID:<"+node.id+"> (named: "+node.name+")");
+
+        //print node.id
+        if (sourceFound == false) {
+          //console.log("\tComparing node's name: "+node.id+" of node["+ii+"] <for source: "+link.source+">");
+          if (node.id == link.source) {
+            //console.log("\tUpdating json.linksFound source: "+ii+" <for source: "+link.source+">");
+            json.links[i].source = ii;
+            sourceFound = true;
+          }  
+        }
+
+        if (targetFound == false) {
+          //console.log("\tComparing node's name: "+node.id+" of node["+ii+"] <for target: "+link.target+">");
+          if (node.id == link.target) {
+            json.links[i].target = ii;
+            //console.log("\tUpdating json.linksFound target: "+ii+" <for target: "+link.source+">");
+            targetFound = true;
+          }
+        }
+
+        if (sourceFound == true && targetFound == true) {
+          //console.log("\tFOUND both source and target -- DONE");
+          break;
+        }
+      }
+    }
     //TOOL TIP - START
     var Tooltip = d3.select("#div_tooltip").append("div")
       .style("opacity", 0)
@@ -113,15 +138,7 @@ function DrawGraph(name_of_json){
       .call(node_drag)
       .call(node_zoom);
 
-    var nodeCount=0;
-    var lastName=""
-
     node.append("svg:image").attr("class", "circle").attr("xlink:href", function (d){
-
-      // print node Count and name to console:
-      console.log("Node["+nodeCount + "]: " + d.name);
-      lastName = d.name;
-
       var IconLink="http://classic.battle.net/favicon.ico";
 
       // BOSSES

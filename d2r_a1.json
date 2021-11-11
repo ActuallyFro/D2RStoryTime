@@ -10,410 +10,304 @@
     },
     "links": [
         {
-            "key": "Link Dark Wanderer to Diablo",
-            "source": "1",
-            "target": "0"
-        },
-        {
             "key": "Link Dark Wanderer to Rogue Encampment",
-            "source": "1",
-            "target": "8"
-        },
-        {
-            "key": "Link Warriv to DW (knew he went through)",
-            "source": "1",
-            "target": "5"
-        },
-        {
-            "key": "Link Andy to Diablo",
-            "source": "0",
-            "target": "9"
-        },
-        {
-            "key": "Link Andy to Rogue Encampment",
-            "source": "0",
-            "target": "9"
-        },
-        {
-            "key": "Link Warriv to Diablo (Rumors walking Earth)",
-            "source": "0",
-            "target": "5"
+            "source": "Rogue Encampment",
+            "target": "npc_D1_DarkWander"
         },
         {
             "key": "Link Akara to Rogue Encampment",
-            "source": "8",
-            "target": "3"
+            "source": "Rogue Encampment",
+            "target": "npc_Akara"
         },
         {
             "key": "Link Gheed to Rogue Encampment",
-            "source": "8",
-            "target": "4"
+            "source": "Rogue Encampment",
+            "target": "npc_Gheed"
         },
         {
             "key": "Link Warriv to Rogue Encampment",
-            "source": "8",
-            "target": "5"
+            "source": "Rogue Encampment",
+            "target": "npc_Warriv"
         },
         {
             "key": "Link Charsi to Rogue Encampment",
-            "source": "8",
-            "target": "6"
+            "source": "Rogue Encampment",
+            "target": "npc_Charsi"
         },
         {
             "key": "Link Kashya to Rogue Encampment",
-            "source": "8",
-            "target": "7"
-        },
-        {
-            "key": "Link Warriv to Akara (told you to talk to her)",
-            "source": "3",
-            "target": "5"
-        },
-        {
-            "key": "Ancestral home is Rogue Monastery",
-            "source": "3",
-            "target": "11"
-        },
-        {
-            "key": "Is Akara's Military Leader",
-            "source": "3",
-            "target": "7"
-        },
-        {
-            "key": "Is her Spirtual Leader",
-            "source": "3",
-            "target": "7"
-        },
-        {
-            "key": "Link Akara's Gossip",
-            "source": "3",
-            "target": "17"
-        },
-        {
-            "key": "Link Charsi to Gheed (speaks, likes, thinks he's funny)",
-            "source": "4",
-            "target": "6"
-        },
-        {
-            "key": "Link Gheed's Gossip",
-            "source": "4",
-            "target": "16"
-        },
-        {
-            "key": "Link Gheed to Andariel (knows of forces/corruption)",
-            "source": "4",
-            "target": "9"
+            "source": "Rogue Encampment",
+            "target": "npc_Kashya"
         },
         {
             "key": "Link Warriv to Tristram (Knows of Tragedy)",
-            "source": "5",
-            "target": "10"
-        },
-        {
-            "key": "Link Warriv to Rogue Monastery (knows pass is blocked)",
-            "source": "5",
-            "target": "11"
-        },
-        {
-            "key": "Link Warriv's Gossip",
-            "source": "5",
-            "target": "12"
-        },
-        {
-            "key": "Link Warriv to Kaysha (knows she's the leader)",
-            "source": "5",
-            "target": "7"
-        },
-        {
-            "key": "Link Warriv to Kaysha (kinda trusts warriv)",
-            "source": "5",
-            "target": "7"
+            "source": "Tristram",
+            "target": "npc_Warriv"
         },
         {
             "key": "Link Charsi to Tristam (knows of Rogue's Fight in D1)",
-            "source": "6",
-            "target": "10"
+            "source": "Tristram",
+            "target": "npc_Charsi"
         },
         {
-            "key": "Link Charsi to Andariel (knows she's cause of corruption)",
-            "source": "6",
-            "target": "9"
-        },
-        {
-            "key": "Link Charsi's Gossip",
-            "source": "6",
-            "target": "15"
+            "key": "Link Warriv to Rogue Monastery (knows pass is blocked)",
+            "source": "Rogue Monastery",
+            "target": "npc_Warriv"
         },
         {
             "key": "Ancestral home is Rogue Monastery",
-            "source": "7",
-            "target": "11"
+            "source": "Rogue Monastery",
+            "target": "npc_Kashya"
+        },
+        {
+            "key": "Ancestral home is Rogue Monastery",
+            "source": "Rogue Monastery",
+            "target": "npc_Akara"
+        },
+        {
+            "key": "Link Andy to Diablo",
+            "source": "boss_01_Andariel",
+            "target": "boss_04_Diablo"
+        },
+        {
+            "key": "Link Andy to Rogue Encampment",
+            "source": "boss_01_Andariel",
+            "target": "boss_04_Diablo"
+        },
+        {
+            "key": "Link Charsi to Andariel (knows she's cause of corruption)",
+            "source": "boss_01_Andariel",
+            "target": "npc_Charsi"
+        },
+        {
+            "key": "Link Gheed to Andariel (knows of forces/corruption)",
+            "source": "boss_01_Andariel",
+            "target": "npc_Gheed"
+        },
+        {
+            "key": "Link Dark Wanderer to Diablo",
+            "source": "boss_04_Diablo",
+            "target": "npc_D1_DarkWander"
+        },
+        {
+            "key": "Link Warriv to Diablo (Rumors walking Earth)",
+            "source": "boss_04_Diablo",
+            "target": "npc_Warriv"
+        },
+        {
+            "key": "Link Warriv to DW (knew he went through)",
+            "source": "npc_D1_DarkWander",
+            "target": "npc_Warriv"
+        },
+        {
+            "key": "Link Warriv to Akara (told you to talk to her)",
+            "source": "npc_Akara",
+            "target": "npc_Warriv"
+        },
+        {
+            "key": "Is Akara's Military Leader",
+            "source": "npc_Akara",
+            "target": "npc_Kashya"
+        },
+        {
+            "key": "Is her Spirtual Leader",
+            "source": "npc_Akara",
+            "target": "npc_Kashya"
+        },
+        {
+            "key": "Link Akara's Gossip",
+            "source": "npc_Akara",
+            "target": "Akara Gossip"
+        },
+        {
+            "key": "Link Charsi to Gheed (speaks, likes, thinks he's funny)",
+            "source": "npc_Gheed",
+            "target": "npc_Charsi"
+        },
+        {
+            "key": "Link Gheed's Gossip",
+            "source": "npc_Gheed",
+            "target": "Gheed Gossip"
+        },
+        {
+            "key": "Link Warriv's Gossip",
+            "source": "npc_Warriv",
+            "target": "Warriv Gossip"
+        },
+        {
+            "key": "Link Warriv to Kaysha (knows she's the leader)",
+            "source": "npc_Warriv",
+            "target": "npc_Kashya"
+        },
+        {
+            "key": "Link Warriv to Kaysha (kinda trusts warriv)",
+            "source": "npc_Warriv",
+            "target": "npc_Kashya"
+        },
+        {
+            "key": "Link Charsi's Gossip",
+            "source": "npc_Charsi",
+            "target": "Charsi Gossip"
         },
         {
             "key": "Link Kaysha's Gossip",
-            "source": "7",
-            "target": "14"
+            "source": "npc_Kashya",
+            "target": "Kaysha Gossip"
         },
         {
             "key": "Link Warriv's Gossip 1",
-            "source": "12",
-            "target": "13"
+            "source": "Warriv Gossip",
+            "target": "Warriv Gossip 1"
         },
         {
             "key": "Link Kaysha's Gossip 1",
-            "source": "14",
-            "target": "18"
+            "source": "Kaysha Gossip",
+            "target": "Kaysha Gossip 1"
         },
         {
             "key": "Link Charsi's Gossip 1",
-            "source": "15",
-            "target": "19"
+            "source": "Charsi Gossip",
+            "target": "Charsi Gossip 1"
         },
         {
             "key": "Link Gheed's Gossip 1",
-            "source": "16",
-            "target": "20"
+            "source": "Gheed Gossip",
+            "target": "Gheed Gossip 1"
         },
         {
             "key": "Link Akara's Gossip 1",
-            "source": "17",
-            "target": "21"
+            "source": "Akara Gossip",
+            "target": "Akara Gossip 1"
         }
     ],
     "multigraph": true,
     "nodes": [
         {
-            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Prime Evil: Lord of Terror</li>\n          <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>\n          <li>Corrupted both King Leoric and his archbishop, Lazarus</li>\n          <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>\n          <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>\n          <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>\n        </ul>\n\n        <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>\n        ",
             "group": 0,
+            "id": "Rogue Encampment",
+            "name": "Rogue Encampment"
+        },
+        {
+            "group": 1,
+            "id": "Tristram",
+            "name": "Tristram"
+        },
+        {
+            "group": 2,
+            "id": "Rogue Monastery",
+            "name": "Rogue Monastery"
+        },
+        {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Lessor Evil: Maiden of Anguish</li>\n          <li>Once overthrew the three Prime Evils</li>\n          <li>Presence in Sanctuary implies: forces of Hell are once again aligned behind Diablo and his Brothers</li>\n          <li>Acting on behalf of Diablo to prevent anyone from following him eastward</li>\n          </ul>\n\n          <p>Source: http://classic.battle.net/diablo2exp/monsters/act1-andariel.shtml</p>\n        ",
+            "group": 0,
+            "id": "boss_01_Andariel",
+            "name": "Andariel"
+        },
+        {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Prime Evil: Lord of Terror</li>\n          <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>\n          <li>Corrupted both King Leoric and his archbishop, Lazarus</li>\n          <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>\n          <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>\n          <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>\n        </ul>\n\n        <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>\n        ",
+            "group": 1,
             "id": "boss_04_Diablo",
-            "idLink": 0,
             "name": "Diablo"
         },
         {
             "group": 1,
             "id": "npc_D1_DarkWander",
-            "idLink": 1,
             "name": "Dark Wanderer"
         },
         {
-            "group": 2,
-            "id": "Cain",
-            "idLink": 2,
+            "group": 3,
+            "id": "npc_Cain",
             "name": "Cain"
         },
         {
             "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>High Priestess of the Sisterhood of the Sightless Eye</li>\n          <li>Offers poor shelter within rickety walls</li>\n          <li>Sisterhood is under a strange curse</li>\n          <li>Their mighty Citadel (the Monastery) has been corrupted by Andariel\n            <ul>\n              <li>- - Andy corrupted the sisters and drove the survivors out</li>\n              <li>Last defenders are scattered or dead</li>\n            </ul>\n          </li>\n          <li>Offers pledge of loyalty forever if we help lift the curse</li>\n        </ul>\n\n        <p>Source: Introduction Speech</p>\n        ",
-            "group": 3,
-            "id": "Akara",
-            "idLink": 3,
+            "group": 2,
+            "id": "npc_Akara",
             "name": "Akara"
         },
         {
             "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>NEVER wanted to lay eyes on Necros</li>\n          <li>BUT is okay with taking your money...gold or gems</li>\n          <li>Items guarenteed for life</li>\n          <li><ul><li>have 2 day warranty</li></ul></li>\n        </ul>\n\n        <p>Source: Introduction Speech</p>\n        ",
-            "group": 4,
-            "id": "Gheed",
-            "idLink": 4,
+            "group": 0,
+            "id": "npc_Gheed",
             "name": "Gheed"
         },
         {
             "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Knows of Tragedy of Tristram</li>\n          <li>Rumors of Diablo walking around</li>\n          <li>KNEW of Dark Wanderer</li>\n          <li>DW Headed to Rogue Monastery</li>\n          <li>Pass is closed monsters started showing up</li>\n          <li>Jokes about you dying</li>\n          <li>Reccomends talking to Akara as leader</li>          \n        </ul>\n\n        <p>Source: Introduction Speech</p>\n        ",
-            "group": 5,
-            "id": "Warriv",
-            "idLink": 5,
+            "group": 1,
+            "id": "npc_Warriv",
             "name": "Warriv"
         },
         {
             "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>She's the blacksmith</li>\n          <li>Calls players adventurers</li>\n          <li>Sisters fought Diablo in Tristram</li>\n          <li>Rogues brought back powerful loot</li>\n          <li>MOST sisters are corrupted by Andariel (FIRST to mention so**)</li>\n        </ul>\n\n        <p>Source: Introduction Speech</p>\n        ",
-            "group": 6,
-            "id": "Charsi",
-            "idLink": 6,
+            "group": 0,
+            "id": "npc_Charsi",
             "name": "Charsi"
         },
         {
             "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Calls you an outlander</li>\n          <li>Knows you are here to to challenge evil/restoring them to ancestral home (Rogue Monastery)</li>\n          <li>Akara is spirital leader</li>\n          <li>Kaysha is military leader</li>          \n        </ul>\n\n        <p>Source: Introduction Speech</p>\n        ",
-            "group": 7,
-            "id": "Kashya",
-            "idLink": 7,
+            "group": 2,
+            "id": "npc_Kashya",
             "name": "Kashya"
         },
         {
-            "group": 8,
-            "id": "Rogue Encampment",
-            "idLink": 8,
-            "name": "Rogue Encampment"
-        },
-        {
-            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Lessor Evil: Maiden of Anguish</li>\n          <li>Once overthrew the three Prime Evils</li>\n          <li>Presence in Sanctuary implies: forces of Hell are once again aligned behind Diablo and his Brothers</li>\n          <li>Acting on behalf of Diablo to prevent anyone from following him eastward</li>\n          </ul>\n\n          <p>Source: http://classic.battle.net/diablo2exp/monsters/act1-andariel.shtml</p>\n        ",
-            "group": 9,
-            "id": "boss_01_Andariel",
-            "idLink": 9,
-            "name": "Andariel"
-        },
-        {
-            "group": 10,
-            "id": "Tristram",
-            "idLink": 10,
-            "name": "Tristram"
-        },
-        {
-            "group": 11,
-            "id": "Rogue Monastery",
-            "idLink": 11,
-            "name": "Rogue Monastery"
-        },
-        {
             "description": "\n        <p>All related Warriv Gossip will be posted here</p>\n        ",
-            "group": 12,
+            "group": 1,
             "id": "Warriv Gossip",
-            "idLink": 12,
             "name": "Gossip"
         },
         {
-            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Knows Kaysha is Rogue Leader</li>\n          <li>Knows she does not like outsiders</li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
-            "group": 13,
-            "id": "Warriv Gossip 1",
-            "idLink": 13,
-            "name": "Gossip 1"
-        },
-        {
             "description": "\n        <p>All related Kaysha Gossip will be posted here</p>\n        ",
-            "group": 14,
+            "group": 2,
             "id": "Kaysha Gossip",
-            "idLink": 14,
             "name": "Gossip"
         },
         {
             "description": "\n        <p>All related Charsi Gossip will be posted here</p>\n        ",
-            "group": 15,
+            "group": 0,
             "id": "Charsi Gossip",
-            "idLink": 15,
             "name": "Gossip"
         },
         {
             "description": "\n        <p>All related Gheed Gossip will be posted here</p>\n        ",
-            "group": 16,
+            "group": 0,
             "id": "Gheed Gossip",
-            "idLink": 16,
             "name": "Gossip"
         },
         {
             "description": "\n        <p>All related Akara Gossip will be posted here</p>\n        ",
-            "group": 17,
+            "group": 2,
             "id": "Akara Gossip",
-            "idLink": 17,
             "name": "Gossip"
         },
         {
+            "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Knows Kaysha is Rogue Leader</li>\n          <li>Knows she does not like outsiders</li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
+            "group": 1,
+            "id": "Warriv Gossip 1",
+            "name": "Gossip 1"
+        },
+        {
             "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Does not trust many outlanders</li>\n          <li>Warriv seems fine</li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
-            "group": 18,
+            "group": 2,
             "id": "Kaysha Gossip 1",
-            "idLink": 18,
             "name": "Gossip 1"
         },
         {
             "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>She likes Gheed -- thinks he's funny</li>\n          <li>Wants to see the sights like Gheed</li>\n        </ul>\n\n        <p>Source: First Gossip</p>\n        ",
-            "group": 19,
+            "group": 0,
             "id": "Charsi Gossip 1",
-            "idLink": 19,
             "name": "Gossip 1"
         },
         {
             "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Forrests and Monastery host Andariel's forces</li>\n          <li>WILL NOT be adventuring out of the camp...</li>\n        </ul>\n        \n        <p>Source: First Gossip</p>\n        ",
-            "group": 20,
+            "group": 0,
             "id": "Gheed Gossip 1",
-            "idLink": 20,
             "name": "Gossip 1"
         },
         {
             "description": "\n        <ul style=\"list-style-type:disc\">\n          <li>Knows Kaysha is fiercly loyal\n          <li>- - Thinks anger and frustration will lead her into harms way\n          <li>- Highly protective of the Rogues that are left\n          <li>- - will not send the rouges out unless there is a dire need \n\n          <li>- GitHub COPILOT SAYS: Knows Charsi is a very nice lady \n          \n          </li>\n        </ul>\n        \n        <p>Source: First Gossip</p>\n        ",
-            "group": 21,
+            "group": 2,
             "id": "Akara Gossip 1",
-            "idLink": 21,
             "name": "Gossip 1"
-        },
-        {
-            "group": 22,
-            "id": "1"
-        },
-        {
-            "group": 22,
-            "id": "0"
-        },
-        {
-            "group": 23,
-            "id": "8"
-        },
-        {
-            "group": 23,
-            "id": "3"
-        },
-        {
-            "group": 24,
-            "id": "4"
-        },
-        {
-            "group": 23,
-            "id": "5"
-        },
-        {
-            "group": 25,
-            "id": "6"
-        },
-        {
-            "group": 23,
-            "id": "7"
-        },
-        {
-            "group": 22,
-            "id": "9"
-        },
-        {
-            "group": 25,
-            "id": "10"
-        },
-        {
-            "group": 23,
-            "id": "11"
-        },
-        {
-            "group": 26,
-            "id": "12"
-        },
-        {
-            "group": 26,
-            "id": "13"
-        },
-        {
-            "group": 27,
-            "id": "14"
-        },
-        {
-            "group": 27,
-            "id": "18"
-        },
-        {
-            "group": 25,
-            "id": "15"
-        },
-        {
-            "group": 25,
-            "id": "19"
-        },
-        {
-            "group": 24,
-            "id": "16"
-        },
-        {
-            "group": 24,
-            "id": "20"
-        },
-        {
-            "group": 28,
-            "id": "17"
-        },
-        {
-            "group": 28,
-            "id": "21"
         }
     ]
 }

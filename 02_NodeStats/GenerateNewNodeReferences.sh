@@ -12,88 +12,88 @@ echo "#!/bin/bash" > $oFile
 
 old="0"
 new="boss_04_Diablo"
-update_source-and-target $old $new
+update_source-and-target "$old" "$new"
 
 old="1"
 new="npc_D1_DarkWander"
-update_source-and-target $old $new
+update_source-and-target "$old" "$new"
 
 old="2"
 new="Cain"
-update_source-and-target $old $new
+update_source-and-target "$old" "$new"
 
 old="3"
 new="Akara"
-update_source-and-target $old $new
+update_source-and-target "$old" "$new"
 
 old="4"
 new="Gheed"
-update_source-and-target $old $new
+update_source-and-target "$old" "$new"
 
 old="5"
 new="Warriv"
-update_source-and-target $old $new
+update_source-and-target "$old" "$new"
 
 old="6"
 new="Charsi"
-update_source-and-target $old $new
+update_source-and-target "$old" "$new"
 
 old="7"
 new="Kaysha"
-update_source-and-target $old $new
+update_source-and-target "$old" "$new"
 
 old="8"
-new="Rogue"
-update_source-and-target $old $new
+new="Rogue Encampment"
+update_source-and-target "$old" "$new"
 
 old="9"
 new="boss_01_Andariel"
-update_source-and-target $old $new
+update_source-and-target "$old" "$new"
 
 old="10"
 new="Tristram"
-update_source-and-target $old $new
+update_source-and-target "$old" "$new"
 
 old="11"
-new="Rogue"
-update_source-and-target $old $new
+new="Rogue Monastery"
+update_source-and-target "$old" "$new"
 
 old="12"
-new="Warriv"
-update_source-and-target $old $new
+new="Warriv Gossip"
+update_source-and-target "$old" "$new"
 
 old="13"
-new="Warriv"
-update_source-and-target $old $new
+new="Warriv Gossip 1"
+update_source-and-target "$old" "$new"
 
 old="14"
-new="Kaysa"
-update_source-and-target $old $new
+new="Kaysha Gossip"
+update_source-and-target "$old" "$new"
 
 old="15"
-new="Charsi"
-update_source-and-target $old $new
+new="Charsi Gossip"
+update_source-and-target "$old" "$new"
 
 old="16"
-new="Gheed"
-update_source-and-target $old $new
+new="Gheed Gossip"
+update_source-and-target "$old" "$new"
 
 old="17"
-new="Akara"
-update_source-and-target $old $new
+new="Akara Gossip"
+update_source-and-target "$old" "$new"
 
 old="18"
-new="Kaysha"
-update_source-and-target $old $new
+new="Kaysha Gossip 1"
+update_source-and-target "$old" "$new"
 
 old="19"
-new="Charsi"
-update_source-and-target $old $new
+new="Charsi Gossip 1"
+update_source-and-target "$old" "$new"
 
 old="20"
-new="Gheed"
-update_source-and-target $old $new
+new="Gheed Gossip 1"
+update_source-and-target "$old" "$new"
 
 old="21"
-new="Akara"
-update_source-and-target $old $new
+new="Akara Gossip 1"
+update_source-and-target "$old" "$new"
