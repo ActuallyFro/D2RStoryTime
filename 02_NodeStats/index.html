@@ -50,6 +50,7 @@
     <script>
         //store Global defaults
         var defaultDescription = "unk";
+        var nodeCounter=1; //1-indexed so VSCode search will match...
 
         $(document).ready(function() {
             $.get("../D2R_Act_I.gxl", function(xml) {
@@ -80,7 +81,11 @@
                 for (var i = 0; i < varNodes.length; i++) {
                     var valKey = $(varNodes[i]).attr("id");
                     var valName = $(varNodes[i]).find("data[key='nameNode']").text();
-                    var valId = $(varNodes[i]).find("data[key='idLinkNode']").text();
+                    // var valId = $(varNodes[i]).find("data[key='idLinkNode']").text(); //REMOVED!
+
+                    //convert nodeCounter to string, store in valID
+                    var valId = nodeCounter.toString();
+                    nodeCounter++;
                     var valDesc = $(varNodes[i]).find("data[key='descriptionNode']").html(); //text() STRIPS tags!
 
                     //if valDesc is empty, show "No description"
