@@ -48,6 +48,9 @@
 
     <!-- Jquery: opens stats.xml file, counts <node> tags, shows result in table with key and value, then update html in div tag -->
     <script>
+        //store Global defaults
+        var defaultDescription = "unk";
+
         $(document).ready(function() {
             $.get("../D2R_Act_I.gxl", function(xml) {
                 var countKey = $(xml).find("key").length;
@@ -57,13 +60,17 @@
                 $("#table").append("<tr><th>Keys</th><td>"+countKey+"</td></tr>");
                 $("#table").append("<tr><th>Nodes</th><td>"+countNode+"</td></tr>");
                 $("#table").append("<tr><th>Edges</th><td>"+countEdge+"</td></tr>");
-                
+
                 // for each key, get the value and show it in the table
                 $(xml).find("key").each(function() {
                     var valKey = $(this).attr("attr.name");
                     var valId = $(this).attr("id");
                     var valType = $(this).attr("attr.type");
                     var valDefault = $(this).find("default").text();
+
+                    if (valKey == "description") {
+                        defaultDescription=valDefault;
+                    }
                     
                     $("#keyTable").append("<tr><th>"+valKey+"</th><td>"+valId+"</td><td>"+valType+"</td><td>"+valDefault+"</td></tr>");
                 });
@@ -74,21 +81,26 @@
                     var valKey = $(varNodes[i]).attr("id");
                     var valName = $(varNodes[i]).find("data[key='nameNode']").text();
                     var valId = $(varNodes[i]).find("data[key='idLinkNode']").text();
-                    var valDesc = $(varNodes[i]).find("data[key='descriptionNode']").text(); //text() STRIPS tags!
+                    var valDesc = $(varNodes[i]).find("data[key='descriptionNode']").html(); //text() STRIPS tags!
 
-                    //remove trailing string ']]>' from description
-                    var valDesc = valDesc.replace(/\]\]>/g, '');
+                    //if valDesc is empty, show "No description"
+                    if (valDesc == undefined) {
+                        valDesc = "["+defaultDescription+"]";
+                    } else {
+                        var valDesc = valDesc.substring(0, valDesc.length - 6); //HAX
+                    }
+
+                    // remove TWO '\n' in description
+                    var valDesc = valDesc.replace(/\n/, '');
+                    var valDesc = valDesc.replace(/\n/, '');
 
                     // replace '\n' with <br> in description
                     var valDesc = valDesc.replace(/\n/g, '<br>');
 
-                    // remove the first instance of '<br>' in description
-                    var valDesc = valDesc.replace("<br>", "");
+                    //replace "<\li><br><li>" with "<\li><li>"
+                    var valDesc = valDesc.replace(/<li><br><li>/g, '<li><li>');
 
-                    // // replace '<li>' with - in description
-                    // var valDesc = valDesc.replace(/<li>/g, '-');
-
-                    $("#nodeTable").append("<tr><th>"+valKey+"</th><td>"+valName+"</td><td>"+valId+"</td><td>"+valDesc+"</td></tr>");                    
+                    $("#nodeTable").append("<tr><th>"+valKey+"</th><td>"+valName+"</td><td>"+valId+"</td><td>"+valDesc+"</td></tr>");
                 }
 
                 // for each edge, get the id, source, target and show it in the #keyEdges table
