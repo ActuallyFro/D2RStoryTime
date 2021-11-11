@@ -75,7 +75,16 @@
                     var valName = $(varNodes[i]).find("data[key='nameNode']").text();
                     var valId = $(varNodes[i]).find("data[key='idLinkNode']").text();
                     var valDesc = $(varNodes[i]).find("data[key='descriptionNode']").text();
-                    
+
+                    //remove trailing string ']]>' from description
+                    var valDesc = valDesc.replace(/\]\]>/g, '');
+
+                    // replace '\n' with <br> in description
+                    var valDesc = valDesc.replace(/\n/g, '<br>');
+
+                    // remove the first instance of '<br>' in description
+                    var valDesc = valDesc.replace("<br>", "");
+
                     $("#nodeTable").append("<tr><th>"+valKey+"</th><td>"+valName+"</td><td>"+valId+"</td><td>"+valDesc+"</td></tr>");                    
                 }
 
