@@ -127,53 +127,6 @@
                     $("#edgeTable").append(valRowStr);
 
                 });
-
-/*
- For posterity: the intention of this code was to VISUALLY highlight logic errors with wiring the edges to the nodes.
- HOWEVER, the edge id's would need to be crafted in order to be parsed correctly.
- Thus, the test case:
-
-     <edge id="Link Andy to Rogue Encampment" source="boss_01_Andariel" target="boss_04_Diablo"/> 
-
-would need to be modified to something like:
-
-    <edge id="Link (Andy) to (Rogue Encampment)" source="boss_01_Andariel" target="boss_04_Diablo"/> 
-
-BUT, to be parsable, the id references would HAVE TO MATCH the "nameNode" key ..., thus it would be:
-
-    <edge id="Link (Andariel) to (Rogue Encampment)" source="boss_01_Andariel" target="boss_04_Diablo"/> 
-
-YET, non-linked edge name would be non-usable (or would ALWAYS error...):
-
-                "Link Akara's Gossip" could NOT be used as an id...
-
-Because of this, the code is commented out.
-However, this FIXES the problem AFTER it has occured...
-
-To prevent it in the first place: the edge-builder could be modified to not allow the user to create edges to non-established nodes/etc.
-
-Yet, it's all moot, since none of this is syntax issues ... it's a logic error.
-
-==============
-
-LAST point: this code could be used to highlight edges that are wired to non-existing nodes...
-
-    <edge id="Link (Andy) to (Rogue Encampment)" source="boss_01_Andariel" target="boss_04_asdblo"/> <--- would alert of error with target being bad, but STILL cannot address the logic error of NOT being the Rogue Emcampment node.
-
-                    var valRowStr = "<tr><th>"+valId+"</th>";
-                    // if (valSource != strSourceIndex) {
-                    //     $("#edgeTable").append("<td>"+valSource+" ("+strSourceIndex+":"+strSource+" <b><font color='red'>ERROR!</font></b>)</td>");
-                    // } else {
-                        valRowStr += "<td>"+valSource+" ("+strSource+")</td>";
-                    // }
-                                        
-                    // if (valTarget != strTargetIndex) {
-                        valRowStr += "<td>"+valTarget+" ("+strTarget+")</td>";
-                    //     $("#edgeTable").append("<td>"+valTarget+" ("+strTargetIndex+":"+strTarget+" <b><font color='red'>ERROR!</font></b>)</td>");
-                    // } else {
-                    // }
-
-*/
             });
         });
 
