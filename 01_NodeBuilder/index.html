@@ -263,6 +263,9 @@ $(document).ready(function() {
 
             pickElementHTML += "</select>";
 
+            // add button 'reset' which changes <select> 'elemPicker' to ''
+            pickElementHTML += "<button type=\"button\" onclick=\"document.getElementById('elemPicker').value=''; updateXmlElementSelector();\">Reset</button>";
+
             //add html to div tag
             document.getElementById("xmlElementSelector").innerHTML = pickElementHTML;
     });
