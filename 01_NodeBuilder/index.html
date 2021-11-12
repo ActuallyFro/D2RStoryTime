@@ -237,102 +237,35 @@ $(document).ready(function() {
 
         var pickElementHTML = "<label for=\"elemPicker\">An Element: </label>";
             pickElementHTML += "<select id=\"elemPicker\" name=\"elemPicker\" onchange=\"updateXmlElementSelector()\">";
-              pickElementHTML += "<option value=\"\"><i></i></option>";
-              pickElementHTML += "<option value=\"one\"><i>one</i></option>";
-              pickElementHTML += "<option value=\"two\"><i>two</i></option>";
+            pickElementHTML += "<option value=\"\"><i></i></option>";
+
+            // var tempVar="";
+
+            // dont like ajax calls, but it works for now...?
+            // on document ready on xml file and count <node>
+            var xmlFile = "../D2R_Act_I.gxl";
+            var xmlDoc = $.parseXML( $.ajax({url: xmlFile, async: false}).responseText );
+            var xml = $( xmlDoc );
+            var varNodes = xml.find( "node" );
+
+            tempVar = "Total nodes: " + varNodes.length + "\n";
+            for (var i = 0; i < varNodes.length; i++) {
+                var valName = $(varNodes[i]).find("data[key='nameNode']").text();
+
+                // $("#nodeTable").append("<tr><th>"+valKey+"</th><td>"+valName+"</td><td>"+valId+"</td><td>"+valDesc+"</td></tr>");
+                pickElementHTML += "<option value=\""+valName+"\">"+valName+"</option>";
+
+                // tempVar += "<option value=\""+valName+"\">"+valName+"</option>";
+            }
+            ////////////////////
+
+            // alert(tempVar);
+
             pickElementHTML += "</select>";
 
             //add html to div tag
             document.getElementById("xmlElementSelector").innerHTML = pickElementHTML;
     });
-/*
-        //store Global defaults
-        var defaultDescription = "unk";
-        var nodeCounter=1; //1-indexed so VSCode search will match...
-
-        $(document).ready(function() {
-            $.get("../D2R_Act_I.gxl", function(xml) {
-                var countKey = $(xml).find("key").length;
-                var countNode = $(xml).find("node").length;
-                var countEdge = $(xml).find("edge").length;
-                
-                $("#table").append("<tr><th>Keys</th><td>"+countKey+"</td></tr>");
-                $("#table").append("<tr><th>Nodes</th><td>"+countNode+"</td></tr>");
-                $("#table").append("<tr><th>Edges</th><td>"+countEdge+"</td></tr>");
-
-                // for each key, get the value and show it in the table
-                $(xml).find("key").each(function() {
-                    var valKey = $(this).attr("attr.name");
-                    var valId = $(this).attr("id");
-                    var valType = $(this).attr("attr.type");
-                    var valDefault = $(this).find("default").text();
-
-                    if (valKey == "description") {
-                        defaultDescription=valDefault;
-                    }
-                    
-                    $("#keyTable").append("<tr><th>"+valKey+"</th><td>"+valId+"</td><td>"+valType+"</td><td>"+valDefault+"</td></tr>");
-                });
-
-                // for each node, get the key, name, id and description to show it in the #keyEdges table
-                var varNodes = $(xml).find("node");
-                for (var i = 0; i < varNodes.length; i++) {
-                    var valKey = $(varNodes[i]).attr("id");
-                    var valName = $(varNodes[i]).find("data[key='nameNode']").text();
-                    // var valId = $(varNodes[i]).find("data[key='idLinkNode']").text(); //REMOVED!
-
-                    //convert nodeCounter to string, store in valID
-                    var valId = nodeCounter.toString();
-                    nodeCounter++;
-                    var valDesc = $(varNodes[i]).find("data[key='descriptionNode']").html(); //text() STRIPS tags!
-
-                    //if valDesc is empty, show "No description"
-                    if (valDesc == undefined) {
-                        valDesc = "["+defaultDescription+"]";
-                    } else {
-                        var valDesc = valDesc.substring(0, valDesc.length - 6); //HAX
-                    }
-
-                    // remove TWO '\n' in description
-                    var valDesc = valDesc.replace(/\n/, '');
-                    var valDesc = valDesc.replace(/\n/, '');
-
-                    // replace '\n' with <br> in description
-                    var valDesc = valDesc.replace(/\n/g, '<br>');
-
-                    //replace "<\li><br><li>" with "<\li><li>"
-                    var valDesc = valDesc.replace(/<li><br><li>/g, '<li><li>');
-
-                    $("#nodeTable").append("<tr><th>"+valKey+"</th><td>"+valName+"</td><td>"+valId+"</td><td>"+valDesc+"</td></tr>");
-                }
-
-                // for each edge, get the id, source, target and show it in the #keyEdges table
-                $(xml).find("edge").each(function() {
-                    var valId = $(this).attr("id");
-                    var valSource = $(this).attr("source");
-                    var valTarget = $(this).attr("target");
-                    
-                    var strSource = $(varNodes[valSource]).attr("id");
-                    var strSourceIndex = $(varNodes[valSource]).find("data[key='idLinkNode']").text();
-                    var strTarget = $(varNodes[valTarget]).attr("id");
-                    var strTargetIndex = $(varNodes[valTarget]).find("data[key='idLinkNode']").text();
-
-                    var valRowStr = "<tr><th>"+valId+"</th>";
-                        valRowStr += "<td>"+valSource+" ("+strSource+")</td>";                                        
-                        valRowStr += "<td>"+valTarget+" ("+strTarget+")</td>";
-
-                    valRowStr += "</tr>";
-                    $("#edgeTable").append(valRowStr);
-
-                });
-            });
-        });
-
-        function xmlFindTag(xml, tag) {
-            var result = $(xml).find(tag);
-            return result;
-        }
-        */
 
   </script>
 
@@ -510,32 +443,57 @@ $(document).ready(function(){
 </html>
 
 <!-- 
-  Example Key:
-    <key attr.name="name" attr.type="string" for="node" id="nameNode"><default>NaN</default></key>
+                var varNodes = $(xml).find("node");
+                for (var i = 0; i < varNodes.length; i++) {
+                    var valKey = $(varNodes[i]).attr("id");
+                    var valName = $(varNodes[i]).find("data[key='nameNode']").text();
+                    // var valId = $(varNodes[i]).find("data[key='idLinkNode']").text(); //REMOVED!
 
-  Example Node:
-    <node id="boss_04_Diablo"> 
-      <data key="nameNode">Diablo</data>
-      <data key="idLinkNode">0</data>
-      <data key="descriptionNode"><![CDATA[
-        <ul style="list-style-type:disc">
-          <li>Prime Evil: Lord of Terror</li>
-          <li>Spent 2 centuries to corrupt the Soulstone that imprisoned him.</li>
-          <li>Corrupted both King Leoric and his archbishop, Lazarus</li>
-          <li>The King proved too strong to fully control, so the Demon took possession of his son, Prince Albrecht.</li>
-          <li>Shaped an outpost of Hell within the catacombs that ran beneath the town of Tristram</li>
-          <li>The will of Diablo fully influenced this adventurer (The Dark Wanderer), and he believed that the only way to fully control the Demon was to plunge the shard of the Soulstone into his own head.</li>
-        </ul>
+                    //convert nodeCounter to string, store in valID
+                    var valId = nodeCounter.toString();
+                    nodeCounter++;
+                    var valDesc = $(varNodes[i]).find("data[key='descriptionNode']").html(); //text() STRIPS tags!
 
-        <p>Source: http://classic.battle.net/diablo2exp/monsters/act4-diablo.shtml</p>
-        ]]></data>
-    </node>
+                    //if valDesc is empty, show "No description"
+                    if (valDesc == undefined) {
+                        valDesc = "["+defaultDescription+"]";
+                    } else {
+                        var valDesc = valDesc.substring(0, valDesc.length - 6); //HAX
+                    }
 
-    <node id="npc_D1_DarkWander">
-      <data key="nameNode">Dark Wanderer</data>
-      <data key="idLinkNode">1</data>
-    </node>
+                    // remove TWO '\n' in description
+                    var valDesc = valDesc.replace(/\n/, '');
+                    var valDesc = valDesc.replace(/\n/, '');
 
-  Example Edge:
-    <edge id="Link Dark Wanderer to Diablo" source="1" target="0"/>
+                    // replace '\n' with <br> in description
+                    var valDesc = valDesc.replace(/\n/g, '<br>');
+
+                    //replace "<\li><br><li>" with "<\li><li>"
+                    var valDesc = valDesc.replace(/<li><br><li>/g, '<li><li>');
+
+                    $("#nodeTable").append("<tr><th>"+valKey+"</th><td>"+valName+"</td><td>"+valId+"</td><td>"+valDesc+"</td></tr>");
+                }
+
+                // for each edge, get the id, source, target and show it in the #keyEdges table
+                $(xml).find("edge").each(function() {
+                    var valId = $(this).attr("id");
+                    var valSource = $(this).attr("source");
+                    var valTarget = $(this).attr("target");
+                    
+                    var strSource = $(varNodes[valSource]).attr("id");
+                    var strSourceIndex = $(varNodes[valSource]).find("data[key='idLinkNode']").text();
+                    var strTarget = $(varNodes[valTarget]).attr("id");
+                    var strTargetIndex = $(varNodes[valTarget]).find("data[key='idLinkNode']").text();
+
+                    var valRowStr = "<tr><th>"+valId+"</th>";
+                        valRowStr += "<td>"+valSource+" ("+strSource+")</td>";                                        
+                        valRowStr += "<td>"+valTarget+" ("+strTarget+")</td>";
+
+                    valRowStr += "</tr>";
+                    $("#edgeTable").append(valRowStr);
+
+                });
+            });
+        });
+
 -->
