@@ -212,23 +212,71 @@ $(document).ready(function() {
       //Update xmlElementSelection
       var xmlElementSelectorPick = document.getElementById("elemPicker").value;
 
-      var tempVal;
-
-      //if <select> value is "two", then add string to innerHTML
-      var tempAdd="one";
-
       if (xmlElementSelectorPick == "") {
         document.getElementById("xmlElementSelection").innerHTML = "";
         return;
 
-      } else if (xmlElementSelectorPick == "two") {
-        tempAdd = "two";
       }
+
+      // var tempVal;
+
+    var pickedXMLFile = document.getElementById("filePicker").value; //on first load this is empty
+
+    if(pickedXMLFile == "") {
+      pickedXMLFile = "../D2R_Act_I.gxl";
+    }
+
+    //if <select> value is "two", then add string to innerHTML
+    var tempAdd="{NO DATA!}";
+
+    ///////////////
+    var xmlFile = pickedXMLFile; 
+          
+    var xmlDoc = $.parseXML( $.ajax({url: xmlFile, async: false}).responseText );
+    var xml = $( xmlDoc );
+    var varNodes = xml.find( "node" );
+
+    // tempVar = "Total nodes: " + varNodes.length + "\n";
+    for (var i = 0; i < varNodes.length; i++) {
+        var valName = $(varNodes[i]).find("data[key='nameNode']").text();
+
+        if (xmlElementSelectorPick == valName){
+          // add table to tempAdd having id and name
+          tempAdd = "<table border=\"1\" style=\"width:50%\">\n";
+          tempAdd += "<tr>\n";
+          tempAdd += "<th>ID</th>\n";
+          tempAdd += "<th>Name</th>\n";
+          tempAdd += "<th>Add as Source</th>\n";
+          tempAdd += "<th>Add as Target</th>\n";
+          tempAdd += "</tr>\n";
+          tempAdd += "<tr>\n";
+          tempAdd += "<td>" + $(varNodes[i]).attr("id") + "</td>\n";
+          tempAdd += "<td>" + valName + "</td>\n";
+
+          //add source and target buttons that will update id's of 'fieldEdgeSource' and 'fieldEdgeTarget'
+          tempAdd += "<td><center><button type=\"button\" onclick=\"document.getElementById('fieldEdgeSource').value = '" + $(varNodes[i]).attr("id") + "';\">Add!</button></center></td>\n";
+          tempAdd += "<td><center><button type=\"button\" onclick=\"document.getElementById('fieldEdgeTarget').value = '" + $(varNodes[i]).attr("id") + "';\">Add!</button></center></td>\n";
+
+
+          tempAdd += "</tr>\n";
+          tempAdd += "</table>\n";
+
+          break;
+        }
+    }
+
+    ///////////////
+
+    document.getElementById("xmlElementSelection").innerHTML = tempAdd;
+
+    //  else if (xmlElementSelectorPick == "two") {
+      //   tempAdd = "two";
+      // }
 
       // debug tempAdd
       // alert(tempAdd);
 
-      document.getElementById("xmlElementSelection").innerHTML = "PICKED!: "+tempAdd;
+      // document.getElementById("xmlElementSelection").innerHTML = "PICKED!: "+tempAdd;
     }
 
     //var pickedXMLFile = document.getElementById("filePicker").value; //on first load this is empty
@@ -273,7 +321,7 @@ $(document).ready(function() {
           var xml = $( xmlDoc );
           var varNodes = xml.find( "node" );
 
-          tempVar = "Total nodes: " + varNodes.length + "\n";
+          // tempVar = "Total nodes: " + varNodes.length + "\n";
           for (var i = 0; i < varNodes.length; i++) {
               var valName = $(varNodes[i]).find("data[key='nameNode']").text();
 
