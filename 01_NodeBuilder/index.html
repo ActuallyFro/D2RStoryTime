@@ -417,8 +417,96 @@ $(document).ready(function() {
 
               <!-- Add blank space to form -->
               <pre></pre> 
+                <!-- add tool tip to  DataTags header: https://www.w3schools.com/css/css_tooltip.asp-->
+                <style> 
+                  .tooltip {
+                    position: relative;
+                    display: inline-block;
+                    border-bottom: 1px dotted black;
+                  }
+                  
+                  .tooltip .tooltiptext {
+                    visibility: hidden;
+                    width: 520px;
+                    background-color: black;
+                    color: #fff;
+                    /* text-align: center; */
+                    border-radius: 6px;
+                    padding: 10px;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 100%;
+                    left: 50%;
+                    margin-left: 60px;
+                  }
+                  
+                  .tooltip .tooltiptext::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: black transparent transparent transparent;
+                  }
+                  
+                  .tooltip:hover .tooltiptext {
+                    visibility: visible;
+                  }
+                  </style>
+
               <div class="form-group" id="fieldNodeDivGroup">
-                <h3><label for="dynamicNodeDataFields">Data Tag(s):</label></h3>
+                <div class="tooltip"><h3><label for="dynamicNodeDataFields">Data Tag(s):</label></h3>
+                  <span class="tooltiptext"><u>The .gxl file has 3 main node items: </u>
+                    <br>
+                    1) Element Name (id)- the reference for edges
+                    <br>
+                    <br>
+                    2) Name Key - (nameNode) - human readable name
+                    <br>
+                    <br>
+                    3) Description Key (descriptionNode)- HTML Optional, details about the node
+                    <br>
+                    <br>
+                    <b>Example:</b>
+                    <br>
+                    <b>1) id: boss_01_Andariel </b>
+                    <br>
+                    <br>
+                    <b>2) key "nameNode": Andariel </b>
+                    <br>
+                    <br>
+                    <b>3) key "descriptionNode": &lt;![CDATA[ <br>
+                      &lt;ul style="list-style-type:disc"&gt; <br>
+                      &lt;li&gt;Lessor Evil: Maiden of Anguish&lt;/li&gt; <br>
+                      &lt;li&gt;Once overthrew the three Prime Evils&lt;/li&gt; <br>
+                      &lt;/ul&gt; <br>
+                      <br>
+                      &lt;p&gt;Source: http://classic.battle.net/diablo2exp/monsters/act1-andariel.shtml&lt;/p&gt;<br>
+                        ]]&gt;
+
+                    </b>
+                    <br>
+
+<!--      <node id=""> 
+    <data key="nameNode">Andariel</data>
+    <data key="descriptionNode"><![CDATA[
+      <ul style="list-style-type:disc">
+        <li>Lessor Evil: Maiden of Anguish</li>
+        <li>Once overthrew the three Prime Evils</li>
+        <li>Presence in Sanctuary implies: forces of Hell are once again aligned behind Diablo and his Brothers</li>
+        <li>Acting on behalf of Diablo to prevent anyone from following him eastward</li>
+        </ul>
+
+        <p>Source: http://classic.battle.net/diablo2exp/monsters/act1-andariel.shtml</p>
+      ]]></data>
+-->
+
+                  </span>
+                </div>
+
+
                 <div class="dynamicNodeDataFields">
                   <!-- Source: https://www.codexworld.com/add-remove-input-fields-dynamically-using-jquery/ -->
                   <div>
