@@ -208,17 +208,43 @@ $(document).ready(function() {
 
   <!-- script, which updates xmlElementSelector the names from all nodes found in xml file -->
   <script>
-// run on page load
-$(document).ready(function() {
+    function updateXmlElementSelector() {
+      //Update xmlElementSelection
+      var xmlElementSelectorPick = document.getElementById("elemPicker").value;
 
-    var pickElementHTML = "<label for=\"elemPicker\">An Element: </label>";
-        pickElementHTML += "<select id=\"elemPicker\" name=\"elemPicker\" onchange=\"updateElementSelector()\">";
-        pickElementHTML += "<option value=\"\">Select an Element</option>";
-        pickElementHTML += "</select>";
+      var tempVal;
 
-        //add html to div tag
-        document.getElementById("xmlElementSelector").innerHTML = pickElementHTML;
-});
+      //if <select> value is "two", then add string to innerHTML
+      var tempAdd="one";
+
+      if (xmlElementSelectorPick == "") {
+        document.getElementById("xmlElementSelection").innerHTML = "";
+        return;
+
+      } else if (xmlElementSelectorPick == "two") {
+        tempAdd = "two";
+      }
+
+      // debug tempAdd
+      // alert(tempAdd);
+
+      document.getElementById("xmlElementSelection").innerHTML = "PICKED!: "+tempAdd;
+    }
+
+
+    // run on page load
+    $(document).ready(function() {
+
+        var pickElementHTML = "<label for=\"elemPicker\">An Element: </label>";
+            pickElementHTML += "<select id=\"elemPicker\" name=\"elemPicker\" onchange=\"updateXmlElementSelector()\">";
+              pickElementHTML += "<option value=\"\"><i></i></option>";
+              pickElementHTML += "<option value=\"one\"><i>one</i></option>";
+              pickElementHTML += "<option value=\"two\"><i>two</i></option>";
+            pickElementHTML += "</select>";
+
+            //add html to div tag
+            document.getElementById("xmlElementSelector").innerHTML = pickElementHTML;
+    });
 /*
         //store Global defaults
         var defaultDescription = "unk";
@@ -323,6 +349,9 @@ $(document).ready(function() {
 
         <div id="xmlElementSelector"></div>
 
+        <div id="xmlElementSelection"></div>
+
+        <br>
         <hr>
 
         <h2>Create a new Node or Edge</h2>
