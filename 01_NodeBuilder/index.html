@@ -206,6 +206,109 @@ $(document).ready(function() {
     }
   </script>
 
+  <!-- script, which updates xmlElementSelector the names from all nodes found in xml file -->
+  <script>
+// run on page load
+$(document).ready(function() {
+
+    var pickElementHTML = "<label for=\"elemPicker\">An Element: </label>";
+        pickElementHTML += "<select id=\"elemPicker\" name=\"elemPicker\" onchange=\"updateElementSelector()\">";
+        pickElementHTML += "<option value=\"\">Select an Element</option>";
+        pickElementHTML += "</select>";
+
+        //add html to div tag
+        document.getElementById("xmlElementSelector").innerHTML = pickElementHTML;
+});
+/*
+        //store Global defaults
+        var defaultDescription = "unk";
+        var nodeCounter=1; //1-indexed so VSCode search will match...
+
+        $(document).ready(function() {
+            $.get("../D2R_Act_I.gxl", function(xml) {
+                var countKey = $(xml).find("key").length;
+                var countNode = $(xml).find("node").length;
+                var countEdge = $(xml).find("edge").length;
+                
+                $("#table").append("<tr><th>Keys</th><td>"+countKey+"</td></tr>");
+                $("#table").append("<tr><th>Nodes</th><td>"+countNode+"</td></tr>");
+                $("#table").append("<tr><th>Edges</th><td>"+countEdge+"</td></tr>");
+
+                // for each key, get the value and show it in the table
+                $(xml).find("key").each(function() {
+                    var valKey = $(this).attr("attr.name");
+                    var valId = $(this).attr("id");
+                    var valType = $(this).attr("attr.type");
+                    var valDefault = $(this).find("default").text();
+
+                    if (valKey == "description") {
+                        defaultDescription=valDefault;
+                    }
+                    
+                    $("#keyTable").append("<tr><th>"+valKey+"</th><td>"+valId+"</td><td>"+valType+"</td><td>"+valDefault+"</td></tr>");
+                });
+
+                // for each node, get the key, name, id and description to show it in the #keyEdges table
+                var varNodes = $(xml).find("node");
+                for (var i = 0; i < varNodes.length; i++) {
+                    var valKey = $(varNodes[i]).attr("id");
+                    var valName = $(varNodes[i]).find("data[key='nameNode']").text();
+                    // var valId = $(varNodes[i]).find("data[key='idLinkNode']").text(); //REMOVED!
+
+                    //convert nodeCounter to string, store in valID
+                    var valId = nodeCounter.toString();
+                    nodeCounter++;
+                    var valDesc = $(varNodes[i]).find("data[key='descriptionNode']").html(); //text() STRIPS tags!
+
+                    //if valDesc is empty, show "No description"
+                    if (valDesc == undefined) {
+                        valDesc = "["+defaultDescription+"]";
+                    } else {
+                        var valDesc = valDesc.substring(0, valDesc.length - 6); //HAX
+                    }
+
+                    // remove TWO '\n' in description
+                    var valDesc = valDesc.replace(/\n/, '');
+                    var valDesc = valDesc.replace(/\n/, '');
+
+                    // replace '\n' with <br> in description
+                    var valDesc = valDesc.replace(/\n/g, '<br>');
+
+                    //replace "<\li><br><li>" with "<\li><li>"
+                    var valDesc = valDesc.replace(/<li><br><li>/g, '<li><li>');
+
+                    $("#nodeTable").append("<tr><th>"+valKey+"</th><td>"+valName+"</td><td>"+valId+"</td><td>"+valDesc+"</td></tr>");
+                }
+
+                // for each edge, get the id, source, target and show it in the #keyEdges table
+                $(xml).find("edge").each(function() {
+                    var valId = $(this).attr("id");
+                    var valSource = $(this).attr("source");
+                    var valTarget = $(this).attr("target");
+                    
+                    var strSource = $(varNodes[valSource]).attr("id");
+                    var strSourceIndex = $(varNodes[valSource]).find("data[key='idLinkNode']").text();
+                    var strTarget = $(varNodes[valTarget]).attr("id");
+                    var strTargetIndex = $(varNodes[valTarget]).find("data[key='idLinkNode']").text();
+
+                    var valRowStr = "<tr><th>"+valId+"</th>";
+                        valRowStr += "<td>"+valSource+" ("+strSource+")</td>";                                        
+                        valRowStr += "<td>"+valTarget+" ("+strTarget+")</td>";
+
+                    valRowStr += "</tr>";
+                    $("#edgeTable").append(valRowStr);
+
+                });
+            });
+        });
+
+        function xmlFindTag(xml, tag) {
+            var result = $(xml).find(tag);
+            return result;
+        }
+        */
+
+  </script>
 
 
 <body>
@@ -214,9 +317,13 @@ $(document).ready(function() {
       <div class="col-md-12">
         <h1>GXL Node Builder</h1>
 
-        <!-- <h2>Current Node/Edge Look-up</h2> -->
+        <h2>Current Node/Edge Look-up</h2>
         <!-- Load the gxl file, and SHOW what the values are ... to enable copy/paste (or simply a 'copy-to' button!) of the text for the editor... -->
         <!-- This could fix some of the 'error colorize' issues NodeStats was trying to solve -->
+
+        <div id="xmlElementSelector"></div>
+
+        <hr>
 
         <h2>Create a new Node or Edge</h2>
         <div class="row">
